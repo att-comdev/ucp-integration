@@ -124,14 +124,16 @@ data:
     no_hooks: false
   upgrade:
     no_hooks: false
-  values: {}
+  values:
+    labels:
+      node_selector_key: ucp-control-plane
+      node_selector_value: enabled
   source:
     type: git
     location: git://git.openstack.org/openstack/openstack-helm
     subpath: mariadb
   dependencies:
     - helm-toolkit
-    - ucp-ceph-config
 ---
 schema: armada/Chart/v1
 metadata:
@@ -145,7 +147,10 @@ data:
     no_hooks: false
   upgrade:
     no_hooks: false
-  values: {}
+  values:
+    labels:
+      node_selector_key: ucp-control-plane
+      node_selector_value: enabled
   source:
     type: git
     location: git://git.openstack.org/openstack/openstack-helm
@@ -424,9 +429,9 @@ data:
     create: []
   values:
     images:
-      drydock: quay.io/attcomdev/drydock:latest
+      drydock: quay.io/attcomdev/drydock:feature_DRYD19_keystone_middleware_integration
     labels:
-      node_selector_key: maas
+      node_selector_key: ucp-control-plane
       node_selector_value: enabled
     network:
       drydock:
@@ -442,7 +447,8 @@ data:
     type: local
     location: /opt/armada/charts
     subpath: drydock
-  dependencies: []
+  dependencies:
+    - helm-toolkit
 ---
 schema: armada/Manifest/v1
 metadata:
