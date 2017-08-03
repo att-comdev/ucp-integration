@@ -373,7 +373,7 @@ data:
     delete: []
     create: []
   values:
-    bootdata_url: http://10.23.19.118:31000/api/v1.0/bootdata/
+    bootdata_url: http://172.20.0.12:31000/api/v1.0/bootdata/
     credentials:
       secret:
         namespace: drydock
@@ -393,7 +393,7 @@ data:
           port: 31900
     conf:
       maas:
-        url: http://10.23.19.118:31900/MAAS
+        url: http://172.20.0.12:31900/MAAS
         proxy:
           enabled: 'false'
           server: http://one.proxy.att.com:8080
