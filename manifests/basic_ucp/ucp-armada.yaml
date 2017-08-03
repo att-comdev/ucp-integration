@@ -457,8 +457,29 @@ metadata:
 data:
   release_prefix: armada-ucp
   chart_groups:
+    - ceph
+    - ceph-bootstrap
     - ucp-infra
     - ucp-services
+---
+schema: armada/ChartGroup/v1
+metadata:
+  schema: metadata/Document/v1
+  name: ceph
+data:
+  description: 'Storage Backend'
+  chart_group:
+    - ceph
+---
+schema: armada/ChartGroup/v1
+metadata:
+  schema: metadata/Document/v1
+  name: ceph-bootstrap
+data:
+  description: 'Storage Backend Config'
+  chart_group:
+    - ucp-ceph-config
+    - maas-ceph-config
 ---
 schema: armada/ChartGroup/v1
 metadata:
@@ -467,10 +488,8 @@ metadata:
 data:
   description: 'UCP Infrastructure'
   chart_group:
-    - ceph
     - ucp-mariadb
     - ucp-memcached
-    - ucp-keystone
     - maas-postgresql
 ---
 schema: armada/ChartGroup/v1
@@ -482,4 +501,5 @@ data:
   chart_group:
     - maas
     - drydock
+    - ucp-keystone
 ...
