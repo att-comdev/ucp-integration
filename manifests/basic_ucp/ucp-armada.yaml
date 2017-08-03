@@ -350,7 +350,7 @@ data:
       node_selector_value: enabled
   source:
     type: git
-    location: git://
+    location: git://git.openstack.org/openstack/openstack-helm-addons
     subpath: postgresql
   dependencies: []
 ---
