@@ -1,0 +1,182 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f62688d7_eae1d857",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-08-07T18:55:46Z",
+      "side": 1,
+      "message": "It would be better if all these lines were sub-80 to make code review, maintainability and readability (when viewed as a raw document) better.",
+      "revId": "750e2b4ad529dd0c2a3d6259c9ad0f370ab345e0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a9e0d08a_cb7120b2",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-08-07T18:55:46Z",
+      "side": 1,
+      "message": "specification",
+      "range": {
+        "startLine": 18,
+        "startChar": 77,
+        "endLine": 18,
+        "endChar": 91
+      },
+      "revId": "750e2b4ad529dd0c2a3d6259c9ad0f370ab345e0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5199beea_eb2ffd81",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-08-07T18:55:46Z",
+      "side": 1,
+      "message": "Remove these blank spaces.",
+      "range": {
+        "startLine": 21,
+        "startChar": 12,
+        "endLine": 21,
+        "endChar": 13
+      },
+      "revId": "750e2b4ad529dd0c2a3d6259c9ad0f370ab345e0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c70c1f92_716db16c",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-08-07T18:55:46Z",
+      "side": 1,
+      "message": "Ditto.",
+      "range": {
+        "startLine": 24,
+        "startChar": 44,
+        "endLine": 24,
+        "endChar": 45
+      },
+      "revId": "750e2b4ad529dd0c2a3d6259c9ad0f370ab345e0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d8e511a1_a249126f",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-08-07T18:55:46Z",
+      "side": 1,
+      "message": "Ditto.",
+      "range": {
+        "startLine": 29,
+        "startChar": 10,
+        "endLine": 29,
+        "endChar": 11
+      },
+      "revId": "750e2b4ad529dd0c2a3d6259c9ad0f370ab345e0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da6f7f65_6210281a",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-08-07T18:55:46Z",
+      "side": 1,
+      "message": "Ditto.",
+      "range": {
+        "startLine": 30,
+        "startChar": 38,
+        "endLine": 30,
+        "endChar": 39
+      },
+      "revId": "750e2b4ad529dd0c2a3d6259c9ad0f370ab345e0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4c59a9a7_020169e9",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-08-07T18:55:46Z",
+      "side": 1,
+      "message": "nit: Inconsistent comma use, no comma on 1.",
+      "range": {
+        "startLine": 31,
+        "startChar": 42,
+        "endLine": 31,
+        "endChar": 43
+      },
+      "revId": "750e2b4ad529dd0c2a3d6259c9ad0f370ab345e0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6e6d7ac_27e16fb0",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-08-07T18:55:46Z",
+      "side": 1,
+      "message": "Remove blank space as well.",
+      "range": {
+        "startLine": 31,
+        "startChar": 43,
+        "endLine": 31,
+        "endChar": 44
+      },
+      "revId": "750e2b4ad529dd0c2a3d6259c9ad0f370ab345e0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
