@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "50dfcb2a_45ddb4ba",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-08-08T15:15:46Z",
+      "side": 1,
+      "message": "Extra spaces",
+      "range": {
+        "startLine": 48,
+        "startChar": 14,
+        "endLine": 48,
+        "endChar": 16
+      },
+      "revId": "f19e07a3378ff1d5a1765bd51b75c38b1af0bbc2",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "246f8dd6_474b5c81",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-08-08T15:15:46Z",
+      "side": 1,
+      "message": "Extra spaces",
+      "range": {
+        "startLine": 53,
+        "startChar": 18,
+        "endLine": 53,
+        "endChar": 20
+      },
+      "revId": "f19e07a3378ff1d5a1765bd51b75c38b1af0bbc2",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ad385c6_9330eeae",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-08-08T15:15:46Z",
+      "side": 1,
+      "message": "client",
+      "range": {
+        "startLine": 54,
+        "startChar": 55,
+        "endLine": 54,
+        "endChar": 61
+      },
+      "revId": "f19e07a3378ff1d5a1765bd51b75c38b1af0bbc2",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
