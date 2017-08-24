@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "48e04089_30d0d23e",
+        "filename": "manifests/basic_ucp/ucp-armada.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 1011936
+      },
+      "writtenOn": "2017-08-24T18:01:52Z",
+      "side": 1,
+      "message": "Trailing whitespace",
+      "revId": "c27ecec7a80ef0c9ba29bd9555b358d1d3e0632f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
