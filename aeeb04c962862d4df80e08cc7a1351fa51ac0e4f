@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c589ec8f_06e42c70",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 7
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 1011936
+      },
+      "writtenOn": "2017-08-29T15:44:30Z",
+      "side": 1,
+      "message": "Trailing whitespace",
+      "revId": "aeeb04c962862d4df80e08cc7a1351fa51ac0e4f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5adb6025_4f68afb7",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1011936
+      },
+      "writtenOn": "2017-08-29T15:44:30Z",
+      "side": 1,
+      "message": "Can we check exit code in case the command fails. This will get into loop later on and never exit.\n\nThere is also no point on continuing if this fails.\n\n\n\u003e\u003e tried with (intentionally) wrong option for promenade\n+ docker run -t -v /home/ubuntu/ucp-integration/manifests/basic_ucp:/target 12.37.173.196:5555/ucp/integration/promenade:master promenade generate -s /target/promenade.yaml -o /target/configs\nError: no such option: -s\n+ echo 2\n2",
+      "revId": "aeeb04c962862d4df80e08cc7a1351fa51ac0e4f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bd289b70_33a4fb50",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1011936
+      },
+      "writtenOn": "2017-08-29T15:44:30Z",
+      "side": 1,
+      "message": "Should we introduce a reasonable timeout?",
+      "revId": "aeeb04c962862d4df80e08cc7a1351fa51ac0e4f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "27dd576b_f387ad64",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1011936
+      },
+      "writtenOn": "2017-08-29T15:44:30Z",
+      "side": 1,
+      "message": "Also check exit code.",
+      "revId": "aeeb04c962862d4df80e08cc7a1351fa51ac0e4f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "785d0fcd_5e5ec5db",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1011936
+      },
+      "writtenOn": "2017-08-29T15:44:30Z",
+      "side": 1,
+      "message": "Should we have a timeout here?",
+      "revId": "aeeb04c962862d4df80e08cc7a1351fa51ac0e4f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
