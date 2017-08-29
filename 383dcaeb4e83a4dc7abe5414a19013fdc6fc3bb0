@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "22ac2c68_440805e2",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-08-29T19:41:43Z",
+      "side": 1,
+      "message": "Question here: What if what I\u0027ve called pre-validation in Deckhand fails -- i.e. basic schema validation fails? That\u0027ll just be thrown for POST deckhand/{{bucket_name}}/documents? No need to store anything for the future?",
+      "revId": "383dcaeb4e83a4dc7abe5414a19013fdc6fc3bb0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b5cc9ccc_3a3f4454",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-08-29T19:41:43Z",
+      "side": 1,
+      "message": "validations to maintain a consistent interface",
+      "range": {
+        "startLine": 92,
+        "startChar": 0,
+        "endLine": 92,
+        "endChar": 48
+      },
+      "revId": "383dcaeb4e83a4dc7abe5414a19013fdc6fc3bb0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
