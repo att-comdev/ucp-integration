@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "96819c82_2a3d74ad",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-08-30T14:09:15Z",
+      "side": 1,
+      "message": "Correct - I don\u0027t expect to call deckhand for this sort of validation - but even if I did, the posting of docs should have its own error response and not accept badly formed or schema inconsistent documents.",
+      "parentUuid": "22ac2c68_440805e2",
+      "revId": "383dcaeb4e83a4dc7abe5414a19013fdc6fc3bb0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b5cc9ccc_3a3f4454",
         "filename": "docs/api-conventions.md",
         "patchSetId": 1
