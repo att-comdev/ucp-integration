@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "762546f2_51db3731",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-09-01T22:34:24Z",
+      "side": 1,
+      "message": "We should be careful to not expose anything in this health check that can\u0027t be seen in an unauthenticated fashion - I expect the health checks to NOT need keystone auth.\n\nLATER... we might want to have a more extensive health check- and we might use the same structure but a different endpoint for the bigger stuff: /health/extended.  This would need to be authenticated though.",
+      "revId": "66e6943db3a788f1fd010e657a84f040d29f941d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d07a9336_e378d2f8",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-09-01T22:34:24Z",
+      "side": 1,
+      "message": "204 means that no message body should accompany.  If we are going to return a status object, it should be a 200.",
+      "revId": "66e6943db3a788f1fd010e657a84f040d29f941d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
