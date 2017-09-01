@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "24598afd_5708debc",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-09-01T23:10:34Z",
+      "side": 1,
+      "message": "Agree.  Have updated the Patch Set to reflect the differences between \u0027health checks\u0027 and \u0027Extended health checks\u0027.  We will only perform \u0027health checks\u0027 that returns HTTP code (without message body) for now.",
+      "parentUuid": "762546f2_51db3731",
+      "revId": "66e6943db3a788f1fd010e657a84f040d29f941d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d07a9336_e378d2f8",
         "filename": "docs/api-conventions.md",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2017-09-01T22:34:24Z",
       "side": 1,
       "message": "204 means that no message body should accompany.  If we are going to return a status object, it should be a 200.",
+      "revId": "66e6943db3a788f1fd010e657a84f040d29f941d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7b5669b7_02c38bb3",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-09-01T23:10:34Z",
+      "side": 1,
+      "message": "Agree. Will update.",
+      "parentUuid": "d07a9336_e378d2f8",
       "revId": "66e6943db3a788f1fd010e657a84f040d29f941d",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
