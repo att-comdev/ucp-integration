@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "24ebadc2_d1ee5a4c",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-09-07T20:51:23Z",
+      "side": 1,
+      "message": "this may be of help: https://github.com/openstack/openstack-helm/blob/master/tools/gate/funcs/kube.sh#L15-L44",
+      "parentUuid": "bd289b70_33a4fb50",
+      "revId": "aeeb04c962862d4df80e08cc7a1351fa51ac0e4f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "27dd576b_f387ad64",
         "filename": "manifests/basic_ucp/deploy_ucp.sh",
         "patchSetId": 7
@@ -81,6 +99,24 @@
       "writtenOn": "2017-08-29T15:44:30Z",
       "side": 1,
       "message": "Should we have a timeout here?",
+      "revId": "aeeb04c962862d4df80e08cc7a1351fa51ac0e4f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "db5bdb51_bf6409e4",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-09-07T20:51:23Z",
+      "side": 1,
+      "message": "again: https://github.com/openstack/openstack-helm/blob/master/tools/gate/funcs/kube.sh#L15-L44",
+      "parentUuid": "785d0fcd_5e5ec5db",
       "revId": "aeeb04c962862d4df80e08cc7a1351fa51ac0e4f",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
