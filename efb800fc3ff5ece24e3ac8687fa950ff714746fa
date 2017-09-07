@@ -1,0 +1,199 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a2c5daf2_7a38c912",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-09-07T15:41:04Z",
+      "side": 1,
+      "message": "can you pin to a commit?",
+      "range": {
+        "startLine": 16,
+        "startChar": 15,
+        "endLine": 16,
+        "endChar": 21
+      },
+      "revId": "efb800fc3ff5ece24e3ac8687fa950ff714746fa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5d497800_4cd75f09",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 8
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-09-07T15:41:04Z",
+      "side": 1,
+      "message": "should not need to specify, see: https://github.com/openstack/openstack-helm/blob/master/tools/deployment/armada/openstack-master.yaml#L19-L84 for a complete ceph deploy yaml.",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 53
+      },
+      "revId": "efb800fc3ff5ece24e3ac8687fa950ff714746fa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "28395b08_692c760b",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 8
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-09-07T15:41:04Z",
+      "side": 1,
+      "message": "missing reference",
+      "revId": "efb800fc3ff5ece24e3ac8687fa950ff714746fa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0b40bb0f_bbb602b9",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 8
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-09-07T15:41:04Z",
+      "side": 1,
+      "message": "missing reference",
+      "revId": "efb800fc3ff5ece24e3ac8687fa950ff714746fa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5694551e_f8f5a01c",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 8
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-09-07T15:41:04Z",
+      "side": 1,
+      "message": "is this needed?",
+      "range": {
+        "startLine": 162,
+        "startChar": 0,
+        "endLine": 165,
+        "endChar": 17
+      },
+      "revId": "efb800fc3ff5ece24e3ac8687fa950ff714746fa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad66d76f_c1c4c2f2",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 8
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-09-07T15:41:04Z",
+      "side": 1,
+      "message": "should be pod.replicas.api (https://github.com/openstack/openstack-helm/blob/master/keystone/values.yaml#L141)",
+      "range": {
+        "startLine": 166,
+        "startChar": 4,
+        "endLine": 166,
+        "endChar": 15
+      },
+      "revId": "efb800fc3ff5ece24e3ac8687fa950ff714746fa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "030e0873_8c68c031",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 8
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-09-07T15:41:04Z",
+      "side": 1,
+      "message": "ws",
+      "range": {
+        "startLine": 184,
+        "startChar": 16,
+        "endLine": 184,
+        "endChar": 17
+      },
+      "revId": "efb800fc3ff5ece24e3ac8687fa950ff714746fa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6751793_d7d11c6f",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 8
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-09-07T15:41:04Z",
+      "side": 1,
+      "message": "needed?",
+      "range": {
+        "startLine": 189,
+        "startChar": 0,
+        "endLine": 194,
+        "endChar": 14
+      },
+      "revId": "efb800fc3ff5ece24e3ac8687fa950ff714746fa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c64579d6_e01acfe9",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-09-07T15:41:04Z",
+      "side": 1,
+      "message": "can you pin to a commit",
+      "range": {
+        "startLine": 35,
+        "startChar": 47,
+        "endLine": 35,
+        "endChar": 53
+      },
+      "revId": "efb800fc3ff5ece24e3ac8687fa950ff714746fa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
