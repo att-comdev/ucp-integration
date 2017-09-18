@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "98c36387_0da27cb4",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 9
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-09-18T21:15:26Z",
+      "side": 1,
+      "message": "Space",
+      "range": {
+        "startLine": 254,
+        "startChar": 16,
+        "endLine": 254,
+        "endChar": 17
+      },
+      "revId": "284e9ed1e15c2f8244c0f8dde477c11928f00fdf",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e827995_15dab6a8",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 9
+      },
+      "lineNbr": 414,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-09-18T21:15:26Z",
+      "side": 1,
+      "message": "Should these ellipses be here?",
+      "range": {
+        "startLine": 414,
+        "startChar": 0,
+        "endLine": 414,
+        "endChar": 3
+      },
+      "revId": "284e9ed1e15c2f8244c0f8dde477c11928f00fdf",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "376cc77c_07bff5df",
+        "filename": "manifests/basic_ucp/drydock.yaml.example",
+        "patchSetId": 9
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-09-18T21:15:26Z",
+      "side": 1,
+      "message": "Space",
+      "range": {
+        "startLine": 215,
+        "startChar": 41,
+        "endLine": 215,
+        "endChar": 42
+      },
+      "revId": "284e9ed1e15c2f8244c0f8dde477c11928f00fdf",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2fd53b2f_20e27e32",
+        "filename": "manifests/basic_ucp/drydock.yaml.example",
+        "patchSetId": 9
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-09-18T21:15:26Z",
+      "side": 1,
+      "message": "Space",
+      "range": {
+        "startLine": 228,
+        "startChar": 93,
+        "endLine": 228,
+        "endChar": 94
+      },
+      "revId": "284e9ed1e15c2f8244c0f8dde477c11928f00fdf",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
