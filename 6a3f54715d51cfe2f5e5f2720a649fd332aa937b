@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "abf05a0d_4e37ab3b",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1008770
+      },
+      "writtenOn": "2017-09-22T03:50:42Z",
+      "side": 1,
+      "message": "should this be 200 or 300?",
+      "range": {
+        "startLine": 226,
+        "startChar": 10,
+        "endLine": 226,
+        "endChar": 13
+      },
+      "revId": "6a3f54715d51cfe2f5e5f2720a649fd332aa937b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
