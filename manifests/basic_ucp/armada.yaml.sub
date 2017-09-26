@@ -13,7 +13,7 @@ data:
     type: git
     location: https://git.openstack.org/openstack/openstack-helm
     subpath: helm-toolkit
-    reference: master
+    reference: 2a75376c1c7efebfaaa52da1afa227af3b1fed3e
   dependencies: []
 ---
 schema: armada/Chart/v1
@@ -170,11 +170,13 @@ data:
     labels:
       node_selector_key: ucp-control-plane
       node_selector_value: enabled
-    replicas:
-      server: 1
+    pod:
+      replicas:
+        server: 1
   source:
     type: git
     location: https://git.openstack.org/openstack/openstack-helm
+    reference: b1206670310b3c5198cf62101a3e7f5a8bd4bf09
     subpath: mariadb
   dependencies:
     - helm-toolkit
@@ -198,6 +200,7 @@ data:
   source:
     type: git
     location: https://git.openstack.org/openstack/openstack-helm
+    reference: f30cbcf10861477ee3eb1194c308d7bda0a056e7
     subpath: memcached
   dependencies:
     - helm-toolkit
@@ -233,13 +236,15 @@ data:
         override:
       paste:
         override:
-    replicas: 2
+    replicas:
+      api: 2
     labels:
       node_selector_key: ucp-control-plane
       node_selector_value: enabled
   source:
     type: git
     location: https://git.openstack.org/openstack/openstack-helm
+    reference: 5e8be5c3395b87d7328989684f9ec7435a68602c
     subpath: keystone
   dependencies:
     - helm-toolkit
@@ -272,7 +277,7 @@ data:
     type: git
     location: https://git.openstack.org/openstack/openstack-helm
     subpath: postgresql
-    reference: master
+    reference: fa0a64c6aa43c3e1db9f062d8b5fb1a6b31d3c3b
   dependencies:
     - helm-toolkit
 ---
