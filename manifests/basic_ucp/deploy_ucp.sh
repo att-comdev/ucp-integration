@@ -51,6 +51,9 @@ export ARMADA_CONFIG=${ARMADA_CONFIG:-"armada.yaml"}
 export PROMENADE_CONFIG=${PROMENADE_CONFIG:-"promenade.yaml"}
 export UP_SCRIPT_FILE=${UP_SCRIPT_FILE:-"up.sh"}
 
+# Timeouts
+export POLL_TIMEOUT=${POLL_TIMEOUT:-3600}
+
 # Validate environment
 if [[ $GENESIS_NODE_IP == "NA" || $MASTER_NODE_IP == "NA" ]]
 then
@@ -71,6 +74,23 @@ then
   export HTTP_PROXY=$PROXY_ADDRESS
   export HTTPS_PROXY=$PROXY_ADDRESS
 fi
+
+# If we haven't $waited as long as the $timeout then sleep for $interval
+# otherwise exit with error status
+sleep_or_timeout () {
+  timeout=$1
+  interval=$2
+  waited=$3
+
+  if [[ $waiting -gt $timeout ]]
+  then
+    echo "Timeout after $waited seconds."
+    return -1
+  fi
+
+  sleep $interval
+  return $((waited + $interval))
+}
 
 # Install docker
 apt -qq update
@@ -98,10 +118,19 @@ mkdir ~/.kube
 cp -r /etc/kubernetes/admin/pki ~/.kube/pki
 cat /etc/kubernetes/admin/kubeconfig.yaml | sed -e 's/\/etc\/kubernetes\/admin/./' > ~/.kube/config
 
-# Polling to ensure genesis is complete
+# Polling to ensure genesis is complete or timeout waiting
+poll_interval=5
+waited=0
+echo "Waiting for kubernetes to come up."
 while [[ -z $(kubectl get pods -n kube-system | grep 'kube-dns' | grep -e '3/3') ]]
 do
-  sleep 5
+  timeout=$(sleep_or_timeout $POLL_TIMEOUT $poll_interval $waited)
+  if [[ $timeout -eq -1 ]]
+  then
+    exit 5
+  else
+    waited=$timeout
+  fi
 done
 
 # Squash Kubernetes RBAC to be compatible w/ OSH
@@ -111,11 +140,19 @@ kubectl update -f ./rbac-generous-permissions.yaml
 docker run -t -v ~/.kube:/armada/.kube -v $(pwd):/target --net=host \
   ${ARMADA_IMAGE} apply /target/${ARMADA_CONFIG} --tiller-host=${GENESIS_NODE_IP} --tiller-port=44134
 
-# Polling for UCP service deployment
-
+# Polling for UCP service deployment or timeout waiting
+poll_interval=5
+waited=0
+echo "Waiting for UCP services to come up."
 while [[ -z $(kubectl get pods -n ucp | grep drydock | grep Running) ]]
 do
-  sleep 5
+  timeout=$(sleep_or_timeout $POLL_TIMEOUT $poll_interval $waited)
+  if [[ $timeout -eq -1 ]]
+  then
+    exit 5
+  else
+    waited=$timeout
+  fi
 done
 
 echo 'UCP control plane deployed.'
