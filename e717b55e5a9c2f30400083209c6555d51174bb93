@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "40b5276d_d9ea2e24",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1011936
+      },
+      "writtenOn": "2017-09-29T23:10:03Z",
+      "side": 1,
+      "message": "Deckhand will not need --host-net IP",
+      "revId": "e717b55e5a9c2f30400083209c6555d51174bb93",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
