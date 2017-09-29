@@ -25,6 +25,8 @@ export MASTER_NODE_IP=${MASTER_NODE_IP:-"NA"}
 export NODE_NET_IFACE=${NODE_NET_IFACE:-"eth0"}
 export PROXY_ADDRESS=${PROXY_ADDRESS:-"http://one.proxy.att.com:8080"}
 export PROXY_ENABLED=${PROXY_ENABLED:-"false"}
+export DECKHAND_NODE_IP=${DECKHAND_NODE_IP:-${GENESIS_NODE_IP}}
+export DECKHAND_NODE_PORT=${DECKHAND_NODE_PORT:-31902}
 
 # Storage
 export CEPH_OSD_DIR=${CEPH_OSD_DIR:-"/var/lib/openstack-helm/ceph/osd"}
@@ -40,11 +42,14 @@ export DRYDOCK_CHART_REPO=${DRYDOCK_CHART_REPO:-"https://github.com/att-comdev/a
 export DRYDOCK_CHART_BRANCH=${DRYDOCK_CHART_BRANCH:-"master"}
 export MAAS_CHART_REPO=${MAAS_CHART_REPO:-"https://github.com/openstack/openstack-helm-addons"}
 export MAAS_CHART_BRANCH=${MAAS_CHART_BRANCH:-"master"}
+export DECKHAND_CHART_REPO=${DECKHAND_CHART_REPO:-"https://github.com/att-comdev/aic-helm"}
+export DECKHAND_CHART_BRANCH=${DECKHAND_CHART_BRANCH:-"master"}
 
 # Images
 export DRYDOCK_IMAGE=${DRYDOCK_IMAGE:-"quay.io/attcomdev/drydock:0.2.0-a1"}
 export ARMADA_IMAGE=${ARMADA_IMAGE:-"quay.io/attcomdev/armada:v0.6.0"}
 export PROMENADE_IMAGE=${PROMENADE_IMAGE:-"quay.io/attcomdev/promenade:master"}
+export DECKHAND_IMAGE=${DECKHAND_IMAGE:-"quay.io/attcomdev/deckhand:master"}
 
 # Filenames
 export ARMADA_CONFIG=${ARMADA_CONFIG:-"armada.yaml"}

@@ -368,6 +368,41 @@ data:
   dependencies:
     - helm-toolkit
 ---
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
+  name: deckhand
+data:
+  chart_name: deckhand
+  release: deckhand
+  namespace: ucp
+  install:
+    no_hooks: false
+  upgrade:
+    no_hooks: false
+  values:
+    images:
+      deckhand: ${DECKHAND_IMAGE}
+    labels:
+      node_selector_key: ucp-control-plane
+      node_selector_value: enabled
+    network:
+      node_port: ${DECKHAND_NODE_PORT}
+      enable_node_port: true
+    conf:
+      deckhand:
+        DEFAULT:
+          debug: true
+          use_stderr: true
+          use_syslog: true
+  source:
+    type: git
+    location: ${DECKHAND_CHART_REPO}
+    subpath: deckhand
+    reference: ${DECKHAND_CHART_BRANCH}
+  dependencies:
+    - helm-toolkit
+---
 schema: armada/Manifest/v1
 metadata:
   schema: metadata/Document/v1
@@ -410,5 +445,6 @@ data:
   chart_group:
     - maas
     - drydock
+    - deckhand
     - ucp-keystone
 ...
