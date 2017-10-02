@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f7c04e33_0a98a84c",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 6
+      },
+      "lineNbr": 389,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2017-10-02T16:09:11Z",
+      "side": 1,
+      "message": "Does deckhand need a nodeport? This is needed only when a service needs to be accessed from the physical network.",
+      "revId": "552224b7e1119fdac99b58c1e6a516568ff21fd4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cca78061_f0c6f975",
+        "filename": "manifests/basic_ucp/set-env.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2017-10-02T16:09:11Z",
+      "side": 1,
+      "message": "Can this be pinned to a image tag that isn\u0027t latest to keep merges from breaking the integration?",
+      "revId": "552224b7e1119fdac99b58c1e6a516568ff21fd4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "805f3586_a6131dab",
+        "filename": "manifests/basic_ucp/set-env.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2017-10-02T16:09:11Z",
+      "side": 1,
+      "message": "Can this be pinned to a commit?",
+      "revId": "552224b7e1119fdac99b58c1e6a516568ff21fd4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
