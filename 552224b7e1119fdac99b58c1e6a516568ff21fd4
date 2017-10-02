@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "76c8c646_516b6a42",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 6
+      },
+      "lineNbr": 389,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-10-02T16:38:50Z",
+      "side": 1,
+      "message": "I think the nodeport is used mainly for testing of API endpoint response.  I agree that we should remove this in Production as DeckHand should not be exposed.\n\nAt the present moment, Shipyard is using port 31901 and DeckHand is on 31902.",
+      "parentUuid": "f7c04e33_0a98a84c",
+      "revId": "552224b7e1119fdac99b58c1e6a516568ff21fd4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cca78061_f0c6f975",
         "filename": "manifests/basic_ucp/set-env.sh",
         "patchSetId": 6
