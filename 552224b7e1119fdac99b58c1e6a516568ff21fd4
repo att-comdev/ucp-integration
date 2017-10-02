@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "f814e7bb_3a6fa36c",
+        "filename": "manifests/basic_ucp/set-env.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-10-02T16:32:00Z",
+      "side": 1,
+      "message": "So I can see where you\u0027re coming from, but consider the following:\n\n1) Some important features are currently under development and will be needed for 1710. These features include oslo.policy integration, rendered-documents endpoint and validations (this includes secret substitution and possibly layering being integrated into rendered-documents).\n2) The problem with pinning is that if we forget to upgrade the pin after each of these major features is merged, we might not immediately notice if there is a bug (e.g. fail fast is good).\n3) Deckhand is also heavily tested so the likelihood that a new feature will break integration is low -- but nonetheless still possible.\n\nGiven the above, I think maybe it be worth doing a pin like 10/10, 1 week before the deadline? \n\nOtherwise, if that\u0027s a bad idea, we\u0027ll simply have to carefully upgrade pins until some cut-off point before 1710 (e.g. 10/10 or whatever).",
+      "parentUuid": "cca78061_f0c6f975",
+      "revId": "552224b7e1119fdac99b58c1e6a516568ff21fd4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "805f3586_a6131dab",
         "filename": "manifests/basic_ucp/set-env.sh",
         "patchSetId": 6
