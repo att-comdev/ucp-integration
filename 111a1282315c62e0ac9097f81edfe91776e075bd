@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f81300d2_234e7ec2",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 6
+      },
+      "lineNbr": 580,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-10-06T20:24:13Z",
+      "side": 1,
+      "message": "Agree. Will move it to the \u0027ucp-infra\u0027 chart group",
+      "parentUuid": "10d25f6c_e44364cf",
+      "range": {
+        "startLine": 579,
+        "startChar": 0,
+        "endLine": 580,
+        "endChar": 18
+      },
+      "revId": "111a1282315c62e0ac9097f81edfe91776e075bd",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f301a837_7f9248c0",
         "filename": "manifests/basic_ucp/set-env.sh",
         "patchSetId": 6
@@ -36,6 +60,30 @@
       "writtenOn": "2017-10-06T20:09:29Z",
       "side": 1,
       "message": "Not sure if you need to specify these here as you appear to be echoing the defaults put in ucp_deploy.sh. Doesn\u0027t hurt anything I suppose.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 53
+      },
+      "revId": "111a1282315c62e0ac9097f81edfe91776e075bd",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e88b74c6_d370dedb",
+        "filename": "manifests/basic_ucp/set-env.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-10-06T20:24:13Z",
+      "side": 1,
+      "message": "Ok. I think you are right. I will remove from here.",
+      "parentUuid": "f301a837_7f9248c0",
       "range": {
         "startLine": 16,
         "startChar": 0,
