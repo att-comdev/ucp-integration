@@ -22,7 +22,8 @@ more specific to point to a particular service.
 ```
 ---
 ## Status responses
-Status responses, and more specifically error responses (HTTP response body accompanying 4xx and 5xx series responses
+Status responses, and more specifically error responses (HTTP response body
+accompanying 4xx and 5xx series responses
 where possible) are a customized version of the
 [Kubernetes standard for error representation](https://github.com/kubernetes/community/blob/master/contributors/devel/api-conventions.md#response-status-kind).
 UCP utilizes the details field in a more formalized way to represent multiple
@@ -50,9 +51,13 @@ messages related to a status response, as follows:
 such that:
 1. the details field is still optional
 2. if used, the details follow that format
-3. the repeating entity inside the messageList can be decorated with as many other fields as are useful, but at least have a message field and error field.
-4. the errorCount field is an integer representing the count of messageList entities that have `error: true`
-5. when using this document as the body of a HTTP response, `code` is populated with a valid HTTP [status code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
+3. the repeating entity inside the messageList can be decorated with as many
+other fields as are useful, but at least have a message field and error field.
+4. the errorCount field is an integer representing the count of messageList
+entities that have `error: true`
+5. when using this document as the body of a HTTP response, `code` is
+populated with a valid HTTP
+[status code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
 ---
 ## Headers
 ### Required
@@ -83,7 +88,7 @@ by the input structure.  Synchronous.
 ```
 {
   rel : "design",
-  href: "deckhand+https://deckhand/{{revision_id}}/rendered-documents",
+  href: "deckhand+https://{{deckhand_url}}/revisions/{{revision_id}}/rendered-documents",
   type: "application/x-yaml"
 }
 ```
