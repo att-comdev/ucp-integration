@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f43b855_72667c63",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-10-11T22:08:07Z",
+      "side": 1,
+      "message": "ws",
+      "range": {
+        "startLine": 65,
+        "startChar": 14,
+        "endLine": 65,
+        "endChar": 16
+      },
+      "revId": "3655a521c846e68a8207a3202acafbc790f8e7df",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "61ec17ca_d837381e",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-10-11T22:08:07Z",
+      "side": 1,
+      "message": "ws",
+      "range": {
+        "startLine": 70,
+        "startChar": 18,
+        "endLine": 70,
+        "endChar": 20
+      },
+      "revId": "3655a521c846e68a8207a3202acafbc790f8e7df",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e8185841_e5700869",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-10-11T22:08:07Z",
+      "side": 1,
+      "message": "ws",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 82,
+        "endChar": 2
+      },
+      "revId": "3655a521c846e68a8207a3202acafbc790f8e7df",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "330b7d35_be3c4140",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-10-11T22:08:07Z",
+      "side": 1,
+      "message": "ws",
+      "range": {
+        "startLine": 83,
+        "startChar": 29,
+        "endLine": 83,
+        "endChar": 31
+      },
+      "revId": "3655a521c846e68a8207a3202acafbc790f8e7df",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9fbb7e06_a57f8a96",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2017-10-11T22:08:07Z",
+      "side": 1,
+      "message": "ws",
+      "range": {
+        "startLine": 87,
+        "startChar": 20,
+        "endLine": 87,
+        "endChar": 22
+      },
+      "revId": "3655a521c846e68a8207a3202acafbc790f8e7df",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
