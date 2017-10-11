@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f34a9b31_e1099ebf",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-10-11T22:20:44Z",
+      "side": 1,
+      "message": "For the bulleted list items, the whitespace here is significant.  For the the header items it\u0027s unnecessary.\n\nI\u0027m assuming that the \u003cdl\u003e html inline is preferred?  I can switch to that.\n\nI\u0027ll fix the header items.",
+      "parentUuid": "1f43b855_72667c63",
+      "range": {
+        "startLine": 65,
+        "startChar": 14,
+        "endLine": 65,
+        "endChar": 16
+      },
+      "revId": "3655a521c846e68a8207a3202acafbc790f8e7df",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "61ec17ca_d837381e",
         "filename": "docs/api-conventions.md",
         "patchSetId": 1
