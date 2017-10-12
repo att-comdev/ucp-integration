@@ -22,6 +22,30 @@
       "revId": "2869ff7110f03f187cfc98e731a4fb7d09aec147",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "98de8b14_719b34b3",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-10-12T00:40:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "875e9646_8b15975e",
+      "range": {
+        "startLine": 89,
+        "startChar": 16,
+        "endLine": 89,
+        "endChar": 27
+      },
+      "revId": "2869ff7110f03f187cfc98e731a4fb7d09aec147",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
