@@ -45,6 +45,30 @@
       "revId": "e104642f8a33c891478a70ee8839a16075e448d0",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0f19edb8_5fff814e",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-10-12T15:49:05Z",
+      "side": 1,
+      "message": "Obviously it does, as indicated in what I just changed from.  Figured that if I was going to embrace the \u003cdl\u003e\u003cdt\u003e\u003cdd\u003e structure for some lists, I\u0027d be consistent and switch the other lists to \u003col\u003e and \u003cul\u003e",
+      "parentUuid": "cfec7f76_f5796d70",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 4
+      },
+      "revId": "e104642f8a33c891478a70ee8839a16075e448d0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
