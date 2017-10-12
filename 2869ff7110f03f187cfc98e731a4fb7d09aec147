@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "875e9646_8b15975e",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-10-12T00:22:58Z",
+      "side": 1,
+      "message": "I think there is a typo here, it should be \u0027synchronous\u0027",
+      "range": {
+        "startLine": 89,
+        "startChar": 16,
+        "endLine": 89,
+        "endChar": 27
+      },
+      "revId": "2869ff7110f03f187cfc98e731a4fb7d09aec147",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
