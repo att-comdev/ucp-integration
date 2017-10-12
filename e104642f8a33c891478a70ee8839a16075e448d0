@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5704236f_ae78c131",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1008770
+      },
+      "writtenOn": "2017-10-12T01:00:55Z",
+      "side": 1,
+      "message": "see below",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 4
+      },
+      "revId": "e104642f8a33c891478a70ee8839a16075e448d0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cfec7f76_f5796d70",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1008770
+      },
+      "writtenOn": "2017-10-12T01:00:55Z",
+      "side": 1,
+      "message": "does markdown not have bullet like * that this is resorting to \u003cli\u003e html tags?",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 4
+      },
+      "revId": "e104642f8a33c891478a70ee8839a16075e448d0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
