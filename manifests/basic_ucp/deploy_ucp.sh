@@ -36,20 +36,28 @@ export GENESIS_NODE_NAME=${GENESIS_NODE_NAME:-"node1"}
 export MASTER_NODE_NAME=${MASTER_NODE_NAME:-"node2"}
 
 # Charts
+export HTK_CHART_REPO=${HTK_CHART_REPO:-"https://github.com/openstack/openstack-helm-infra"}
+export HTK_CHART_PATH=${HTK_CHART_PATH:-"helm-toolkit"}
+export HTK_CHART_BRANCH=${HTK_CHART_BRANCH:-"master"}
 export CEPH_CHART_REPO=${CEPH_CHART_REPO:-"https://github.com/openstack/openstack-helm"}
+export CEPH_CHART_PATH=${CEPH_CHART_PATH:-"ceph"}
 export CEPH_CHART_BRANCH=${CEPH_CHART_BRANCH:-"master"}
-export DRYDOCK_CHART_REPO=${DRYDOCK_CHART_REPO:-"https://github.com/att-comdev/aic-helm"}
+export DRYDOCK_CHART_REPO=${DRYDOCK_CHART_REPO:-"https://github.com/att-comdev/drydock"}
+export DRYDOCK_CHART_PATH=${DRYDOCK_CHART_PATH:-"charts/drydock"}
 export DRYDOCK_CHART_BRANCH=${DRYDOCK_CHART_BRANCH:-"master"}
-export MAAS_CHART_REPO=${MAAS_CHART_REPO:-"https://github.com/openstack/openstack-helm-addons"}
+export MAAS_CHART_REPO=${MAAS_CHART_REPO:-"https://github.com/att-comdev/maas"}
+export MAAS_CHART_PATH=${MAAS_CHART_PATH:-"charts/maas"}
 export MAAS_CHART_BRANCH=${MAAS_CHART_BRANCH:-"master"}
-export DECKHAND_CHART_REPO=${DECKHAND_CHART_REPO:-"https://github.com/att-comdev/aic-helm"}
+export DECKHAND_CHART_REPO=${DECKHAND_CHART_REPO:-"https://github.com/att-comdev/deckhand"}
+export DECKHAND_CHART_PATH=${DECKHAND_CHART_PATH:-"charts/deckhand"}
 export DECKHAND_CHART_BRANCH=${DECKHAND_CHART_BRANCH:-"master"}
-export SHIPYARD_CHART_REPO=${SHIPYARD_CHART_REPO:-"https://github.com/att-comdev/aic-helm"}
+export SHIPYARD_CHART_REPO=${SHIPYARD_CHART_REPO:-"https://github.com/att-comdev/shipyard"}
+export SHIPYARD_CHART_PATH=${SHIPYARD_CHART_PATH:-"charts/shipyard"}
 export SHIPYARD_CHART_BRANCH=${SHIPYARD_CHART_BRANCH:-"master"}
 
 # Images
-export DRYDOCK_IMAGE=${DRYDOCK_IMAGE:-"quay.io/attcomdev/drydock:0.2.0-a1"}
-export ARMADA_IMAGE=${ARMADA_IMAGE:-"quay.io/attcomdev/armada:v0.6.0"}
+export DRYDOCK_IMAGE=${DRYDOCK_IMAGE:-"quay.io/attcomdev/drydock:master"}
+export ARMADA_IMAGE=${ARMADA_IMAGE:-"quay.io/attcomdev/armada:master"}
 export PROMENADE_IMAGE=${PROMENADE_IMAGE:-"quay.io/attcomdev/promenade:master"}
 export DECKHAND_IMAGE=${DECKHAND_IMAGE:-"quay.io/attcomdev/deckhand:master"}
 export SHIPYARD_IMAGE=${SHIPYARD_IMAGE:-"quay.io/attcomdev/shipyard:master"}
