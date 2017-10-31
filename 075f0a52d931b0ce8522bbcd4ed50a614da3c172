@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7466fa40_98ebd0cf",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 2
+      },
+      "lineNbr": 391,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-10-31T14:50:02Z",
+      "side": 1,
+      "message": "Can we also include the tags for the Deckhand images?",
+      "revId": "075f0a52d931b0ce8522bbcd4ed50a614da3c172",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "23a68165_d195186b",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 2
+      },
+      "lineNbr": 396,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-10-31T14:50:02Z",
+      "side": 1,
+      "message": "I think the \u0027memcache_security_strategy\u0027 will cause similar problems in DeckHand, can we also over-ride it from \u0027Encrypt\u0027 to \u0027None\u0027? Thanks.\n\n\n    conf:\n      deckhand:\n        keystone_authtoken:\n          memcache_security_strategy: None",
+      "revId": "075f0a52d931b0ce8522bbcd4ed50a614da3c172",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "84aabbba_879fa987",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 2
+      },
+      "lineNbr": 455,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-10-31T14:50:02Z",
+      "side": 1,
+      "message": "Can we also include the tags for the Shipyard/Airflow images?",
+      "revId": "075f0a52d931b0ce8522bbcd4ed50a614da3c172",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
