@@ -22,6 +22,30 @@
       "revId": "f8dc770aca6367cc8aac9b20cd26ca35f6ba9650",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39284c91_0a05236b",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-11-03T14:23:25Z",
+      "side": 1,
+      "message": "Agree. That can happen.  I have added time out to the script.",
+      "parentUuid": "e6d4af9d_1ccd53ff",
+      "range": {
+        "startLine": 167,
+        "startChar": 0,
+        "endLine": 167,
+        "endChar": 9
+      },
+      "revId": "f8dc770aca6367cc8aac9b20cd26ca35f6ba9650",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
