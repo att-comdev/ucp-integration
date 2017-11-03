@@ -27,6 +27,7 @@ export PROXY_ADDRESS=${PROXY_ADDRESS:-"http://one.proxy.att.com:8080"}
 export PROXY_ENABLED=${PROXY_ENABLED:-"false"}
 export AIRFLOW_NODE_PORT=${AIRFLOW_NODE_PORT:-32080}
 export SHIPYARD_NODE_PORT=${SHIPYARD_NODE_PORT:-31901}
+export ARMADA_NODE_PORT=${ARMADA_NODE_PORT:-31903}
 
 # Storage
 export CEPH_OSD_DIR=${CEPH_OSD_DIR:-"/var/lib/openstack-helm/ceph/osd"}
@@ -56,6 +57,9 @@ export DECKHAND_CHART_BRANCH=${DECKHAND_CHART_BRANCH:-"master"}
 export SHIPYARD_CHART_REPO=${SHIPYARD_CHART_REPO:-"https://github.com/att-comdev/shipyard"}
 export SHIPYARD_CHART_PATH=${SHIPYARD_CHART_PATH:-"charts/shipyard"}
 export SHIPYARD_CHART_BRANCH=${SHIPYARD_CHART_BRANCH:-"master"}
+export ARMADA_CHART_REPO=${ARMADA_CHART_REPO:-"https://github.com/att-comdev/armada"}
+export ARMADA_CHART_PATH=${ARMADA_CHART_PATH:-"charts/armada"}
+export ARMADA_CHART_BRANCH=${ARMADA_CHART_BRANCH:-"master"}
 
 # Images
 export DRYDOCK_IMAGE=${DRYDOCK_IMAGE:-"quay.io/attcomdev/drydock:master"}
@@ -152,6 +156,13 @@ done
 # Check the status of deckhand-api pod
 # Ignore deckhand db or ks related pod
 while [[ -z $(kubectl get pods -n ucp | grep deckhand | grep -v db | grep -v ks | grep Running) ]]
+do
+  sleep 5
+done
+
+# Check the status of armada-api pod
+# Ignore armada db or ks related pod
+while [[ -z $(kubectl get pods -n ucp | grep armada | grep -v db | grep -v ks | grep Running) ]]
 do
   sleep 5
 done
