@@ -16,6 +16,24 @@
       "revId": "94a9d4e8b2c40f2a1c712fbabb19269971ee59aa",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1c9bbfb7_23bea9b7",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-11-03T14:40:00Z",
+      "side": 1,
+      "message": "My bad... 5x720 is indeed 3600 seconds.",
+      "parentUuid": "96a2e64d_46092bef",
+      "revId": "94a9d4e8b2c40f2a1c712fbabb19269971ee59aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
