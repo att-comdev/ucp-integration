@@ -289,7 +289,6 @@ data:
   upgrade:
     no_hooks: false
   values:
-    bootdata_url: http://${DRYDOCK_NODE_IP}:${DRYDOCK_NODE_PORT}/api/v1.0/bootdata/
     labels:
       rack:
         node_selector_key: ucp-control-plane
@@ -307,6 +306,8 @@ data:
           enabled: true
           port: 31900
     conf:
+      drydock:
+        bootaction_url: http://${DRYDOCK_NODE_IP}:${DRYDOCK_NODE_PORT}/api/v1.0/bootactions/nodes/
       maas:
         credentials:
           secret:
@@ -601,17 +602,6 @@ data:
     reference: master
   dependencies:
     - helm-toolkit
----
-schema: armada/Manifest/v1
-metadata:
-  schema: metadata/Document/v1
-  name: ucp-basic
-data:
-  release_prefix: armada-ucp
-  chart_groups:
-    - ceph
-    - ucp-infra
-    - ucp-services
 ---
 schema: armada/ChartGroup/v1
 metadata:
