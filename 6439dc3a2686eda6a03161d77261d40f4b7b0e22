@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a382d001_b140e1dd",
+        "filename": "manifests/basic_ucp/Genesis.yaml.sub",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2017-11-08T15:53:54Z",
+      "side": 1,
+      "message": "I would recommend removing this master label, and moving the calico-etcd\u003denabled label into the dynamic bucket.  Static labels work in slightly unexpected ways.",
+      "revId": "6439dc3a2686eda6a03161d77261d40f4b7b0e22",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0a2ff19e_e700cefb",
+        "filename": "manifests/basic_ucp/HostSystem.yaml.sub",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2017-11-08T15:53:54Z",
+      "side": 1,
+      "message": "This image should be coredns/coredns:0.9.9, it was out of date in master when you brought it over I suspect.\n\nOptional configuration here.",
+      "revId": "6439dc3a2686eda6a03161d77261d40f4b7b0e22",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "244dab08_9c2e02e6",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2017-11-08T15:53:54Z",
+      "side": 1,
+      "message": "I don\u0027t think this is needed any longer, because /usr/local/bin/kubectl handles pointing at the configuration correctly now.",
+      "revId": "6439dc3a2686eda6a03161d77261d40f4b7b0e22",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "22fa0a95_e9f7b47a",
+        "filename": "manifests/basic_ucp/joining-host-config.yaml.sub",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2017-11-08T15:53:54Z",
+      "side": 1,
+      "message": "As with previous comment, this label can be removed.",
+      "revId": "6439dc3a2686eda6a03161d77261d40f4b7b0e22",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
