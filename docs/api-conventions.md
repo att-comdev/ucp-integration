@@ -1,4 +1,4 @@
-# UCP API conventions
+# API conventions
 A collection of conventions that components of the UnderCloud Platform (UCP)
 utilize for their REST APIs
 ---
