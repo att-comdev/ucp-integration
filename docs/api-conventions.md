@@ -1,6 +1,7 @@
-# UCP API conventions
+# API conventions
 A collection of conventions that components of the UnderCloud Platform (UCP)
 utilize for their REST APIs
+
 ---
 ## Resource path naming
 
@@ -9,10 +10,11 @@ pluralize the resource names. Nodes that refer to keys, ids or names that are
 externally controlled, the external naming will be honored.
 * The version of the API resource path will be prefixed before the first
 node of the path for that resource using v#.# format.
-* By default, the API will be namespaced by /api before the version. For
-the purposes of documentation, this will not be specified in each of the
-resource paths below. In more complex APIs, it makes sense to allow the /api
-node to be more specific to point to a particular service.
+* By default and unless otherwise noted, the API will be namespaced by /api
+before the version. For the purposes of documentation, this will not be
+specified in each of the resource paths below. In more complex APIs, UCP
+components may use values other than /api to be more specific to point to a
+particular service.
 
 ```
 /api/v1.0/sampleresources/ExTeRnAlNAME-1234
@@ -27,7 +29,7 @@ node to be more specific to point to a particular service.
 Status responses, and more specifically error responses (HTTP response body
 accompanying 4xx and 5xx series responses
 where possible) are a customized version of the
-[Kubernetes standard for error representation](https://github.com/kubernetes/community/blob/master/contributors/devel/api-conventions.md#response-status-kind).
+[Kubernetes standard for error representation].
 UCP utilizes the details field in a more formalized way to represent multiple
 messages related to a status response, as follows:
 
@@ -58,8 +60,7 @@ other fields as are useful, but at least have a message field and error field.
 * the errorCount field is an integer representing the count of messageList
 entities that have `error: true`
 * when using this document as the body of a HTTP response, `code` is
-populated with a valid HTTP
-[status code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+populated with a valid [HTTP status code]
 
 ---
 ## Headers
@@ -67,7 +68,8 @@ populated with a valid HTTP
 
 <dl>
   <dt>X-Auth-Token</dt>
-  <dd>The auth token to identify the invoking user.</dd>
+  <dd>The auth token to identify the invoking user. Required unless the
+  resource is explictly unauthenticated.</dd>
 </dl>
 
 ### Optional
@@ -145,26 +147,28 @@ Success message example:
 
 ## Health Check API
 Each UCP component shall expose an endpoint that allows other components
-to access and validate its health status.  The response shall be received
-within 30 seconds.
+to access and validate its health status. Clients of the health check should
+wait up to 30 seconds for a health check response from each component.
 
 ### GET /v1.0/health
-Invokes a UCP component to return its health status
+Invokes a UCP component to return its health status. This endpoint is intended
+to be unauthenticated, and must not return any information beyond the noted
+204 or 503 status response. The component invoked is expected to return a
+response in less than 30 seconds.
 
 #### Health Check Output
 The current design will be for the UCP component to return an empty response
 to show that it is alive and healthy. This means that the UCP component that
 is performing the query will receive HTTP response code 204.
 
-HTTP response code 503 will be returned if the UCP component fails to receive
-any response from the component that it is querying.  The time out will be set
-to 30 seconds.
+HTTP response code 503 with a generic response status or an empty message body
+will be returned if the UCP component determines it is in a non-healthy state,
+or is unable to reach another component it is dependent upon.
 
 ### GET /v1.0/health/extended
-Invokes a UCP component to return its detailed health status. Authentication
-will be required to invoke this API call.
-
-This feature will be implemented in the future.
+Ucp components may provide an extended health check. This request invokes a
+UCP component to return its detailed health status. Authentication is required
+to invoke this API call.
 
 #### Extended Health Check Output
 The output structure reuses the Kubernetes Status kind to represent the health
@@ -212,7 +216,8 @@ Success message example:
 
 ## Versions API
 Each UCP component shall expose an endpoint that allows other components to
-discover its different API versions.
+discover its different API versions. This endpoint is not prefixed by /api
+or a version.
 
 ### GET /versions
 Invokes a UCP component to return its list of API versions.
@@ -239,3 +244,6 @@ Success message example:
   "code": 200
 }
 ```
+
+[Kubernetes standard for error representation]: https://github.com/kubernetes/community/blob/master/contributors/devel/api-conventions.md#response-status-kind
+[HTTP status code]: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
