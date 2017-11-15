@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5e694f80_a8ab300e",
+        "filename": "manifests/basic_ucp/armada-resources.yaml.sub",
+        "patchSetId": 2
+      },
+      "lineNbr": 450,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2017-11-15T21:48:57Z",
+      "side": 1,
+      "message": "These TLS params have been moved to $.values.secrets.tls.*.",
+      "revId": "f612ad48800b7dad389bfd46e78cfafb22a247aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fde8bcf0_615aeb9c",
+        "filename": "manifests/basic_ucp/armada-resources.yaml.sub",
+        "patchSetId": 2
+      },
+      "lineNbr": 493,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2017-11-15T21:48:57Z",
+      "side": 1,
+      "message": "Likewise for this one.",
+      "revId": "f612ad48800b7dad389bfd46e78cfafb22a247aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7bc1287d_a54f0e2f",
+        "filename": "manifests/basic_ucp/armada-resources.yaml.sub",
+        "patchSetId": 2
+      },
+      "lineNbr": 515,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2017-11-15T21:48:57Z",
+      "side": 1,
+      "message": "This and service_account will need to be indented.",
+      "revId": "f612ad48800b7dad389bfd46e78cfafb22a247aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3cc7de8f_31d1b5c2",
+        "filename": "manifests/basic_ucp/armada-resources.yaml.sub",
+        "patchSetId": 2
+      },
+      "lineNbr": 545,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2017-11-15T21:48:57Z",
+      "side": 1,
+      "message": "Controller-manager has the same changes as apiserver above for tls value locations.",
+      "revId": "f612ad48800b7dad389bfd46e78cfafb22a247aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
