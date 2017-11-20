@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b6c28798_d7935c5a",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2017-11-20T14:24:31Z",
+      "side": 1,
+      "message": "We recently merged a change to the Dockerfile that changes the user to UID 1000.  This causes the later cert gen and script building to fail.\n\nI think a reasonable workaround here would be to do chmod 777 configs right after creating the dir.",
+      "revId": "41ea5f26e52b6151479cad0f8a6568073117d4f3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
