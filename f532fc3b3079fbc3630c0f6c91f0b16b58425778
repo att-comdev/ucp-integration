@@ -1,0 +1,191 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "30be90e7_b7e19440",
+        "filename": "docs/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-11-27T16:53:33Z",
+      "side": 1,
+      "message": "s/comonents/components",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6c749fac_c88ea8c3",
+        "filename": "docs/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-11-27T16:53:33Z",
+      "side": 1,
+      "message": "s/Openstack/OpenStack",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6621910d_58dcbe24",
+        "filename": "docs/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-11-27T16:53:33Z",
+      "side": 1,
+      "message": "followed where applicable or followed within reason",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "36c54cfb_c9ec6069",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-11-27T16:53:33Z",
+      "side": 1,
+      "message": "Are there plans to have API versioning? So far, api/v1.0/... feels like overkill. Not only that, but is there a use case for us to use microversioning (i.e. v1.0 vs. v1)? There ought to be a convention around that. My vote is to drop microversioning as I\u0027m afraid it\u0027ll just lead to a bloated mess in practice.",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a59f163f_44e37b59",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-11-27T16:53:33Z",
+      "side": 1,
+      "message": "UCP components",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a224a9e2_d8426d00",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-11-27T16:53:33Z",
+      "side": 1,
+      "message": "to be authenticated",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2bb9188b_850ee129",
+        "filename": "docs/code-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-11-27T16:53:33Z",
+      "side": 1,
+      "message": "s/Convetions/Conventions",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b1ee906d_c2db9d74",
+        "filename": "docs/code-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-11-27T16:53:33Z",
+      "side": 1,
+      "message": "I\u0027d add a sentence about sphinx_build and preference for rst to enable documentation auto-generation.",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "841d53a8_b1fd1340",
+        "filename": "docs/code-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-11-27T16:53:33Z",
+      "side": 1,
+      "message": "This standard sounds more like a recommendation, to me, seeming to tip-toe around the issue that we don\u0027t actually have pep8 standardization in UCP.",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "53ad37f8_f739f11f",
+        "filename": "docs/code-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-11-27T16:53:33Z",
+      "side": 1,
+      "message": "This is missing a tox.ini file which I believe is more important than the Makefile (for development at least), as tox uses venvs, Makefiles do not.",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d1fbd19e_c2dc794c",
+        "filename": "docs/service-logging-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-11-27T16:53:33Z",
+      "side": 1,
+      "message": "There should also be a standard about global vs local logging variables. Some projects do it globally only, others locally only, and yet others both.\n\nI don\u0027t think it\u0027d be out of scope to create an implementation-level standard, as it would obviously be of value.",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
