@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0a684663_c65251e6",
+        "filename": "docs/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-11-28T00:42:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "30be90e7_b7e19440",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6c749fac_c88ea8c3",
         "filename": "docs/README.md",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2017-11-27T16:53:33Z",
       "side": 1,
       "message": "s/Openstack/OpenStack",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a2204ea2_077e4dcf",
+        "filename": "docs/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-11-28T00:42:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6c749fac_c88ea8c3",
       "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "493b9c16_b1c94cb9",
+        "filename": "docs/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-11-28T00:42:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6621910d_58dcbe24",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "36c54cfb_c9ec6069",
         "filename": "docs/api-conventions.md",
         "patchSetId": 8
@@ -64,6 +118,24 @@
       "writtenOn": "2017-11-27T16:53:33Z",
       "side": 1,
       "message": "Are there plans to have API versioning? So far, api/v1.0/... feels like overkill. Not only that, but is there a use case for us to use microversioning (i.e. v1.0 vs. v1)? There ought to be a convention around that. My vote is to drop microversioning as I\u0027m afraid it\u0027ll just lead to a bloated mess in practice.",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "96b6f5a6_c72869b8",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-11-28T00:42:33Z",
+      "side": 1,
+      "message": "We can open the question to the larger team, but I know this was a conscious decision to go with x.x versioning some months back.\n\nI think it\u0027s OK to have the ability to use microversions even if we don\u0027t use it. It\u0027s much harder to use them if we need them, and haven\u0027t allowed for them.",
+      "parentUuid": "36c54cfb_c9ec6069",
       "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "4a92b444_8e8efa99",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-11-28T00:42:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a59f163f_44e37b59",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a224a9e2_d8426d00",
         "filename": "docs/api-conventions.md",
         "patchSetId": 8
@@ -98,6 +188,24 @@
       "writtenOn": "2017-11-27T16:53:33Z",
       "side": 1,
       "message": "to be authenticated",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b8ddf7a3_2afb69fd",
+        "filename": "docs/api-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-11-28T00:42:33Z",
+      "side": 1,
+      "message": "I\u0027ll fix the typo for \"to\", but this is intended to be UNauthenticated.",
+      "parentUuid": "a224a9e2_d8426d00",
       "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
@@ -138,6 +246,24 @@
     },
     {
       "key": {
+        "uuid": "ea7d1fe5_4c5b3801",
+        "filename": "docs/code-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-11-28T00:42:33Z",
+      "side": 1,
+      "message": "I\u0027ll add some info.",
+      "parentUuid": "b1ee906d_c2db9d74",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "841d53a8_b1fd1340",
         "filename": "docs/code-conventions.md",
         "patchSetId": 8
@@ -149,6 +275,24 @@
       "writtenOn": "2017-11-27T16:53:33Z",
       "side": 1,
       "message": "This standard sounds more like a recommendation, to me, seeming to tip-toe around the issue that we don\u0027t actually have pep8 standardization in UCP.",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ac51effe_45b7a471",
+        "filename": "docs/code-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-11-28T00:42:33Z",
+      "side": 1,
+      "message": "I was trying to indicate that PEP-8 is the target with the prior statements, but leave it open to doing some research if/when we introduce other languages and trigger automation in a lint step.  Help me out with the wording here if you\u0027ve got some suggestions.  I\u0027ll take a stab before my next commit as well.",
+      "parentUuid": "841d53a8_b1fd1340",
       "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
@@ -172,6 +316,24 @@
     },
     {
       "key": {
+        "uuid": "dc885bba_1fa96793",
+        "filename": "docs/code-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-11-28T00:42:33Z",
+      "side": 1,
+      "message": "tox is Python specific, I was making a feeble attempt at being more generic.  I\u0027ll add some stronger info regarding tox for python projects elsewhere.",
+      "parentUuid": "53ad37f8_f739f11f",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d1fbd19e_c2dc794c",
         "filename": "docs/service-logging-conventions.md",
         "patchSetId": 8
@@ -183,6 +345,24 @@
       "writtenOn": "2017-11-27T16:53:33Z",
       "side": 1,
       "message": "There should also be a standard about global vs local logging variables. Some projects do it globally only, others locally only, and yet others both.\n\nI don\u0027t think it\u0027d be out of scope to create an implementation-level standard, as it would obviously be of value.",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "506417c5_5aa8a7ab",
+        "filename": "docs/service-logging-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-11-28T00:42:33Z",
+      "side": 1,
+      "message": "I\u0027d actually like to move to a shared component, and I agree that for code consistency across components a single approach would be nicer.\n\nWhat\u0027s more important to me is that within a component that a single approach be applied. \n\nThis sort of breaks down when we get to multi-component projects (CLI/API client in the same project as the service), but considering those as things we\u0027ll eventually separate, it\u0027s not the end of the world if they aren\u0027t consistent in approach between the separate parts.\n\nI\u0027ll add the start of some verbiage in a \"consistency\" direction.",
+      "parentUuid": "d1fbd19e_c2dc794c",
       "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
