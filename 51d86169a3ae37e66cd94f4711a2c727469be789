@@ -16,6 +16,24 @@
       "revId": "51d86169a3ae37e66cd94f4711a2c727469be789",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2557590a_eea12db3",
+        "filename": "docs/code-conventions.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-11-28T00:42:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "45aa223b_0e84e9ee",
+      "revId": "51d86169a3ae37e66cd94f4711a2c727469be789",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
