@@ -334,6 +334,24 @@
     },
     {
       "key": {
+        "uuid": "b798c61f_fa9ce0b1",
+        "filename": "docs/code-conventions.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-12-01T05:01:17Z",
+      "side": 1,
+      "message": "You\u0027re right. I neglected DivingBell. I considered how everyone else is Python-based. I was mostly thinking about this from a \"this will help newcomers understand everything\" perspective, rather than a \"let\u0027s nuisance Craig\" perspective.",
+      "parentUuid": "dc885bba_1fa96793",
+      "revId": "f532fc3b3079fbc3630c0f6c91f0b16b58425778",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d1fbd19e_c2dc794c",
         "filename": "docs/service-logging-conventions.md",
         "patchSetId": 8
