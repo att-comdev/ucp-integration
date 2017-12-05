@@ -5,5 +5,6 @@ export GENESIS_NODE_IP=172.24.1.100
 export MASTER_NODE_IP=172.24.1.101
 export NODE_NET_IFACE=ens3
 export PROMENADE_IMAGE=quay.io/attcomdev/promenade:master
-export ARMADA_IMAGE=quay.io/attcomdev/armada:v0.7.1
+export ARMADA_IMAGE=quay.io/attcomdev/armada:master
 export DRYDOCK_IMAGE=sthussey/drydock:386668v14
+export MAAS_CACHE_IMAGE=sthussey/maas-cache:cachetest
