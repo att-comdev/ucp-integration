@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2123e9dc_d6fa772c",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 1
+      },
+      "lineNbr": 488,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2017-12-11T14:39:24Z",
+      "side": 1,
+      "message": "As far as I know Armada does not currently support cleaning up secrets. That could be a feature request.",
+      "parentUuid": "a7b6277d_fcc06969",
+      "revId": "6ec8b26de26acafde6211e83a899fcf25d25875b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b801387e_b079b590",
         "filename": "manifests/basic_ucp/deploy_ucp.sh",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2017-12-11T04:25:16Z",
       "side": 1,
       "message": "I think we also need to specify the host and port in order for Armada apply to work properly:\n\n\n$ tiller\u003d`kubectl get pods -n kube-system -o wide | grep tiller-deploy | awk \u0027{print $6}\u0027`\n\n$ docker run -t -v ~/.kube:/armada/.kube -v $(pwd):/target --net\u003dhost ${ARMADA_IMAGE} apply /target/${ARMADA_CONFIG} --tiller-host\u003d${tiller} --tiller-port\u003d44134",
+      "revId": "6ec8b26de26acafde6211e83a899fcf25d25875b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c6cdfd12_68f87a02",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2017-12-11T14:39:24Z",
+      "side": 1,
+      "message": "Armada should automatically find the tiller as deployed by `helm init` as the CLI checks in the kube-system namespace and looks for the default labels of app\u003dhelm name\u003dtiller",
+      "parentUuid": "b801387e_b079b590",
       "revId": "6ec8b26de26acafde6211e83a899fcf25d25875b",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
