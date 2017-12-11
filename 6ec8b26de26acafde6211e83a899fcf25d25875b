@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a7b6277d_fcc06969",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 1
+      },
+      "lineNbr": 488,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-12-11T04:25:16Z",
+      "side": 1,
+      "message": "Is it possible to delete secrets as well?\n\n\nroot@genesis:~# kubectl get secrets -n ucp | grep \u0027airflow\\|shipyard\u0027\nairflow-db-admin           Opaque                                1         1h\nairflow-db-user            Opaque                                1         1h\nshipyard-db-admin          Opaque                                1         1h\nshipyard-db-user           Opaque                                1         1h\nshipyard-keystone-admin    Opaque                                7         1h\nshipyard-keystone-user     Opaque                                7         1h\nroot@genesis:~#",
+      "revId": "6ec8b26de26acafde6211e83a899fcf25d25875b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b801387e_b079b590",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-12-11T04:25:16Z",
+      "side": 1,
+      "message": "I think we also need to specify the host and port in order for Armada apply to work properly:\n\n\n$ tiller\u003d`kubectl get pods -n kube-system -o wide | grep tiller-deploy | awk \u0027{print $6}\u0027`\n\n$ docker run -t -v ~/.kube:/armada/.kube -v $(pwd):/target --net\u003dhost ${ARMADA_IMAGE} apply /target/${ARMADA_CONFIG} --tiller-host\u003d${tiller} --tiller-port\u003d44134",
+      "revId": "6ec8b26de26acafde6211e83a899fcf25d25875b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
