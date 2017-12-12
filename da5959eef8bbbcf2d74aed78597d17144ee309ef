@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4b531169_f285d480",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 3
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-12-12T08:56:54Z",
+      "side": 1,
+      "message": "i think the application name should be \u0027deckhand-api\u0027\n\n\nroot@node1:~# kubectl get pods --show-labels -n ucp | grep deckhand | awk \u0027{print $6}\u0027\napplication\u003ddeckhand-api,component\u003dserver,pod-template-hash\u003d3322555126,release_group\u003ducp-deckhand\nroot@node1:~#",
+      "revId": "da5959eef8bbbcf2d74aed78597d17144ee309ef",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b3758d0f_23215037",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 3
+      },
+      "lineNbr": 490,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-12-12T08:56:54Z",
+      "side": 1,
+      "message": "i think the application name should be \u0027shipyard-api\u0027. We probably need to include the clean up for airflow as well\n\n\nroot@node1:~# kubectl get pods --show-labels -n ucp | grep shipyard | awk \u0027{print $6}\u0027\napplication\u003dairflow,component\u003dflower,pod-template-hash\u003d2787295760,release_group\u003ducp-shipyard\napplication\u003dairflow,component\u003dflower,pod-template-hash\u003d2787295760,release_group\u003ducp-shipyard\napplication\u003dairflow,component\u003dscheduler,pod-template-hash\u003d2810001694,release_group\u003ducp-shipyard\napplication\u003dairflow,component\u003dscheduler,pod-template-hash\u003d2810001694,release_group\u003ducp-shipyard\napplication\u003dairflow,component\u003dweb,pod-template-hash\u003d3682584138,release_group\u003ducp-shipyard\napplication\u003dairflow,component\u003dweb,pod-template-hash\u003d3682584138,release_group\u003ducp-shipyard\napplication\u003dairflow,component\u003dworker,pod-template-hash\u003d2222528271,release_group\u003ducp-shipyard\napplication\u003dairflow,component\u003dworker,pod-template-hash\u003d2222528271,release_group\u003ducp-shipyard\napplication\u003dshipyard-api,component\u003dserver,pod-template-hash\u003d29510455,release_group\u003ducp-shipyard\napplication\u003dshipyard-api,component\u003dserver,pod-template-hash\u003d29510455,release_group\u003ducp-shipyard\nroot@node1:~#",
+      "revId": "da5959eef8bbbcf2d74aed78597d17144ee309ef",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
