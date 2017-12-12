@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "45a763af_43e0d8cf",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-12-12T03:02:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4c582e4f_f7c882ea",
+      "range": {
+        "startLine": 61,
+        "startChar": 19,
+        "endLine": 61,
+        "endChar": 21
+      },
+      "revId": "fe6863a6717b4986f2ad44330ba3e31a0c14f980",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f85ed4b5_7bb9b2dc",
         "filename": "docs/source/api-conventions.rst",
         "patchSetId": 14
@@ -36,6 +60,30 @@
       "writtenOn": "2017-12-11T21:15:35Z",
       "side": 1,
       "message": "This field is still a mystery to me. Is there a use case where UCP will actually populate this with something useful?",
+      "range": {
+        "startLine": 62,
+        "startChar": 4,
+        "endLine": 62,
+        "endChar": 19
+      },
+      "revId": "fe6863a6717b4986f2ad44330ba3e31a0c14f980",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "626f2939_7b30bcad",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-12-12T03:02:48Z",
+      "side": 1,
+      "message": "Indeed. I suspect that it can\u0027t hurt to keep it as an empty object that clients should not be surprised by, but probably should not require it.",
+      "parentUuid": "f85ed4b5_7bb9b2dc",
       "range": {
         "startLine": 62,
         "startChar": 4,
@@ -71,6 +119,29 @@
     },
     {
       "key": {
+        "uuid": "426c9c1e_661e6a66",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-12-12T03:02:48Z",
+      "side": 1,
+      "message": "I\u0027m removing this and making message more what it\u0027s being used as - a human readable description.",
+      "range": {
+        "startLine": 64,
+        "startChar": 15,
+        "endLine": 64,
+        "endChar": 39
+      },
+      "revId": "fe6863a6717b4986f2ad44330ba3e31a0c14f980",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a676287_04dba21d",
         "filename": "docs/source/api-conventions.rst",
         "patchSetId": 14
@@ -94,6 +165,30 @@
     },
     {
       "key": {
+        "uuid": "712a4bf2_2f8be063",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-12-12T03:02:48Z",
+      "side": 1,
+      "message": "This has definitely deviated to your latter point.  I don\u0027t see a big benefit from a pedantic reading in our case. I\u0027ll add some description.",
+      "parentUuid": "7a676287_04dba21d",
+      "range": {
+        "startLine": 65,
+        "startChar": 4,
+        "endLine": 65,
+        "endChar": 46
+      },
+      "revId": "fe6863a6717b4986f2ad44330ba3e31a0c14f980",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9697ea78_99a3ca5f",
         "filename": "docs/source/api-conventions.rst",
         "patchSetId": 14
@@ -105,6 +200,30 @@
       "writtenOn": "2017-12-11T21:15:35Z",
       "side": 1,
       "message": "``error: True``",
+      "range": {
+        "startLine": 85,
+        "startChar": 22,
+        "endLine": 85,
+        "endChar": 35
+      },
+      "revId": "fe6863a6717b4986f2ad44330ba3e31a0c14f980",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "07fe6b21_1cfc4b85",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-12-12T03:02:48Z",
+      "side": 1,
+      "message": "I\u0027ll offset with the quotes, but lowercase true since it is json.",
+      "parentUuid": "9697ea78_99a3ca5f",
       "range": {
         "startLine": 85,
         "startChar": 22,
@@ -163,6 +282,30 @@
     },
     {
       "key": {
+        "uuid": "88623076_ce7bcbe1",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-12-12T03:02:48Z",
+      "side": 1,
+      "message": "This seems to be copy/paste from the basic validation, so I\u0027m going to remove it, but in general, it\u0027s nice to have upper bounds for api consumers to be able to set reasonable timeouts.",
+      "parentUuid": "b8d80cf8_b7c23fff",
+      "range": {
+        "startLine": 111,
+        "startChar": 28,
+        "endLine": 111,
+        "endChar": 72
+      },
+      "revId": "fe6863a6717b4986f2ad44330ba3e31a0c14f980",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c653e8e1_29f415d4",
         "filename": "docs/source/api-conventions.rst",
         "patchSetId": 14
@@ -186,6 +329,30 @@
     },
     {
       "key": {
+        "uuid": "5790d1be_08f5bdb3",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-12-12T03:02:48Z",
+      "side": 1,
+      "message": "agree, I\u0027ll need to update Shipyard a bit to accept both until we can move everyone over.",
+      "parentUuid": "c653e8e1_29f415d4",
+      "range": {
+        "startLine": 147,
+        "startChar": 15,
+        "endLine": 147,
+        "endChar": 22
+      },
+      "revId": "fe6863a6717b4986f2ad44330ba3e31a0c14f980",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1cda3a0a_2c5f7664",
         "filename": "docs/source/api-conventions.rst",
         "patchSetId": 14
@@ -197,6 +364,30 @@
       "writtenOn": "2017-12-11T21:15:35Z",
       "side": 1,
       "message": "This can only be gleaned if this information is made mandatory in a DataSchema. Namely, the metadata.labels.application: \u003cUCP Component\u003e field will have to be provided. Otherwise DH will have to do hacky stuff just to figure out the UCP component name from a DataSchema document.",
+      "range": {
+        "startLine": 148,
+        "startChar": 16,
+        "endLine": 148,
+        "endChar": 38
+      },
+      "revId": "fe6863a6717b4986f2ad44330ba3e31a0c14f980",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b121b558_99bdf259",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-12-12T03:02:48Z",
+      "side": 1,
+      "message": "Since this is the result of a direct request to a component to validate the design, as opposed to a request to Deckhand to get the aggregated responses from all the other components, I think it\u0027s appropriate to have the component know it\u0027s own name.  I would not expect that Deckhand to necessarily respond with this exact structure/message.",
+      "parentUuid": "1cda3a0a_2c5f7664",
       "range": {
         "startLine": 148,
         "startChar": 16,
@@ -255,6 +446,30 @@
     },
     {
       "key": {
+        "uuid": "2ad65164_97d9cabd",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-12-12T03:02:48Z",
+      "side": 1,
+      "message": "Switched to Success/Failure",
+      "parentUuid": "c45d7037_4887f58b",
+      "range": {
+        "startLine": 219,
+        "startChar": 13,
+        "endLine": 219,
+        "endChar": 36
+      },
+      "revId": "fe6863a6717b4986f2ad44330ba3e31a0c14f980",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a1911d10_e98791e5",
         "filename": "docs/source/api-conventions.rst",
         "patchSetId": 14
@@ -266,6 +481,30 @@
       "writtenOn": "2017-12-11T21:15:35Z",
       "side": 1,
       "message": "Again, this violates the one-word camelCase rule above.",
+      "range": {
+        "startLine": 221,
+        "startChar": 15,
+        "endLine": 221,
+        "endChar": 28
+      },
+      "revId": "fe6863a6717b4986f2ad44330ba3e31a0c14f980",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9edb6aca_beb46056",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-12-12T03:02:48Z",
+      "side": 1,
+      "message": "Changed to HealthCheck",
+      "parentUuid": "a1911d10_e98791e5",
       "range": {
         "startLine": 221,
         "startChar": 15,
@@ -301,6 +540,30 @@
     },
     {
       "key": {
+        "uuid": "06a234b0_0094edac",
+        "filename": "docs/source/code-conventions.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-12-12T03:02:48Z",
+      "side": 1,
+      "message": "Agree - I\u0027ll add a section talking about this.  Shipyard is also lagging behind in the old format, and needs to be updated eventually to bring it into compliance.",
+      "parentUuid": "d750bc7f_e3fb3e78",
+      "range": {
+        "startLine": 131,
+        "startChar": 11,
+        "endLine": 131,
+        "endChar": 16
+      },
+      "revId": "fe6863a6717b4986f2ad44330ba3e31a0c14f980",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3b388cc3_a4edfbca",
         "filename": "docs/source/index.rst",
         "patchSetId": 14
@@ -312,6 +575,30 @@
       "writtenOn": "2017-12-11T21:15:35Z",
       "side": 1,
       "message": "This needs a corresponding reference on L20, around column 5.",
+      "range": {
+        "startLine": 45,
+        "startChar": 3,
+        "endLine": 45,
+        "endChar": 25
+      },
+      "revId": "fe6863a6717b4986f2ad44330ba3e31a0c14f980",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b298ce57_e54f3dd5",
+        "filename": "docs/source/index.rst",
+        "patchSetId": 14
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-12-12T03:02:48Z",
+      "side": 1,
+      "message": "?  Line 29, Col 1.  \nLine 20, Col 5 is for UCP, not for OSH.\nConfused.",
+      "parentUuid": "3b388cc3_a4edfbca",
       "range": {
         "startLine": 45,
         "startChar": 3,
