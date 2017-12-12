@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "28faa9a8_4fc9e5e0",
+        "filename": "docs/source/index.rst",
+        "patchSetId": 19
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-12-12T21:23:35Z",
+      "side": 1,
+      "message": "Are the triple ticks intended? Double should be enough. Also can just use a tox entrypoint here later (as it would self-referentially align with its own documentation :D), but this is fine since we don\u0027t use tox for anything else.",
+      "range": {
+        "startLine": 35,
+        "startChar": 6,
+        "endLine": 35,
+        "endChar": 56
+      },
+      "revId": "7c5399ae1080d618eafad988646e10e1167fe546",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
