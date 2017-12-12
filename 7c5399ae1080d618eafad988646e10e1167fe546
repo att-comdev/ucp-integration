@@ -22,6 +22,30 @@
       "revId": "7c5399ae1080d618eafad988646e10e1167fe546",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "440504cd_3b432008",
+        "filename": "docs/source/index.rst",
+        "patchSetId": 19
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2017-12-12T23:27:23Z",
+      "side": 1,
+      "message": "removed the triple ticks...\n\ndidn\u0027t reference tox since UCP Integration doesn\u0027t have a tox.ini",
+      "parentUuid": "28faa9a8_4fc9e5e0",
+      "range": {
+        "startLine": 35,
+        "startChar": 6,
+        "endLine": 35,
+        "endChar": 56
+      },
+      "revId": "7c5399ae1080d618eafad988646e10e1167fe546",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
