@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "035677b0_b7eb7bbe",
+        "filename": "docs/source/code-conventions.rst",
+        "patchSetId": 23
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2017-12-13T21:29:50Z",
+      "side": 1,
+      "message": "Maybe we should go ahead and list a table of standards that are decided. You\u0027ve listed examples, but we might want build an explicit list where the standard is known for a language\n\nPython - Pep8\nGo - Gofmt\nBash - shellcheck",
+      "revId": "b6d40f0050064c7b0e941b04f6064d48e4a2120a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ec702ce_97f823ac",
+        "filename": "docs/source/code-conventions.rst",
+        "patchSetId": 23
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2017-12-13T21:29:50Z",
+      "side": 1,
+      "message": "Need to call Python out specifically if we list this above?",
+      "revId": "b6d40f0050064c7b0e941b04f6064d48e4a2120a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e0d6c178_881322a6",
+        "filename": "docs/source/service-logging-conventions.rst",
+        "patchSetId": 23
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2017-12-13T21:29:50Z",
+      "side": 1,
+      "message": "I\u0027d like to see an instance_id included for services that run replicas. Something like drydock-api:{8 bytes of random}",
+      "revId": "b6d40f0050064c7b0e941b04f6064d48e4a2120a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8f62983a_771c758c",
+        "filename": "docs/source/ucp-basic-deployment.rst",
+        "patchSetId": 23
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2017-12-13T21:29:50Z",
+      "side": 1,
+      "message": "There should be no updates in deploy_ucp.sh. All customizations should be done via env vars. This should be removed and fall into Deployment #3 below.",
+      "revId": "b6d40f0050064c7b0e941b04f6064d48e4a2120a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
