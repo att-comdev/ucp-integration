@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "033845ec_33b617d0",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 3
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-12-15T16:52:41Z",
+      "side": 1,
+      "message": "Agree. You are right on this.",
+      "parentUuid": "1a78bdcd_0a1c79d6",
+      "revId": "da5959eef8bbbcf2d74aed78597d17144ee309ef",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b3758d0f_23215037",
         "filename": "manifests/basic_ucp/armada.yaml.sub",
         "patchSetId": 3
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Same re: shipyard\n\n  root@node1:/home/ubuntu# kubectl get jobs --show-labels -n ucp | grep shipyard | tr -s \u0027 \u0027 | cut -d\u0027 \u0027 -f 5                             \n  application\u003dairflow,component\u003ddb-init,controller-uid\u003de6227197-e1b3-11e7-a599-525400e1bdb4,job-name\u003dairflow-db-init,release_group\u003ducp-shi\npyard                                                                                                                                   \n  application\u003dairflow,component\u003ddb-sync,controller-uid\u003de61c2101-e1b3-11e7-a599-525400e1bdb4,job-name\u003dairflow-db-sync,release_group\u003ducp-shi\npyard                                                                                                                                   \n  application\u003dshipyard,component\u003ddb-init,controller-uid\u003de6144777-e1b3-11e7-a599-525400e1bdb4,job-name\u003dshipyard-db-init,release_group\u003ducp-s\nhipyard                                                                                                                                 \n  application\u003dshipyard,component\u003ddb-sync,controller-uid\u003de6082119-e1b3-11e7-a599-525400e1bdb4,job-name\u003dshipyard-db-sync,release_group\u003ducp-s\nhipyard                                                                                                                                 \n  application\u003dshipyard,component\u003dks-endpoints,controller-uid\u003de638f15e-e1b3-11e7-a599-525400e1bdb4,job-name\u003dshipyard-ks-endpoints,release_g\nroup\u003ducp-shipyard                                                                                                                       \n  application\u003dshipyard,component\u003dks-user,controller-uid\u003de626f3fb-e1b3-11e7-a599-525400e1bdb4,job-name\u003dshipyard-ks-service,release_group\u003duc\np-shipyard                                                                                                                              \n  controller-uid\u003de60f8a11-e1b3-11e7-a599-525400e1bdb4,job-name\u003dshipyard-ks-user                                                           \n\nAnd for airflow I\u0027ll add in a hook.\n\n  root@node1:/home/ubuntu# kubectl get jobs --show-labels -n ucp | grep airflow | tr -s \u0027 \u0027 | cut -d\u0027 \u0027 -f 5                              \n  application\u003dairflow,component\u003ddb-init,controller-uid\u003de6227197-e1b3-11e7-a599-525400e1bdb4,job-name\u003dairflow-db-init,release_group\u003ducp-shi\npyard                                                                                                                                   \n  application\u003dairflow,component\u003ddb-sync,controller-uid\u003de61c2101-e1b3-11e7-a599-525400e1bdb4,job-name\u003dairflow-db-sync,release_group\u003ducp-shi\npyard",
       "parentUuid": "b3758d0f_23215037",
+      "revId": "da5959eef8bbbcf2d74aed78597d17144ee309ef",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "21c6c1af_6a34f0dc",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 3
+      },
+      "lineNbr": 490,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2017-12-15T16:52:41Z",
+      "side": 1,
+      "message": "Agree. This is the right value.",
+      "parentUuid": "6099935b_4b04e25c",
       "revId": "da5959eef8bbbcf2d74aed78597d17144ee309ef",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
