@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a78bdcd_0a1c79d6",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 3
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2017-12-15T16:45:05Z",
+      "side": 1,
+      "message": "These aren\u0027t for pods, they are for jobs\n\n  root@node1:/home/ubuntu# kubectl get jobs --show-labels -n ucp | grep deckhand | tr -s \u0027 \u0027 | cut -d\u0027 \u0027 -f 5                             \n  application\u003ddeckhand,component\u003ddb-init,controller-uid\u003de3e4b484-e1b3-11e7-a599-525400e1bdb4,job-name\u003ddeckhand-db-init,release_group\u003ducp-d\neckhand                                                                                                                                 \n  application\u003ddeckhand,component\u003ddb-sync,controller-uid\u003de3e29795-e1b3-11e7-a599-525400e1bdb4,job-name\u003ddeckhand-db-sync,release_group\u003ducp-d\neckhand                                                                                                                                 \n  application\u003ddeckhand,component\u003dks-endpoints,controller-uid\u003de3f12543-e1b3-11e7-a599-525400e1bdb4,job-name\u003ddeckhand-ks-endpoints,release_g\nroup\u003ducp-deckhand                                                                                                                       \n  application\u003ddeckhand,component\u003dks-user,controller-uid\u003de3f5668f-e1b3-11e7-a599-525400e1bdb4,job-name\u003ddeckhand-ks-service,release_group\u003duc\np-deckhand                                                                                                                              \n  controller-uid\u003de3e948da-e1b3-11e7-a599-525400e1bdb4,job-name\u003ddeckhand-ks-user                                                           \n  root@node1:/home/ubuntu#",
+      "parentUuid": "4b531169_f285d480",
+      "revId": "da5959eef8bbbcf2d74aed78597d17144ee309ef",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b3758d0f_23215037",
         "filename": "manifests/basic_ucp/armada.yaml.sub",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2017-12-12T08:56:54Z",
       "side": 1,
       "message": "i think the application name should be \u0027shipyard-api\u0027. We probably need to include the clean up for airflow as well\n\n\nroot@node1:~# kubectl get pods --show-labels -n ucp | grep shipyard | awk \u0027{print $6}\u0027\napplication\u003dairflow,component\u003dflower,pod-template-hash\u003d2787295760,release_group\u003ducp-shipyard\napplication\u003dairflow,component\u003dflower,pod-template-hash\u003d2787295760,release_group\u003ducp-shipyard\napplication\u003dairflow,component\u003dscheduler,pod-template-hash\u003d2810001694,release_group\u003ducp-shipyard\napplication\u003dairflow,component\u003dscheduler,pod-template-hash\u003d2810001694,release_group\u003ducp-shipyard\napplication\u003dairflow,component\u003dweb,pod-template-hash\u003d3682584138,release_group\u003ducp-shipyard\napplication\u003dairflow,component\u003dweb,pod-template-hash\u003d3682584138,release_group\u003ducp-shipyard\napplication\u003dairflow,component\u003dworker,pod-template-hash\u003d2222528271,release_group\u003ducp-shipyard\napplication\u003dairflow,component\u003dworker,pod-template-hash\u003d2222528271,release_group\u003ducp-shipyard\napplication\u003dshipyard-api,component\u003dserver,pod-template-hash\u003d29510455,release_group\u003ducp-shipyard\napplication\u003dshipyard-api,component\u003dserver,pod-template-hash\u003d29510455,release_group\u003ducp-shipyard\nroot@node1:~#",
+      "revId": "da5959eef8bbbcf2d74aed78597d17144ee309ef",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6099935b_4b04e25c",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 3
+      },
+      "lineNbr": 490,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2017-12-15T16:45:05Z",
+      "side": 1,
+      "message": "Same re: shipyard\n\n  root@node1:/home/ubuntu# kubectl get jobs --show-labels -n ucp | grep shipyard | tr -s \u0027 \u0027 | cut -d\u0027 \u0027 -f 5                             \n  application\u003dairflow,component\u003ddb-init,controller-uid\u003de6227197-e1b3-11e7-a599-525400e1bdb4,job-name\u003dairflow-db-init,release_group\u003ducp-shi\npyard                                                                                                                                   \n  application\u003dairflow,component\u003ddb-sync,controller-uid\u003de61c2101-e1b3-11e7-a599-525400e1bdb4,job-name\u003dairflow-db-sync,release_group\u003ducp-shi\npyard                                                                                                                                   \n  application\u003dshipyard,component\u003ddb-init,controller-uid\u003de6144777-e1b3-11e7-a599-525400e1bdb4,job-name\u003dshipyard-db-init,release_group\u003ducp-s\nhipyard                                                                                                                                 \n  application\u003dshipyard,component\u003ddb-sync,controller-uid\u003de6082119-e1b3-11e7-a599-525400e1bdb4,job-name\u003dshipyard-db-sync,release_group\u003ducp-s\nhipyard                                                                                                                                 \n  application\u003dshipyard,component\u003dks-endpoints,controller-uid\u003de638f15e-e1b3-11e7-a599-525400e1bdb4,job-name\u003dshipyard-ks-endpoints,release_g\nroup\u003ducp-shipyard                                                                                                                       \n  application\u003dshipyard,component\u003dks-user,controller-uid\u003de626f3fb-e1b3-11e7-a599-525400e1bdb4,job-name\u003dshipyard-ks-service,release_group\u003duc\np-shipyard                                                                                                                              \n  controller-uid\u003de60f8a11-e1b3-11e7-a599-525400e1bdb4,job-name\u003dshipyard-ks-user                                                           \n\nAnd for airflow I\u0027ll add in a hook.\n\n  root@node1:/home/ubuntu# kubectl get jobs --show-labels -n ucp | grep airflow | tr -s \u0027 \u0027 | cut -d\u0027 \u0027 -f 5                              \n  application\u003dairflow,component\u003ddb-init,controller-uid\u003de6227197-e1b3-11e7-a599-525400e1bdb4,job-name\u003dairflow-db-init,release_group\u003ducp-shi\npyard                                                                                                                                   \n  application\u003dairflow,component\u003ddb-sync,controller-uid\u003de61c2101-e1b3-11e7-a599-525400e1bdb4,job-name\u003dairflow-db-sync,release_group\u003ducp-shi\npyard",
+      "parentUuid": "b3758d0f_23215037",
       "revId": "da5959eef8bbbcf2d74aed78597d17144ee309ef",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
