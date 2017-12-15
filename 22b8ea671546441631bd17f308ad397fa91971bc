@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ec7cd093_ccb40f21",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2017-12-15T18:36:34Z",
+      "side": 1,
+      "message": "This can be unindented",
+      "range": {
+        "startLine": 143,
+        "startChar": 3,
+        "endLine": 143,
+        "endChar": 5
+      },
+      "revId": "22b8ea671546441631bd17f308ad397fa91971bc",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
