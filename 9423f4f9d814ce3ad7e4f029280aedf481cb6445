@@ -16,6 +16,24 @@
       "revId": "9423f4f9d814ce3ad7e4f029280aedf481cb6445",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "861d0ac4_dea28302",
+        "filename": "manifests/basic_ucp/get_token.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2017-12-15T17:00:04Z",
+      "side": 1,
+      "message": "No, updated",
+      "parentUuid": "eed77843_3de56bb8",
+      "revId": "9423f4f9d814ce3ad7e4f029280aedf481cb6445",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
