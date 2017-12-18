@@ -66,22 +66,22 @@ export ARMADA_CHART_PATH=${ARMADA_CHART_PATH:-"charts/armada"}
 export ARMADA_CHART_BRANCH=${ARMADA_CHART_BRANCH:-"master"}
 
 #Kubernetes artifacts
-export KUBE_PROXY_IMAGE=${KUBE_PROXY_IMAGE:-"gcr.io/google_containers/hyperkube-amd64:v1.8.0"}
+export KUBE_PROXY_IMAGE=${KUBE_PROXY_IMAGE:-"gcr.io/google_containers/hyperkube-amd64:v1.9.0"}
 export KUBE_ETCD_IMAGE=${KUBE_ETCD_IMAGE:-"quay.io/coreos/etcd:v3.0.17"}
 export KUBE_ETCDCTL_IMAGE=${KUBE_ETCDCTL_IMAGE:-"quay.io/coreos/etcd:v3.0.17"}
-export KUBE_ANCHOR_IMAGE=${KUBE_ANCHOR_IMAGE:-"gcr.io/google_containers/hyperkube-amd64:v1.8.0"}
+export KUBE_ANCHOR_IMAGE=${KUBE_ANCHOR_IMAGE:-"gcr.io/google_containers/hyperkube-amd64:v1.9.0"}
 export KUBE_COREDNS_IMAGE=${KUBE_COREDNS_IMAGE:-"coredns/coredns:0.9.9"}
-export KUBE_APISERVER_IMAGE=${KUBE_APISERVER_IMAGE:-"gcr.io/google_containers/hyperkube-amd64:v1.8.0"}
-export KUBE_CTLRMGR_IMAGE=${KUBE_CTLRMGR_IMAGE:-"gcr.io/google_containers/hyperkube-amd64:v1.8.0"}
-export KUBE_SCHED_IMAGE=${KUBE_SCHED_IMAGE:-"gcr.io/google_containers/hyperkube-amd64:v1.8.0"}
-export KUBECTL_IMAGE=${KUBECTL_IMAGE:-"gcr.io/google_containers/hyperkube-amd64:v1.8.0"}
+export KUBE_APISERVER_IMAGE=${KUBE_APISERVER_IMAGE:-"gcr.io/google_containers/hyperkube-amd64:v1.9.0"}
+export KUBE_CTLRMGR_IMAGE=${KUBE_CTLRMGR_IMAGE:-"gcr.io/google_containers/hyperkube-amd64:v1.9.0"}
+export KUBE_SCHED_IMAGE=${KUBE_SCHED_IMAGE:-"gcr.io/google_containers/hyperkube-amd64:v1.9.0"}
+export KUBECTL_IMAGE=${KUBECTL_IMAGE:-"gcr.io/google_containers/hyperkube-amd64:v1.9.0"}
 export CALICO_CNI_IMAGE=${CALICO_CNI_IMAGE:-"quay.io/calico/cni:v1.11.0"}
 export CALICO_CTL_IMAGE=${CALICO_CTL_IMAGE:-"quay.io/calico/ctl:v1.6.1"}
 export CALICO_NODE_IMAGE=${CALICO_NODE_IMAGE:-"quay.io/calico/node:v2.6.1"}
 export CALICO_POLICYCTLR_IMAGE=${CALICO_POLICYCTLR_IMAGE:-"quay.io/calico/kube-controllers:v1.0.0"}
 export CALICO_ETCD_IMAGE=${CALICO_ETCD_IMAGE:-"quay.io/coreos/etcd:v3.0.17"}
 export CALICO_ETCDCTL_IMAGE=${CALICO_ETCDCTL_IMAGE:-"quay.io/coreos/etcd:v3.0.17"}
-export KUBE_KUBELET_TAR=${KUBE_KUBELET_TAR:-"https://dl.k8s.io/v1.8.0/kubernetes-node-linux-amd64.tar.gz"}
+export KUBE_KUBELET_TAR=${KUBE_KUBELET_TAR:-"https://dl.k8s.io/v1.9.0/kubernetes-node-linux-amd64.tar.gz"}
 
 # Images
 export TILLER_IMAGE=${TILLER_IMAGE:-"gcr.io/kubernetes-helm/tiller:v2.5.1"}
