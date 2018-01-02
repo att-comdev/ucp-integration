@@ -187,6 +187,84 @@ data:
 schema: armada/Chart/v1
 metadata:
   schema: metadata/Document/v1
+  name: clcp-elasticsearch
+data:
+  chart_name: clcp-elasticsearch
+  release: clcp-elasticsearch
+  namespace: kube-system
+  install:
+    no_hooks: false
+  upgrade:
+    no_hooks: false
+  values:
+    labels:
+      node_selector_key: ucp-control-plane
+      node_selector_value: enabled
+    storage:
+      filesystem_repository:
+        enabled: false
+    manifests:
+      job_snapshot_repository: false
+      pvc_snapshots: false
+  source:
+    type: git
+    location: https://git.openstack.org/openstack/openstack-helm-infra
+    subpath: elasticsearch
+  dependencies:
+    - helm-toolkit
+---
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
+  name: clcp-fluent-logging
+data:
+  chart_name: clcp-fluent-logging
+  release: clcp-fluent-logging
+  namespace: kube-system
+  install:
+    no_hooks: false
+  upgrade:
+    no_hooks: false
+  values:
+    labels:
+      node_selector_key: ucp-control-plane
+      node_selector_value: enabled
+  source:
+    type: git
+    location: https://git.openstack.org/openstack/openstack-helm-infra
+    subpath: fluent-logging
+  dependencies:
+    - helm-toolkit
+---
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
+  name: clcp-kibana
+data:
+  chart_name: clcp-kibana
+  release: clcp-kibana
+  namespace: kube-system
+  install:
+    no_hooks: false
+  upgrade:
+    no_hooks: false
+  values:
+    labels:
+      node_selector_key: ucp-control-plane
+      node_selector_value: enabled
+    pod:
+      replicas:
+        kibana: 1
+  source:
+    type: git
+    location: https://git.openstack.org/openstack/openstack-helm-infra
+    subpath: kibana
+  dependencies:
+    - helm-toolkit
+---
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
   name: ucp-mariadb
 data:
   chart_name: ucp-mariadb
@@ -697,6 +775,18 @@ data:
 schema: armada/ChartGroup/v1
 metadata:
   schema: metadata/Document/v1
+  name: clcp-logging
+data:
+  description: 'Logging Infrastructure'
+  sequenced: true
+  chart_group:
+    - clcp-elasticsearch
+    - clcp-fluent-logging
+    - clcp-kibana
+---
+schema: armada/ChartGroup/v1
+metadata:
+  schema: metadata/Document/v1
   name: ucp-infra
 data:
   description: 'UCP Infrastructure'
@@ -735,6 +825,7 @@ data:
   release_prefix: ucp
   chart_groups:
     - ceph
+    - clcp-logging
     - ucp-infra
     - ucp-services
 ...
