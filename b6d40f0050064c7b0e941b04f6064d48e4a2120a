@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "15811e80_492892f0",
+        "filename": "docs/source/service-logging-conventions.rst",
+        "patchSetId": 23
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-01-02T16:04:46Z",
+      "side": 1,
+      "message": "Per some side discussion, not going to add this since the log collection will include container id and anything the docker log driver is configured to add.  I don\u0027t think we need to standardize on another layer of identification at this time. Services are definitely welcome to include anything they wish in the message portion, so specific use cases could be satisfied that way.",
+      "parentUuid": "e0d6c178_881322a6",
+      "revId": "b6d40f0050064c7b0e941b04f6064d48e4a2120a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8f62983a_771c758c",
         "filename": "docs/source/ucp-basic-deployment.rst",
         "patchSetId": 23
@@ -64,6 +82,24 @@
       "writtenOn": "2017-12-13T21:29:50Z",
       "side": 1,
       "message": "There should be no updates in deploy_ucp.sh. All customizations should be done via env vars. This should be removed and fall into Deployment #3 below.",
+      "revId": "b6d40f0050064c7b0e941b04f6064d48e4a2120a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c5c50512_a481578b",
+        "filename": "docs/source/ucp-basic-deployment.rst",
+        "patchSetId": 23
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-01-02T16:04:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8f62983a_771c758c",
       "revId": "b6d40f0050064c7b0e941b04f6064d48e4a2120a",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
