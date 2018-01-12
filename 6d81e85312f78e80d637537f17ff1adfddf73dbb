@@ -258,6 +258,30 @@
       "revId": "6d81e85312f78e80d637537f17ff1adfddf73dbb",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "383398be_dca77ec0",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-01-12T20:25:01Z",
+      "side": 1,
+      "message": "The need for US were identified on today\u0027s gaps call.",
+      "parentUuid": "54051fb1_54d2ebeb",
+      "range": {
+        "startLine": 223,
+        "startChar": 0,
+        "endLine": 225,
+        "endChar": 10
+      },
+      "revId": "6d81e85312f78e80d637537f17ff1adfddf73dbb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
