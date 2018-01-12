@@ -234,6 +234,30 @@
       "revId": "6d81e85312f78e80d637537f17ff1adfddf73dbb",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "54051fb1_54d2ebeb",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-01-12T19:53:35Z",
+      "side": 1,
+      "message": "Fair enough, I think that it shouldn\u0027t be hard for any of us to update logging, it\u0027s more grunt work than anything.\n\nUpdating all error messages and responses to align with this though will take some time, unless we have some stories around this. This is the kind of thing where a unified implementation will go a long way. I\u0027ve been hesitant to add stuff like this to Deckhand because then each and every service needs to update their internal logic to align with this, when a common library could rather be imported and used appropriately.\n\nFor example, just for rendered-documents to really return a list of all meaningful errors, warnings and messages I\u0027d probably have to pass around the request context with a kind of template of stuff that I populate in various places, then have a function (or middleware) at the very end of the controller that unravels it all and returns the appropriately formatted error message. While I think this document is useful, right now it\u0027s hard to enforce without someone going to each repo and forcing the standard on it, because as I said, a lot of this is tedious grunt work.\n\nThat\u0027s not to say I disagree with the value of good logging and with what\u0027s presented here, I just balk at having to go accumulate more specific fine-grained information everywhere then assemble it all with a pretty bow.",
+      "parentUuid": "b1980198_b2ae0286",
+      "range": {
+        "startLine": 223,
+        "startChar": 0,
+        "endLine": 225,
+        "endChar": 10
+      },
+      "revId": "6d81e85312f78e80d637537f17ff1adfddf73dbb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
