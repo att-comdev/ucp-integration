@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a3274601_af2902f9",
+        "filename": "manifests/basic_ucp/drydock_deckhand.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-01-12T06:07:53Z",
+      "side": 1,
+      "message": "This should be removed as per: http://deckhand.readthedocs.io/en/latest/validation.html#deckhand.engine.schema.v1_0.layering_policy_schema.schema\n\nThough I do see value in layeringDefinition.abstract, but not layeringDefinition.layer as a LayeringPolicy will never itself undergo layering.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 15
+      },
+      "revId": "7e8e972908a9d8b7b2ceadcf067a335c869f87be",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e65650d2_fc46b79d",
+        "filename": "manifests/basic_ucp/drydock_deckhand.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-01-12T06:07:53Z",
+      "side": 1,
+      "message": "Are there DataSchemas for any of these custom schemas? I guess that can be added later.",
+      "revId": "7e8e972908a9d8b7b2ceadcf067a335c869f87be",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
