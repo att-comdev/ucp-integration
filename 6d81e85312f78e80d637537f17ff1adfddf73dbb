@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "e4c4035e_0b971809",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-01-12T19:03:04Z",
+      "side": 1,
+      "message": "I changed the wording, as that doesn\u0027t belong here anyway.",
+      "parentUuid": "38033677_83e1042c",
+      "range": {
+        "startLine": 69,
+        "startChar": 26,
+        "endLine": 69,
+        "endChar": 43
+      },
+      "revId": "6d81e85312f78e80d637537f17ff1adfddf73dbb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5681a96f_ce25836e",
         "filename": "docs/source/api-conventions.rst",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2018-01-12T17:54:29Z",
       "side": 1,
       "message": "an",
+      "range": {
+        "startLine": 89,
+        "startChar": 54,
+        "endLine": 89,
+        "endChar": 55
+      },
+      "revId": "6d81e85312f78e80d637537f17ff1adfddf73dbb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae112f08_1ee738e4",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-01-12T19:03:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5681a96f_ce25836e",
       "range": {
         "startLine": 89,
         "startChar": 54,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "00aad2a5_cd76ab3b",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-01-12T19:03:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "50ef5930_79f8f242",
+      "range": {
+        "startLine": 96,
+        "startChar": 64,
+        "endLine": 96,
+        "endChar": 72
+      },
+      "revId": "6d81e85312f78e80d637537f17ff1adfddf73dbb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "461efb74_38a95822",
         "filename": "docs/source/api-conventions.rst",
         "patchSetId": 2
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "60e4e7fb_23e69d33",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-01-12T19:03:04Z",
+      "side": 1,
+      "message": "These are not necessarily error messages, but in any case there should be no cases where error is true and the level is not Error that I can think of.  It will be up to the components to no do dumb things with this.  I would dump the \"error\" field altogether, except that this maintains our backwards compatibility with current implementation.",
+      "parentUuid": "461efb74_38a95822",
+      "range": {
+        "startLine": 178,
+        "startChar": 11,
+        "endLine": 178,
+        "endChar": 28
+      },
+      "revId": "6d81e85312f78e80d637537f17ff1adfddf73dbb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d2c972ac_63b00305",
         "filename": "docs/source/api-conventions.rst",
         "patchSetId": 2
@@ -105,6 +201,30 @@
       "writtenOn": "2018-01-12T17:54:29Z",
       "side": 1,
       "message": "So if error is false then your valid options are \"Warning\" or \"Info\" but if error is true then your valid options are just \"Error\"? I\u0027m curious under what circumstances an API would return a successful code with a \"Warning\"? \n\nLet me rephrase: the gist of what I\u0027m getting here is that UCP responses should be extremely verbose and contain as much information as humanly possible? I guess we don\u0027t want people sifting through logs at all and finding logging messages with WARNING and INFO levels themselves?\n\nWhat I see from an implementation standpoint is a new array being instantiated per API request and every time you call LOG.warning or something, you just create a wrapper around that that writes a new line to the array as well as outputs to LOG.warning, then returns this intricate response back to the user. \n\nWithout a bunch of helpers and abstraction, our APIs will just be littered with error message response building which is something that has already happened and I feel like this will compound the problem unless a nice module is written that abstracts a lot of that away.",
+      "range": {
+        "startLine": 223,
+        "startChar": 0,
+        "endLine": 225,
+        "endChar": 10
+      },
+      "revId": "6d81e85312f78e80d637537f17ff1adfddf73dbb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b1980198_b2ae0286",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-01-12T19:03:04Z",
+      "side": 1,
+      "message": "The example that makes most sense for what I intend for Warning is the case where something like: \"There are no nodes specified\". This could be wrong, it might be right... it\u0027s worth noting that it\u0027s abnormal.  \n\nThe response as part of a validation message should not be the same as what we log.  I expect logs to more indicate the intricacies of what the code is doing for support purposes, while this should be capturing the information for the user.\n\nI\u0027ve been a little taken aback by the lack of logging in our code at the debug and trace levels that would allow a troubleshooter to follow what happened in the code - I\u0027m clearly to blame for not having enough in some of my stuff, but some of the code is completely bereft of any operational information.\n\nIn any case, I think conflating logging with the intention here is not the intent. This is for things intended for the user or client of the software, and as such, I expect that it is as verbose as reasonable to point to the particular problem.\n\nOne of the drivers of our validation was complete info - so it should include \"this validation passed\", \"this next validation passed\" etc...",
+      "parentUuid": "d2c972ac_63b00305",
       "range": {
         "startLine": 223,
         "startChar": 0,
