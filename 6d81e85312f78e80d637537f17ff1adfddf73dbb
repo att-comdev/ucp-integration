@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "38033677_83e1042c",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-01-12T17:54:29Z",
+      "side": 1,
+      "message": "Might be clearer to name this \"sample error message\".",
+      "range": {
+        "startLine": 69,
+        "startChar": 26,
+        "endLine": 69,
+        "endChar": 43
+      },
+      "revId": "6d81e85312f78e80d637537f17ff1adfddf73dbb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5681a96f_ce25836e",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-01-12T17:54:29Z",
+      "side": 1,
+      "message": "an",
+      "range": {
+        "startLine": 89,
+        "startChar": 54,
+        "endLine": 89,
+        "endChar": 55
+      },
+      "revId": "6d81e85312f78e80d637537f17ff1adfddf73dbb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "50ef5930_79f8f242",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-01-12T17:54:29Z",
+      "side": 1,
+      "message": "presence",
+      "range": {
+        "startLine": 96,
+        "startChar": 64,
+        "endLine": 96,
+        "endChar": 72
+      },
+      "revId": "6d81e85312f78e80d637537f17ff1adfddf73dbb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "461efb74_38a95822",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-01-12T17:54:29Z",
+      "side": 1,
+      "message": "When would level not be \"Error\" if \"error\": true is present above on L170? It just feels weird to adapt logging level standards in an error message.",
+      "range": {
+        "startLine": 178,
+        "startChar": 11,
+        "endLine": 178,
+        "endChar": 28
+      },
+      "revId": "6d81e85312f78e80d637537f17ff1adfddf73dbb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d2c972ac_63b00305",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-01-12T17:54:29Z",
+      "side": 1,
+      "message": "So if error is false then your valid options are \"Warning\" or \"Info\" but if error is true then your valid options are just \"Error\"? I\u0027m curious under what circumstances an API would return a successful code with a \"Warning\"? \n\nLet me rephrase: the gist of what I\u0027m getting here is that UCP responses should be extremely verbose and contain as much information as humanly possible? I guess we don\u0027t want people sifting through logs at all and finding logging messages with WARNING and INFO levels themselves?\n\nWhat I see from an implementation standpoint is a new array being instantiated per API request and every time you call LOG.warning or something, you just create a wrapper around that that writes a new line to the array as well as outputs to LOG.warning, then returns this intricate response back to the user. \n\nWithout a bunch of helpers and abstraction, our APIs will just be littered with error message response building which is something that has already happened and I feel like this will compound the problem unless a nice module is written that abstracts a lot of that away.",
+      "range": {
+        "startLine": 223,
+        "startChar": 0,
+        "endLine": 225,
+        "endChar": 10
+      },
+      "revId": "6d81e85312f78e80d637537f17ff1adfddf73dbb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
