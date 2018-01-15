@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "25a4f909_96f4d4fe",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 1
+      },
+      "lineNbr": 669,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-01-15T07:26:51Z",
+      "side": 1,
+      "message": "Would we be putting divingbell as part of UCP Infrastructure or UCP Services?",
+      "revId": "d88c553ad50eee76ae0686f3137bc0be12d220ef",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "903481f6_2c4b5e98",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-01-15T07:26:51Z",
+      "side": 1,
+      "message": "Was wondering if we will move the charts to a chart folder like the rest of the UCP services, i.e. charts/divingbell",
+      "revId": "d88c553ad50eee76ae0686f3137bc0be12d220ef",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
