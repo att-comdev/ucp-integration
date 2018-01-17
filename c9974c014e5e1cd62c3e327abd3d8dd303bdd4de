@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3db29dee_2373d540",
+        "filename": "manifests/basic_ucp/armada-resources.yaml.sub",
+        "patchSetId": 2
+      },
+      "lineNbr": 843,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-01-17T14:15:13Z",
+      "side": 1,
+      "message": "this would work for UCP, but should be set to kube-ingress.\n\nGenesis.yaml.sub will then need kube-ingress\u003denabled set on the dynamic labels section.",
+      "revId": "c9974c014e5e1cd62c3e327abd3d8dd303bdd4de",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
