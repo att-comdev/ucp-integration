@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c50cb8f5_cc5f2da4",
+        "filename": "manifests/basic_ucp/armada-resources.yaml.sub",
+        "patchSetId": 3
+      },
+      "lineNbr": 853,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2018-01-17T06:54:56Z",
+      "side": 1,
+      "message": "this will have no effect on a daemonset",
+      "range": {
+        "startLine": 853,
+        "startChar": 8,
+        "endLine": 853,
+        "endChar": 18
+      },
+      "revId": "bc9ec11f9e50a672bc0b3de8028fc0af82cc6153",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
