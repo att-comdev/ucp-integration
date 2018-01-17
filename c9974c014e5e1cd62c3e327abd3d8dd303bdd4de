@@ -16,6 +16,24 @@
       "revId": "c9974c014e5e1cd62c3e327abd3d8dd303bdd4de",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b9e6acf8_56d91210",
+        "filename": "manifests/basic_ucp/armada-resources.yaml.sub",
+        "patchSetId": 2
+      },
+      "lineNbr": 843,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-01-17T14:54:26Z",
+      "side": 1,
+      "message": "Thanks Bryan. I will make the changes in the next p.s.",
+      "parentUuid": "3db29dee_2373d540",
+      "revId": "c9974c014e5e1cd62c3e327abd3d8dd303bdd4de",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
