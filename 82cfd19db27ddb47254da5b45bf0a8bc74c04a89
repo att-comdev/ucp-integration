@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f7a8612_291b1fea",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1012987
+      },
+      "writtenOn": "2018-01-23T13:59:05Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 206,
+        "startChar": 0,
+        "endLine": 206,
+        "endChar": 10
+      },
+      "revId": "82cfd19db27ddb47254da5b45bf0a8bc74c04a89",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e54f9cee_b037609e",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1012987
+      },
+      "writtenOn": "2018-01-23T13:59:05Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 206,
+        "startChar": 11,
+        "endLine": 206,
+        "endChar": 19
+      },
+      "revId": "82cfd19db27ddb47254da5b45bf0a8bc74c04a89",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
