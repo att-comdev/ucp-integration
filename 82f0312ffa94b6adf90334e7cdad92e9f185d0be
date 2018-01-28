@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8d29f230_ba96867f",
+        "filename": "manifests/basic_ucp/armada-resources.yaml.sub",
+        "patchSetId": 2
+      },
+      "lineNbr": 867,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-01-28T00:13:10Z",
+      "side": 1,
+      "message": "Is there a default for this defined anywhere?",
+      "range": {
+        "startLine": 867,
+        "startChar": 16,
+        "endLine": 867,
+        "endChar": 31
+      },
+      "revId": "82f0312ffa94b6adf90334e7cdad92e9f185d0be",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
