@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c11c881b_26de2bdc",
+        "filename": "docs/source/api-conventions.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-01-29T18:27:50Z",
+      "side": 1,
+      "message": "An example would be nice too :)",
+      "revId": "7f2da755c21c8e33e6b88d9839daf3eef5ecd6be",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
