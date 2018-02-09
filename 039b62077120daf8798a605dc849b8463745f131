@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7e1abdd8_4e4081e8",
+        "filename": "docs/blueprints/node_teardown.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2018-02-09T19:26:41Z",
+      "side": 1,
+      "message": "My intuition would be to default it to the last \"deploy\", but it\u0027s the kind of thing that might be worth exposing to operators.",
+      "revId": "039b62077120daf8798a605dc849b8463745f131",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70948703_078fc90c",
+        "filename": "docs/blueprints/node_teardown.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2018-02-09T19:26:41Z",
+      "side": 1,
+      "message": "I actually don\u0027t think we need the design ref for this call.\n\nIt could be useful to use if we want additional validations, but it\u0027s probably not strictly necessary.",
+      "revId": "039b62077120daf8798a605dc849b8463745f131",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "11e38713_15b6964b",
+        "filename": "docs/blueprints/node_teardown.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2018-02-09T19:26:41Z",
+      "side": 1,
+      "message": "Likewise, we do not strictly need this ref.",
+      "revId": "039b62077120daf8798a605dc849b8463745f131",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d32416c8_bd8a6c9c",
+        "filename": "docs/blueprints/node_teardown.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2018-02-09T19:26:41Z",
+      "side": 1,
+      "message": "This call is the one that\u0027s \"tricky\" to implement in Prom.  I want to make sure we understand how this will be executed cleanly (will require Prom to be running a daemonset on the host or similar solution).",
+      "revId": "039b62077120daf8798a605dc849b8463745f131",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "18eedfa6_ab60226b",
+        "filename": "docs/blueprints/node_teardown.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2018-02-09T19:26:41Z",
+      "side": 1,
+      "message": "This endpoint doesn\u0027t strictly require the design ref either.",
+      "revId": "039b62077120daf8798a605dc849b8463745f131",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
