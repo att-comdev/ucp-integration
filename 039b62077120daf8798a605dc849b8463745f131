@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "792d3682_1b05b8e4",
+        "filename": "docs/blueprints/node_teardown.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2018-02-09T20:33:17Z",
+      "side": 1,
+      "message": "This is not existing in terms of working functionality unless this covers only Shipyard calling the API, not successful completion of the task.",
+      "revId": "039b62077120daf8798a605dc849b8463745f131",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7e1abdd8_4e4081e8",
         "filename": "docs/blueprints/node_teardown.rst",
         "patchSetId": 1
@@ -36,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "0838cdd4_6528abd2",
+        "filename": "docs/blueprints/node_teardown.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2018-02-09T20:33:17Z",
+      "side": 1,
+      "message": "Could there be cases that you would need more than \u0027node_id\u0027 to determine exactly the node in Kubernetes.",
+      "parentUuid": "70948703_078fc90c",
+      "revId": "039b62077120daf8798a605dc849b8463745f131",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "11e38713_15b6964b",
         "filename": "docs/blueprints/node_teardown.rst",
         "patchSetId": 1
@@ -47,6 +82,29 @@
       "writtenOn": "2018-02-09T19:26:41Z",
       "side": 1,
       "message": "Likewise, we do not strictly need this ref.",
+      "revId": "039b62077120daf8798a605dc849b8463745f131",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70b0c8de_9a6f3dfe",
+        "filename": "docs/blueprints/node_teardown.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2018-02-09T20:33:17Z",
+      "side": 1,
+      "message": "parameter",
+      "range": {
+        "startLine": 178,
+        "startChar": 20,
+        "endLine": 178,
+        "endChar": 29
+      },
       "revId": "039b62077120daf8798a605dc849b8463745f131",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
