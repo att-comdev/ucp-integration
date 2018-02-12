@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce5cd5c5_cc17848e",
+        "filename": "docs/source/blueprints/node-teardown.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2018-02-12T16:28:39Z",
+      "side": 1,
+      "message": "I also propose that for the convenience endpoint at least, that we describe how long to wait for all the pods to be removed from a node after removing labels (label removal API will be very fast, but the actually workload may take a while to leave).",
+      "revId": "2e625bd7bde2ecea5f0e5014cbc84687e2bd97fc",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "342d4329_e70c9a5f",
+        "filename": "docs/source/blueprints/node-teardown.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2018-02-12T16:28:39Z",
+      "side": 1,
+      "message": "I propose we pass some arguments to the convenience endpoint and possibly also the the etcd health check endpoint itself to describe retries/how long to wait for the etcd clusters to become healthy.",
+      "revId": "2e625bd7bde2ecea5f0e5014cbc84687e2bd97fc",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
