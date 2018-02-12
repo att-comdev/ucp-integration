@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "e02c1648_21d8e761",
+        "filename": "docs/source/blueprints/node-teardown.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-02-12T19:25:08Z",
+      "side": 1,
+      "message": "I\u0027ll make up some details and add them in, It\u0027s worth being in here for sure.",
+      "parentUuid": "ce5cd5c5_cc17848e",
+      "revId": "2e625bd7bde2ecea5f0e5014cbc84687e2bd97fc",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "342d4329_e70c9a5f",
         "filename": "docs/source/blueprints/node-teardown.rst",
         "patchSetId": 5
