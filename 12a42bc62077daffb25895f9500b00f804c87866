@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3d5ea11f_15c25abf",
+        "filename": "docs/source/blueprints/node-teardown.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-02-12T15:34:44Z",
+      "side": 1,
+      "message": "the",
+      "range": {
+        "startLine": 57,
+        "startChar": 48,
+        "endLine": 57,
+        "endChar": 50
+      },
+      "revId": "12a42bc62077daffb25895f9500b00f804c87866",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
