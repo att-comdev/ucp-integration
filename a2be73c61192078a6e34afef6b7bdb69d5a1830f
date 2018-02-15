@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "14a95b75_574c1b90",
+        "filename": "manifests/basic_ucp/armada-resources.yaml.sub",
+        "patchSetId": 4
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-02-15T23:48:09Z",
+      "side": 1,
+      "message": "The docstring isn\u0027t the best but DH should support \u0027$\u0027 or \u0027.\u0027 as \u0027.\u0027 is converted to \u0027$.\u0027 anyway: https://github.com/att-comdev/deckhand/blob/9f2a0fb3475c746de47372147446a1c04b640476/deckhand/utils.py#L159",
+      "revId": "a2be73c61192078a6e34afef6b7bdb69d5a1830f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
