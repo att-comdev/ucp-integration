@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "76f259d6_013cdf8f",
+        "filename": "manifests/basic_ucp/armada.yaml.sub",
+        "patchSetId": 1
+      },
+      "lineNbr": 712,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2018-02-16T14:47:09Z",
+      "side": 1,
+      "message": "I think we also now need:\n\nconf.armada.DEFAULT.tiller_namespace: kube-system\n\nhttps://github.com/att-comdev/promenade/blob/master/examples/complete/armada-resources.yaml#L1839",
+      "revId": "01d01443a34f553ce5c139f18a74e1bdfa038a1c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
