@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c0758d0b_7b115433",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1011672
+      },
+      "writtenOn": "2018-02-16T14:45:00Z",
+      "side": 1,
+      "message": "typos:  TILLER instead of PROMENADE",
+      "range": {
+        "startLine": 83,
+        "startChar": 27,
+        "endLine": 85,
+        "endChar": 30
+      },
+      "revId": "dab5005285787266dde7c05d465378724ee01e09",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
