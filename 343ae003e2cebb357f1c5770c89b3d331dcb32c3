@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fe6a102_6200b1a1",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-02-20T15:19:10Z",
+      "side": 1,
+      "message": "For those who didn\u0027t know this like me:\n\n-k/--insecure will \"only make\" curl skip certificate validation, it will not turn off SSL altogether.",
+      "range": {
+        "startLine": 155,
+        "startChar": 12,
+        "endLine": 155,
+        "endChar": 22
+      },
+      "revId": "343ae003e2cebb357f1c5770c89b3d331dcb32c3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
