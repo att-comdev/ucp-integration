@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "55b4c962_daae79d8",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-02-23T03:34:18Z",
+      "side": 1,
+      "message": "We need to export the variable. It should be\n\n\n      export CEPH_CRUSH_TUNABLES\u003d\u0027hammer\u0027",
+      "revId": "52fc2c3f221b2adeb4acab4893b2fca6b4f66449",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ca279d80_4176b86e",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-02-23T03:34:18Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "52fc2c3f221b2adeb4acab4893b2fca6b4f66449",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
