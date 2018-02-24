@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4d7a6b8e_36484cbd",
+        "filename": "manifests/basic_ucp/deploy_ucp.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-02-24T03:30:08Z",
+      "side": 1,
+      "message": "Are we not able to support jewel with the ceph version we use? http://docs.ceph.com/docs/master/rados/operations/crush-map/#jewel-crush-tunables5",
+      "revId": "1cf933834f9c0089d9caa1ced19ad3dbc2f6bf11",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
