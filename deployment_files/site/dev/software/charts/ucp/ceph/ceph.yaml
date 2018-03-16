@@ -1,0 +1,177 @@
+---
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
+  name: ucp-ceph
+  layeringDefinition:
+    abstract: false
+    layer: site
+    parentSelector:
+        name: ucp-ceph-global
+    actions:
+        - method: replace
+          path: .values.conf.storage.osd
+        - method: replace
+          path: .values.conf.pool.target.osd
+        - method: merge
+          path: .
+  storagePolicy: cleartext
+data:
+  values:
+    labels:
+      job:
+        node_selector_key: ucp-control-plane
+        node_selector_value: enabled
+      provisioner:
+        node_selector_key: ucp-control-plane
+        node_selector_value: enabled
+    endpoints:
+      identity:
+        namespace: openstack
+      object_store:
+        namespace: ceph
+      ceph_mon:
+        namespace: ceph
+    ceph:
+      rgw_keystone_auth: true
+    deployment:
+      ceph: true
+      client_secrets: false
+      rbd_provisioner: true
+      cephfs_provisioner: true
+      rgw_keystone_user_and_endpoints: false
+      storage_secrets: true
+    bootstrap:
+      enabled: true
+    conf:
+      rgw_ks:
+        enabled: true
+      ceph:
+        global:
+          fsid: '88904ebb-f6fc-48b1-80ec-e1915cfa84a9'
+          osd_pool_default_size: 1
+        osd:
+          osd_crush_chooseleaf_type: 0
+      pool:
+        crush:
+          tunables: 'hammer'
+        target:
+          osd: 1
+          pg_per_osd: 100
+        default:
+          crush_rule: same_host
+        spec:
+          # RBD pool
+          - name: rbd
+            application: rbd
+            replication: 1
+            percent_total_data: 40
+          # CephFS pools
+          - name: cephfs_metadata
+            application: cephfs
+            replication: 1
+            percent_total_data: 5
+          - name: cephfs_data
+            application: cephfs
+            replication: 1
+            percent_total_data: 10
+          # RadosGW pools
+          - name: .rgw.root
+            application: rgw
+            replication: 1
+            percent_total_data: 0.1
+          - name: default.rgw.control
+            application: rgw
+            replication: 1
+            percent_total_data: 0.1
+          - name: default.rgw.data.root
+            application: rgw
+            replication: 1
+            percent_total_data: 0.1
+          - name: default.rgw.gc
+            application: rgw
+            replication: 1
+            percent_total_data: 0.1
+          - name: default.rgw.log
+            application: rgw
+            replication: 1
+            percent_total_data: 0.1
+          - name: default.rgw.intent-log
+            application: rgw
+            replication: 1
+            percent_total_data: 0.1
+          - name: default.rgw.meta
+            application: rgw
+            replication: 1
+            percent_total_data: 0.1
+          - name: default.rgw.usage
+            application: rgw
+            replication: 1
+            percent_total_data: 0.1
+          - name: default.rgw.users.keys
+            application: rgw
+            replication: 1
+            percent_total_data: 0.1
+          - name: default.rgw.users.email
+            application: rgw
+            replication: 1
+            percent_total_data: 0.1
+          - name: default.rgw.users.swift
+            application: rgw
+            replication: 1
+            percent_total_data: 0.1
+          - name: default.rgw.users.uid
+            application: rgw
+            replication: 1
+            percent_total_data: 0.1
+          - name: default.rgw.buckets.extra
+            application: rgw
+            replication: 1
+            percent_total_data: 0.1
+          - name: default.rgw.buckets.index
+            application: rgw
+            replication: 1
+            percent_total_data: 3
+          - name: default.rgw.buckets.data
+            application: rgw
+            replication: 1
+            percent_total_data: 34.8
+      storage:
+        osd:
+          - data:
+              type: block-logical
+              location: /dev/vdb
+            journal:
+              type: directory
+              location: /var/lib/ceph/journal0/osd/journal-vdb
+          - data:
+              type: block-logical
+              location: /dev/vdc
+            journal:
+              type: directory
+              location: /var/lib/ceph/journal0/osd/journal-vdc
+  dependencies:
+    - ceph_htk
+...
+---
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
+  name: ceph_htk
+  layeringDefinition:
+    abstract: false
+    layer: site
+  storagePolicy: cleartext
+data:
+  chart_name: ceph_htk
+  release: ceph_htk
+  namespace: ceph_htk
+  timeout: 100
+  values: {}
+  source:
+    type: git
+    location: https://github.com/openstack/openstack-helm
+    subpath: helm-toolkit
+    reference: d5f880c1ee5111c0e6889323fa4b7138c36f2673
+  dependencies: []
+...
