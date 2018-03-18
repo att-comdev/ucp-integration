@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "24102e2f_7a2da312",
+        "filename": "deployment_files/global/v1.0u/schemas/aic/AccountCatalogue/v1.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2018-03-18T18:52:21Z",
+      "side": 1,
+      "message": "I may be missing something, but I\u0027m struggling to see the correlation between these sections and the sections within the charts themselves.\n\neg: https://github.com/openstack/openstack-helm/blob/master/cinder/values.yaml#L657-L674,\n\nshould this not be under an `identity.auth` set of keys to make sense? Or am I missing something? Also the repetition of the role, region_name, username, project_name, user_domain_name \u0026 project_domain_name seems overly verbose, and error-prone - could we compact these into a \u0027keystone_credentials\u0027 macro?",
+      "range": {
+        "startLine": 301,
+        "startChar": 0,
+        "endLine": 315,
+        "endChar": 30
+      },
+      "revId": "aa524831d7d57247ff5df2b95f85a34746bc9429",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
