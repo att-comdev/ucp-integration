@@ -22,6 +22,29 @@
       "revId": "aa524831d7d57247ff5df2b95f85a34746bc9429",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8fd18b0c_0d2f1b88",
+        "filename": "deployment_files/global/v1.0u/schemas/aic/SoftwareVersions/v1.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 707,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2018-03-18T18:54:43Z",
+      "side": 1,
+      "message": "if going to this level of verbosity, should we not be checking for more than just a string - also how can we keep these schemas aligned with the upstream charts - it seems like a huge maintenance overhead?",
+      "range": {
+        "startLine": 707,
+        "startChar": 24,
+        "endLine": 707,
+        "endChar": 30
+      },
+      "revId": "aa524831d7d57247ff5df2b95f85a34746bc9429",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
