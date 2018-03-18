@@ -45,6 +45,23 @@
       "revId": "aa524831d7d57247ff5df2b95f85a34746bc9429",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "05dcdf9c_f245577b",
+        "filename": "deployment_files/global/v1.0u/software/charts/ucp/ceph/ceph.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 1010324
+      },
+      "writtenOn": "2018-03-18T21:20:10Z",
+      "side": 1,
+      "message": "this will need the following to work in a single node deployment:\nhttps://github.com/openstack/openstack-helm/blob/master/tools/deployment/developer/ceph/040-ceph.sh#L55-L147",
+      "revId": "aa524831d7d57247ff5df2b95f85a34746bc9429",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
