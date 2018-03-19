@@ -1,0 +1,85 @@
+---
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
+  name: helm-toolkit-infra
+  layeringDefinition:
+    abstract: false
+    layer: site
+data:
+  chart_name: helm-toolkit-infra
+  release: helm-toolkit-infra
+  namespace: helm-toolkit-infra
+  timeout: 100
+  values: {}
+  source:
+    type: git
+    location: ${HTK_INFRA_CHART_REPO}
+    subpath: ${HTK_INFRA_CHART_PATH}
+    reference: ${HTK_INFRA_CHART_BRANCH}
+  dependencies: []
+---
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
+  name: nfs
+  layeringDefinition:
+    abstract: false
+    layer: site
+data:
+  chart_name: nfs
+  release: nfs
+  namespace: nfs
+  timeout: 3600
+  wait:
+    timeout: 3600
+    labels:
+      release_group: ucp-nfs
+  install:
+    no_hooks: false
+  upgrade:
+    no_hooks: false
+  values:
+    labels:
+      node_selector_key: ucp-control-plane
+      node_selector_value: enabled
+    storageclass:
+      name: general
+    storage::
+      persistentVolumeClaim:
+        size: 40Gi
+  source:
+    type: git
+    location: ${NFS_CHART_REPO}
+    subpath: ${NFS_CHART_PATH}
+    reference: ${NFS_CHART_BRANCH}
+  dependencies:
+    - helm-toolkit-infra
+---
+schema: armada/ChartGroup/v1
+metadata:
+  schema: metadata/Document/v1
+  name: nfs
+  layeringDefinition:
+    abstract: false
+    layer: site
+data:
+  description: 'NFS Storage Backend'
+  sequenced: true
+  chart_group:
+    - nfs
+---
+schema: armada/Manifest/v1
+metadata:
+  schema: metadata/Document/v1
+  name: ucp_deploy
+  layeringDefinition:
+    abstract: false
+    layer: site
+data:
+  release_prefix: ucp
+  chart_groups:
+    - nfs
+    - ucp-infra
+    - ucp-services
+...

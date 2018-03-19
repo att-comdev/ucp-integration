@@ -13,6 +13,10 @@ function init_env {
     # Setup environmental variables
     # with stable defaults
 
+    # Deploy ceph by default
+    export DEPLOY_CEPH=${DEPLOY_CEPH:-"true"}
+    export DEPLOY_NFS=${DEPLOY_NFS:-"false"}
+
     # Network
     export CEPH_CLUSTER_NET=${CEPH_CLUSTER_NET:-"NA"}
     export CEPH_PUBLIC_NET=${CEPH_PUBLIC_NET:-"NA"}
@@ -56,9 +60,15 @@ function init_env {
     export HTK_CHART_REPO=${HTK_CHART_REPO:-"https://github.com/openstack/openstack-helm"}
     export HTK_CHART_PATH=${HTK_CHART_PATH:-"helm-toolkit"}
     export HTK_CHART_BRANCH=${HTK_CHART_BRANCH:-"master"}
+    export HTK_INFRA_CHART_REPO=${HTK_INFRA_CHART_REPO:-"https://github.com/openstack/openstack-helm-infra"}
+    export HTK_INFRA_CHART_PATH=${HTK_INFRA_CHART_PATH:-"helm-toolkit"}
+    export HTK_INFRA_CHART_BRANCH=${HTK_INFRA_CHART_BRANCH:-"master"}
     export CEPH_CHART_REPO=${CEPH_CHART_REPO:-"https://github.com/openstack/openstack-helm"}
     export CEPH_CHART_PATH=${CEPH_CHART_PATH:-"ceph"}
     export CEPH_CHART_BRANCH=${CEPH_CHART_BRANCH:-"master"}
+    export NFS_CHART_REPO=${NFS_CHART_REPO:-"https://github.com/openstack/openstack-helm-infra"}
+    export NFS_CHART_PATH=${NFS_CHART_PATH:-"nfs-provisioner"}
+    export NFS_CHART_BRANCH=${NFS_CHART_BRANCH:-"master"}
     export DRYDOCK_CHART_REPO=${DRYDOCK_CHART_REPO:-"https://github.com/att-comdev/drydock"}
     export DRYDOCK_CHART_PATH=${DRYDOCK_CHART_PATH:-"charts/drydock"}
     export DRYDOCK_CHART_BRANCH=${DRYDOCK_CHART_BRANCH:-"master"}
@@ -122,6 +132,8 @@ function init_env {
     # Filenames
     export ARMADA_CONFIG=${ARMADA_CONFIG:-"armada.yaml"}
     export UP_SCRIPT_FILE=${UP_SCRIPT_FILE:-"genesis.sh"}
+    export ARMADA_CEPH_CONFIG=${ARMADA_CEPH_CONFIG:-"armada-ceph.yaml"}
+    export ARMADA_NFS_CONFIG=${ARMADA_NFS_CONFIG:-"armada-nfs.yaml"}
 
     # detect the proper Ceph config for this kernel
     kern_minor=$(uname -a | cut -d ' ' -f 3 | cut -d '.' -f 2)
@@ -181,6 +193,15 @@ function genesis {
     cp Docker.yaml configs/
     cp ArmadaManifest.yaml configs/
 
+    if [[ $DEPLOY_CEPH == "true" ]]
+    then
+        cat armada-ceph.yaml.sub | envsubst > ${ARMADA_CEPH_CONFIG}
+        cat ${ARMADA_CEPH_CONFIG} >> ${ARMADA_CONFIG}
+    else
+        cat armada-nfs-provisioner.yaml.sub | envsubst > ${ARMADA_NFS_CONFIG}
+        cat ${ARMADA_NFS_CONFIG} >> ${ARMADA_CONFIG}
+    fi
+
     if [[ $PROXY_ENABLED == 'true' ]]
     then
       export http_proxy=$PROXY_ADDRESS
@@ -203,6 +224,12 @@ function genesis {
     # Install docker
     apt -qq update
     apt -y install docker.io jq
+
+    # Install nfs-common packages if nfs file system is selected
+    if [[ $DEPLOY_NFS == "true" ]]
+    then
+        apt -y install nfs-common
+    fi
 
     # Generate certificates
     docker run --rm -t -w /target -v $(pwd)/configs:/target ${PROMENADE_IMAGE} promenade generate-certs -o /target $(ls ./configs)
