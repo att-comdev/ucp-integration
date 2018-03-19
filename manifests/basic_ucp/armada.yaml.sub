@@ -22,6 +22,26 @@ data:
 schema: armada/Chart/v1
 metadata:
   schema: metadata/Document/v1
+  name: helm-toolkit-infra
+  layeringDefinition:
+    abstract: false
+    layer: site
+data:
+  chart_name: helm-toolkit-infra
+  release: helm-toolkit-infra
+  namespace: helm-toolkit-infra
+  timeout: 100
+  values: {}
+  source:
+    type: git
+    location: ${HTK_INFRA_CHART_REPO}
+    subpath: ${HTK_INFRA_CHART_PATH}
+    reference: ${HTK_INFRA_CHART_BRANCH}
+  dependencies: []
+---
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
   name: divingbell
   layeringDefinition:
     abstract: false
@@ -216,6 +236,38 @@ data:
     network:
       public: ${CEPH_PUBLIC_NET}
       cluster: ${CEPH_CLUSTER_NET}
+    manifests:
+      configmap_bin_clients: ${DEPLOY_CEPH}
+      configmap_bin_ks: ${DEPLOY_CEPH}
+      configmap_bin: ${DEPLOY_CEPH}
+      configmap_etc: ${DEPLOY_CEPH}
+      configmap_templates: ${DEPLOY_CEPH}
+      daemonset_mon: ${DEPLOY_CEPH}
+      daemonset_osd: ${DEPLOY_CEPH}
+      deployment_mds: ${DEPLOY_CEPH}
+      deployment_moncheck: ${DEPLOY_CEPH}
+      deployment_rbd_provisioner: ${DEPLOY_CEPH}
+      deployment_cephfs_provisioner: ${DEPLOY_CEPH}
+      deployment_rgw: ${DEPLOY_CEPH}
+      deployment_mgr: ${DEPLOY_CEPH}
+      job_bootstrap: ${DEPLOY_CEPH}
+      job_cephfs_client_key: ${DEPLOY_CEPH}
+      job_keyring: ${DEPLOY_CEPH}
+      job_ks_endpoints: ${DEPLOY_CEPH}
+      job_ks_service: ${DEPLOY_CEPH}
+      job_ks_user: ${DEPLOY_CEPH}
+      job_namespace_client_key_cleaner: ${DEPLOY_CEPH}
+      job_namespace_client_key: ${DEPLOY_CEPH}
+      job_rbd_pool: ${DEPLOY_CEPH}
+      job_storage_admin_keys: ${DEPLOY_CEPH}
+      secret_keystone_rgw: ${DEPLOY_CEPH}
+      secret_keystone: ${DEPLOY_CEPH}
+      service_mgr: ${DEPLOY_CEPH}
+      service_mon: ${DEPLOY_CEPH}
+      service_mon_discovery: ${DEPLOY_CEPH}
+      service_rgw: ${DEPLOY_CEPH}
+      storageclass_cephfs: ${DEPLOY_CEPH}
+      storageclass_rbd: ${DEPLOY_CEPH}
   source:
     type: git
     location: ${CEPH_CHART_REPO}
@@ -270,6 +322,38 @@ data:
       cephfs_provisioner: false
       client_secrets: true
       rgw_keystone_user_and_endpoints: false
+    manifests:
+      configmap_bin_clients: ${DEPLOY_CEPH}
+      configmap_bin_ks: ${DEPLOY_CEPH}
+      configmap_bin: ${DEPLOY_CEPH}
+      configmap_etc: ${DEPLOY_CEPH}
+      configmap_templates: ${DEPLOY_CEPH}
+      daemonset_mon: ${DEPLOY_CEPH}
+      daemonset_osd: ${DEPLOY_CEPH}
+      deployment_mds: ${DEPLOY_CEPH}
+      deployment_moncheck: ${DEPLOY_CEPH}
+      deployment_rbd_provisioner: ${DEPLOY_CEPH}
+      deployment_cephfs_provisioner: ${DEPLOY_CEPH}
+      deployment_rgw: ${DEPLOY_CEPH}
+      deployment_mgr: ${DEPLOY_CEPH}
+      job_bootstrap: ${DEPLOY_CEPH}
+      job_cephfs_client_key: ${DEPLOY_CEPH}
+      job_keyring: ${DEPLOY_CEPH}
+      job_ks_endpoints: ${DEPLOY_CEPH}
+      job_ks_service: ${DEPLOY_CEPH}
+      job_ks_user: ${DEPLOY_CEPH}
+      job_namespace_client_key_cleaner: ${DEPLOY_CEPH}
+      job_namespace_client_key: ${DEPLOY_CEPH}
+      job_rbd_pool: ${DEPLOY_CEPH}
+      job_storage_admin_keys: ${DEPLOY_CEPH}
+      secret_keystone_rgw: ${DEPLOY_CEPH}
+      secret_keystone: ${DEPLOY_CEPH}
+      service_mgr: ${DEPLOY_CEPH}
+      service_mon: ${DEPLOY_CEPH}
+      service_mon_discovery: ${DEPLOY_CEPH}
+      service_rgw: ${DEPLOY_CEPH}
+      storageclass_cephfs: ${DEPLOY_CEPH}
+      storageclass_rbd: ${DEPLOY_CEPH}
   source:
     type: git
     location: ${CEPH_CHART_REPO}
@@ -277,6 +361,50 @@ data:
     reference: ${CEPH_CHART_BRANCH}
   dependencies:
     - helm-toolkit
+---
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
+  name: nfs
+  layeringDefinition:
+    abstract: false
+    layer: site
+data:
+  chart_name: nfs
+  release: nfs
+  namespace: nfs
+  timeout: 3600
+  wait:
+    timeout: 3600
+    labels:
+      release_group: ucp-nfs
+  install:
+    no_hooks: false
+  upgrade:
+    no_hooks: false
+  values:
+    labels:
+      node_selector_key: ucp-control-plane
+      node_selector_value: enabled
+    storageclass:
+      name: general
+    storage::
+      persistentVolumeClaim:
+        size: 40Gi
+    manifests:
+      configmap_bin: ${DEPLOY_NFS}
+      deployment: ${DEPLOY_NFS}
+      job_image_repo_sync: ${DEPLOY_NFS}
+      service: ${DEPLOY_NFS}
+      storage_class: ${DEPLOY_NFS}
+      volume_claim: ${DEPLOY_NFS}
+  source:
+    type: git
+    location: ${NFS_CHART_REPO}
+    subpath: ${NFS_CHART_PATH}
+    reference: ${NFS_CHART_BRANCH}
+  dependencies:
+    - helm-toolkit-infra
 ---
 schema: armada/Chart/v1
 metadata:
@@ -886,11 +1014,24 @@ metadata:
     abstract: false
     layer: site
 data:
-  description: 'Storage Backend'
+  description: 'CEPH Storage Backend'
   sequenced: true
   chart_group:
     - ceph
     - ucp-ceph-config
+---
+schema: armada/ChartGroup/v1
+metadata:
+  schema: metadata/Document/v1
+  name: nfs
+  layeringDefinition:
+    abstract: false
+    layer: site
+data:
+  description: 'NFS Storage Backend'
+  sequenced: true
+  chart_group:
+    - nfs
 ---
 schema: armada/ChartGroup/v1
 metadata:
@@ -940,6 +1081,7 @@ data:
   release_prefix: ucp
   chart_groups:
     - ceph
+    - nfs
     - ucp-infra
     - ucp-services
 ...
