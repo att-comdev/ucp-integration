@@ -13,6 +13,10 @@ function init_env {
     # Setup environmental variables
     # with stable defaults
 
+    # Deploy ceph by default
+    export DEPLOY_CEPH=${DEPLOY_CEPH:-"true"}
+    export DEPLOY_NFS=${DEPLOY_NFS:-"false"}
+
     # Network
     export CEPH_CLUSTER_NET=${CEPH_CLUSTER_NET:-"NA"}
     export CEPH_PUBLIC_NET=${CEPH_PUBLIC_NET:-"NA"}
@@ -40,7 +44,6 @@ function init_env {
     export CEPH_OSD_POOL_SIZE=${CEPH_OSD_POOL_SIZE:-"1"}
 
     # Storage
-    export CEPH_OSD_DIR=${CEPH_OSD_DIR:-"/var/lib/openstack-helm/ceph/osd"}
     export ETCD_KUBE_DATA_PATH=${ETCD_KUBE_DATA_PATH:-"/var/lib/etcd/kubernetes"}
     export ETCD_KUBE_ETC_PATH=${ETCD_KUBE_ETC_PATH:-"/etc/etcd/kubernetes"}
     export ETCD_CALICO_DATA_PATH=${ETCD_CALICO_DATA_PATH:-"/var/lib/etcd/calico"}
@@ -53,12 +56,18 @@ function init_env {
     export MASTER_NODE_NAME=$(echo $MASTER_NODE_NAME | tr '[:upper:]' '[:lower:]')
 
     # Charts
-    export HTK_CHART_REPO=${HTK_CHART_REPO:-"https://github.com/openstack/openstack-helm"}
-    export HTK_CHART_PATH=${HTK_CHART_PATH:-"helm-toolkit"}
-    export HTK_CHART_BRANCH=${HTK_CHART_BRANCH:-"master"}
     export CEPH_CHART_REPO=${CEPH_CHART_REPO:-"https://github.com/openstack/openstack-helm"}
     export CEPH_CHART_PATH=${CEPH_CHART_PATH:-"ceph"}
     export CEPH_CHART_BRANCH=${CEPH_CHART_BRANCH:-"master"}
+    export NFS_CHART_REPO=${NFS_CHART_REPO:-"https://github.com/openstack/openstack-helm-infra"}
+    export NFS_CHART_PATH=${NFS_CHART_PATH:-"nfs-provisioner"}
+    export NFS_CHART_BRANCH=${NFS_CHART_BRANCH:-"master"}
+    export HTK_INFRA_CHART_REPO=${HTK_INFRA_CHART_REPO:-"https://github.com/openstack/openstack-helm-infra"}
+    export HTK_INFRA_CHART_PATH=${HTK_INFRA_CHART_PATH:-"helm-toolkit"}
+    export HTK_INFRA_CHART_BRANCH=${HTK_INFRA_CHART_BRANCH:-"master"}
+    export HTK_CHART_REPO=${HTK_CHART_REPO:-"https://github.com/openstack/openstack-helm"}
+    export HTK_CHART_PATH=${HTK_CHART_PATH:-"helm-toolkit"}
+    export HTK_CHART_BRANCH=${HTK_CHART_BRANCH:-"master"}
     export DRYDOCK_CHART_REPO=${DRYDOCK_CHART_REPO:-"https://github.com/att-comdev/drydock"}
     export DRYDOCK_CHART_PATH=${DRYDOCK_CHART_PATH:-"charts/drydock"}
     export DRYDOCK_CHART_BRANCH=${DRYDOCK_CHART_BRANCH:-"master"}
@@ -203,6 +212,12 @@ function genesis {
     # Install docker
     apt -qq update
     apt -y install docker.io jq
+
+    # Install nfs-common packages if nfs file system is selected
+    if [[ $DEPLOY_NFS == "true" ]]
+    then
+        apt -y install nfs-common
+    fi
 
     # Generate certificates
     docker run --rm -t -w /target -v $(pwd)/configs:/target ${PROMENADE_IMAGE} promenade generate-certs -o /target $(ls ./configs)

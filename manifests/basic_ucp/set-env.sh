@@ -7,3 +7,5 @@ export NODE_NET_IFACE=ens3
 export PROMENADE_IMAGE=quay.io/attcomdev/promenade:latest
 export ARMADA_IMAGE=quay.io/attcomdev/armada:latest
 export DRYDOCK_IMAGE=quay.io/attcomdev/drydock:latest
+export DEPLOY_CEPH="true"
+export DEPLOY_NFS="false"
