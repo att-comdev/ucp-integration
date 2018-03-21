@@ -82,6 +82,24 @@
     },
     {
       "key": {
+        "uuid": "b8541d11_e9991223",
+        "filename": "deployment_files/site/dev/software/configs/endpoints.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-03-21T16:52:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "63121bc4_18fd35b1",
+      "revId": "aa524831d7d57247ff5df2b95f85a34746bc9429",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e1a9b7ee_15eb8e90",
         "filename": "deployment_files/site/dev/software/configs/service_accounts.yaml",
         "patchSetId": 3
@@ -93,6 +111,24 @@
       "writtenOn": "2018-03-18T21:26:41Z",
       "side": 1,
       "message": "why does this exist when traditional open-stack (glance, nova, neutron, et all) is not being deployed?",
+      "revId": "aa524831d7d57247ff5df2b95f85a34746bc9429",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a8f8f8ee_240f8783",
+        "filename": "deployment_files/site/dev/software/configs/service_accounts.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-03-21T16:52:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e1a9b7ee_15eb8e90",
       "revId": "aa524831d7d57247ff5df2b95f85a34746bc9429",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
