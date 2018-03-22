@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2a8a0fb6_f51b78ac",
+        "filename": "deployment_files/global/v1.0u/profiles/genesis.yaml",
+        "patchSetId": 26
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-03-22T22:50:39Z",
+      "side": 1,
+      "message": "Have you guys abandoned your so-called catalogue authoring strategy? I thought according to which all the global documents are abstract.",
+      "range": {
+        "startLine": 9,
+        "startChar": 14,
+        "endLine": 9,
+        "endChar": 19
+      },
+      "revId": "032ba60c455a55f10dc300261e920484daab7ee8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a41984e_ff33b9e5",
+        "filename": "deployment_files/global/v1.0u/profiles/genesis.yaml",
+        "patchSetId": 26
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-03-22T22:50:39Z",
+      "side": 1,
+      "message": "section?",
+      "range": {
+        "startLine": 84,
+        "startChar": 79,
+        "endLine": 84,
+        "endChar": 83
+      },
+      "revId": "032ba60c455a55f10dc300261e920484daab7ee8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
