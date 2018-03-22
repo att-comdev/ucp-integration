@@ -2,6 +2,69 @@
   "comments": [
     {
       "key": {
+        "uuid": "83cb64ea_232cd1b9",
+        "filename": "deployment_files/global/v1.0u/software/charts/ucp/drydock/drydock.yaml",
+        "patchSetId": 22
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-03-22T09:28:15Z",
+      "side": 1,
+      "message": "I think we might want to reduce the number of drydock pods to 1 for dev setup as the default is 2.\n\n\nreplicas:\n  drydock: 1",
+      "revId": "db2221dd2e662a154e64650453425234f39e45a3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4c77aadb_531d6512",
+        "filename": "deployment_files/global/v1.0u/software/charts/ucp/shipyard/shipyard.yaml",
+        "patchSetId": 22
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-03-22T09:28:15Z",
+      "side": 1,
+      "message": "I think we should change this to 1 instead as this is for dev purpose",
+      "range": {
+        "startLine": 236,
+        "startChar": 15,
+        "endLine": 236,
+        "endChar": 16
+      },
+      "revId": "db2221dd2e662a154e64650453425234f39e45a3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ced406ac_0ba31269",
+        "filename": "deployment_files/global/v1.0u/software/charts/ucp/shipyard/shipyard.yaml",
+        "patchSetId": 22
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-03-22T09:28:15Z",
+      "side": 1,
+      "message": "Same as above for the airflow related pods",
+      "range": {
+        "startLine": 238,
+        "startChar": 15,
+        "endLine": 238,
+        "endChar": 16
+      },
+      "revId": "db2221dd2e662a154e64650453425234f39e45a3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2f49ad49_9dcd6506",
         "filename": "manifests/dev_single_node/README.txt",
         "patchSetId": 22
