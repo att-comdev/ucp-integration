@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "40c0a196_4997a91b",
+        "filename": "deployment_files/global/v1.0u/software/charts/ucp/drydock/drydock.yaml",
+        "patchSetId": 22
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-03-22T16:14:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "83cb64ea_232cd1b9",
+      "revId": "db2221dd2e662a154e64650453425234f39e45a3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4c77aadb_531d6512",
         "filename": "deployment_files/global/v1.0u/software/charts/ucp/shipyard/shipyard.yaml",
         "patchSetId": 22
@@ -30,6 +48,30 @@
       "writtenOn": "2018-03-22T09:28:15Z",
       "side": 1,
       "message": "I think we should change this to 1 instead as this is for dev purpose",
+      "range": {
+        "startLine": 236,
+        "startChar": 15,
+        "endLine": 236,
+        "endChar": 16
+      },
+      "revId": "db2221dd2e662a154e64650453425234f39e45a3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5572d1c1_150cd5dd",
+        "filename": "deployment_files/global/v1.0u/software/charts/ucp/shipyard/shipyard.yaml",
+        "patchSetId": 22
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-03-22T16:14:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4c77aadb_531d6512",
       "range": {
         "startLine": 236,
         "startChar": 15,
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "34b869b6_cf056333",
+        "filename": "deployment_files/global/v1.0u/software/charts/ucp/shipyard/shipyard.yaml",
+        "patchSetId": 22
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-03-22T16:14:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ced406ac_0ba31269",
+      "range": {
+        "startLine": 238,
+        "startChar": 15,
+        "endLine": 238,
+        "endChar": 16
+      },
+      "revId": "db2221dd2e662a154e64650453425234f39e45a3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2f49ad49_9dcd6506",
         "filename": "manifests/dev_single_node/README.txt",
         "patchSetId": 22
@@ -76,6 +142,30 @@
       "writtenOn": "2018-03-22T05:51:18Z",
       "side": 1,
       "message": "Probably needs to remove the extra quotes",
+      "range": {
+        "startLine": 43,
+        "startChar": 113,
+        "endLine": 43,
+        "endChar": 116
+      },
+      "revId": "db2221dd2e662a154e64650453425234f39e45a3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "43fb8974_905dfbde",
+        "filename": "manifests/dev_single_node/README.txt",
+        "patchSetId": 22
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-03-22T16:14:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2f49ad49_9dcd6506",
       "range": {
         "startLine": 43,
         "startChar": 113,
@@ -111,6 +201,30 @@
     },
     {
       "key": {
+        "uuid": "beeebf69_df1b3bef",
+        "filename": "manifests/dev_single_node/README.txt",
+        "patchSetId": 22
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-03-22T16:14:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3735d998_f0d16329",
+      "range": {
+        "startLine": 46,
+        "startChar": 4,
+        "endLine": 46,
+        "endChar": 5
+      },
+      "revId": "db2221dd2e662a154e64650453425234f39e45a3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e48cf976_14f2338d",
         "filename": "manifests/dev_single_node/deploy-ucp.sh",
         "patchSetId": 22
@@ -122,6 +236,24 @@
       "writtenOn": "2018-03-22T05:51:18Z",
       "side": 1,
       "message": "Do we want to include options that allow us to set proxy? For instance,\n\n  --env http_proxy\u003d$PROXY \\\n  --env https_proxy\u003d$PROXY \\",
+      "revId": "db2221dd2e662a154e64650453425234f39e45a3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49b6f07f_22fdb102",
+        "filename": "manifests/dev_single_node/deploy-ucp.sh",
+        "patchSetId": 22
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-03-22T16:14:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e48cf976_14f2338d",
       "revId": "db2221dd2e662a154e64650453425234f39e45a3",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
