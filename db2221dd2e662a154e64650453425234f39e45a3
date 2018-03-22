@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2f49ad49_9dcd6506",
+        "filename": "manifests/dev_single_node/README.txt",
+        "patchSetId": 22
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-03-22T05:51:18Z",
+      "side": 1,
+      "message": "Probably needs to remove the extra quotes",
+      "range": {
+        "startLine": 43,
+        "startChar": 113,
+        "endLine": 43,
+        "endChar": 116
+      },
+      "revId": "db2221dd2e662a154e64650453425234f39e45a3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3735d998_f0d16329",
+        "filename": "manifests/dev_single_node/README.txt",
+        "patchSetId": 22
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-03-22T05:51:18Z",
+      "side": 1,
+      "message": "nit: Extra white space",
+      "range": {
+        "startLine": 46,
+        "startChar": 4,
+        "endLine": 46,
+        "endChar": 5
+      },
+      "revId": "db2221dd2e662a154e64650453425234f39e45a3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e48cf976_14f2338d",
+        "filename": "manifests/dev_single_node/deploy-ucp.sh",
+        "patchSetId": 22
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-03-22T05:51:18Z",
+      "side": 1,
+      "message": "Do we want to include options that allow us to set proxy? For instance,\n\n  --env http_proxy\u003d$PROXY \\\n  --env https_proxy\u003d$PROXY \\",
+      "revId": "db2221dd2e662a154e64650453425234f39e45a3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
