@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "84fbb40b_5da69c50",
+        "filename": "deployment_files/global/v1.0u/profiles/kubernetes-host.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-04-03T16:04:45Z",
+      "side": 1,
+      "message": "https://unix.stackexchange.com/questions/33447/why-we-should-use-create-and-copytruncate-together\n\napparently.",
+      "parentUuid": "0fd4c741_db912836",
+      "range": {
+        "startLine": 80,
+        "startChar": 12,
+        "endLine": 80,
+        "endChar": 24
+      },
+      "revId": "3958e8dc389532f89d20d1452da120c0a9ff5dd6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ecc37a59_c8f71d67",
         "filename": "deployment_files/global/v1.0u/schemas/aic/AccountCatalogue/v1.yaml",
         "patchSetId": 48
