@@ -22,6 +22,75 @@
       "revId": "3958e8dc389532f89d20d1452da120c0a9ff5dd6",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ecc37a59_c8f71d67",
+        "filename": "deployment_files/global/v1.0u/schemas/aic/AccountCatalogue/v1.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-03T14:36:10Z",
+      "side": 1,
+      "message": "This sort of thing can be reduced by using YAML anchors and pointers. I know that that can be done later, but that\u0027s a pattern I have yet to see applied.",
+      "range": {
+        "startLine": 111,
+        "startChar": 0,
+        "endLine": 132,
+        "endChar": 30
+      },
+      "revId": "3958e8dc389532f89d20d1452da120c0a9ff5dd6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b516fa89_fb7f31d8",
+        "filename": "deployment_files/site/dev/secrets/passphrases/maas_region_secret.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-03T14:36:10Z",
+      "side": 1,
+      "message": "nit: placeholder instead",
+      "range": {
+        "startLine": 10,
+        "startChar": 6,
+        "endLine": 10,
+        "endChar": 38
+      },
+      "revId": "3958e8dc389532f89d20d1452da120c0a9ff5dd6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e525392f_3ad706c5",
+        "filename": "deployment_files/site/dev/secrets/passphrases/ucp_rabbitmq_erlang_cookie.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-03T14:36:10Z",
+      "side": 1,
+      "message": "Ditto",
+      "range": {
+        "startLine": 10,
+        "startChar": 6,
+        "endLine": 10,
+        "endChar": 26
+      },
+      "revId": "3958e8dc389532f89d20d1452da120c0a9ff5dd6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
