@@ -1,0 +1,416 @@
+..
+      Copyright 2018 AT&T Intellectual Property.
+      All Rights Reserved.
+
+      Licensed under the Apache License, Version 2.0 (the "License"); you may
+      not use this file except in compliance with the License. You may obtain
+      a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+      WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+      License for the specific language governing permissions and limitations
+      under the License.
+
+.. _deployment-grouping-baremetal:
+
+Deployment Grouping for Baremetal Nodes
+=======================================
+One of the primary functionalities of the Undercloud Platform is the deployment
+of baremetal nodes as part of site deployment and upgrade. This blueprint aims
+to define how deployment strategies can be applied to the workflow during these
+actions.
+
+Overview
+--------
+When Shipyard is invoked for a deploy_site or update_site action, there are
+three primary stages:
+
+1. Preparation and Validaiton
+2. Baremetal and Network Deployment
+3. Software Deployment
+
+During the Baremetal and Network Deployment stage, the deploy_site or
+update_site workflow (and perhaps other workflows in the future) invokes
+Drydock to verify the site, prepare the site, prepare the nodes, and deploy the
+nodes. Each of thse steps is described in the `Drydock Orchestrator Readme`_
+
+.. _Drydock Orchestrator Readme: https://github.com/att-comdev/drydock/tree/master/drydock_provisioner/orchestrator
+
+The prepare nodes and deploy nodes steps each involve intensive and potentially
+time consuming operations on the target nodes, orchestrated by Drydock and
+Maas. These steps need to be approached and managed such that grouping,
+ordering, and criticality of success of nodes can be managed in support of
+fault tolerant site deployments and updates.
+
+For the purposes of this document `phase of deployment` refer to the prepare
+nodes and deploy nodes steps of the Baremetal and Network deployment.
+
+Some factors that advise this solution:
+
+1. Limits to the amount of parallelzation that can occur due to a centralized
+   Maas system.
+2. Faults in the hardware, preventing operational nodes.
+3. Miswiring or configuration of network hardware.
+4. Incorrect site design causing a mismatch against the hardware.
+5. Criticality of particular nodes to the realization of the site design.
+6. Desired configurability within the framework of the UCP declarative site
+   design.
+7. Improved visibility into the current state of node deployment.
+
+Solution
+--------
+Updates supporting this solution will require changes to Shipyard for changed
+workflows and Drydock for the desired node targeting, and for retrieval of
+diagnostic and result information.
+
+Deployment Strategy Document (Shipyard)
+---------------------------------------
+To accommodate the needed changes, this design introduces a new
+DeploymentStrategy document into the site design to be read and utilized
+by the workflows for update_site and deploy_site.
+
+Groups
+~~~~~~
+Groups are named sets of nodes that will be deployed together. The fields of a
+group are:
+
+name
+  Required. The identifying name of the group.
+
+critical
+  Required. Indicates if this group is required to continue to additional
+  phases of deployment.
+
+depends_on
+  Required, may be empty list. Group names that must be successful before this
+  group can be processed.
+
+selectors
+  Required, may be empty list. A list of identifying information to indicate
+  the nodes that are members of this group.
+
+success_criteria
+  Optional. Criteria that must evaluate to be true before a group is considered
+  successfully complete with a phase of deployment.
+
+Criticality
+'''''''''''
+- Field: critical
+- Valid values: true | false
+
+Each group is required to indicate true or false for the `critical` field.
+This drives the behavior after the phase of deployment.  If any groups that
+are marked as `critical: true` fail to meet that group's success criteria, the
+workflow should halt after the current phase. A group that cannot be processed
+due to a parent dependency failing will be considered failed, regardless of the
+success criteria.
+
+Dependencies
+''''''''''''
+- Field: depends_on
+- Valid values: [] or a list of group names
+
+Each group specifies a list of depends_on groups, or an empty list. All
+identified groups must complete successfully for the phase of deployment before
+the current group is allowed to be processed by the current phase.
+
+- A failure (based on success criteria) of a group prevents any groups
+  dependent upon the failed group from being attempted.
+- Circular dependencies will be rejected as invalid during document validation.
+- There is no guarantee of ordering among groups that have their dependencies
+  met. Any group that is ready for deployment based on declared dependencies
+  will execute. Exection of groups is serialized - two groups will not deploy
+  at the same time.
+
+Selectors
+'''''''''
+- Field: selectors
+- Valid values: [] or a list of selectors
+
+The list of selectors indicate the nodes that will be included in a group.
+Each selector has three available filering values: node_names, node_tags, and
+rack_names. Each selctor is an intersection of these criterion, while the list
+of selectors are a union of the individual selectors.
+
+- Omitting a criterion from a selctor, or using empty list means that criterion
+  is ignored.
+- Having a completely empty list of selectors, or a selector that has no
+  criteria specified indicates ALL nodes.
+- A collection of selectors that results in no nodes being identified will be
+  processed as if 100% of nodes successfully deployed (avoiding divison by
+  zero), but would fail the minimum or maximum nodes criteria (still counts as
+  0 nodes)
+- There is no guard against the same node being in multiple groups. Due to the
+  nature of Drydock, nodes that have already completed will not be re-deployed,
+  but nodes that may have failed in another group may be retried.
+
+E.g.::
+
+  selectors:
+    - node_names:
+        - node01
+        - node02
+      rack_names:
+        - rack01
+      node_tags:
+        - control
+    - node_names:
+        - node04
+      node_tags:
+        - monitoring
+
+Will indicate (not really SQL, just for illustration)::
+
+    SELECT nodes
+    WHERE node_name in ('node01', 'node02')
+          AND rack_name in ('rack01')
+          AND node_tags in ('control')
+    UNION
+    SELECT nodes
+    WHERE node_name in ('node04')
+          AND node_tag in ('monitoring')
+
+Success Criteria
+''''''''''''''''
+- Field: success_criteria
+- Valid values: for possible values, see below
+
+Each group optionally contains success criteria which is used to indicate if
+the deployment of that group is successful. The values that may be specified:
+
+percent_successful_nodes
+  The calculated success rate of nodes completing the deployment phase.
+
+  E.g.: 75 would mean that 3 of 4 nodes must complete the phase successfully.
+
+  This is useful for groups that have larger numbers of nodes, and do not
+  have critical minimums or are not sensitive to an arbitrary number of nodes
+  not working.
+
+minimum_successful_nodes
+  An integer indicating how many nodes must complete the phase successfully.
+
+maximum_failed_nodes
+  An integer indicating a number of nodes that are allowed to have failed the
+  deployment phase and still consider that group succesful.
+
+When no criteria are specified, it means that no checks are done - processing
+continues as if nothing is wrong.
+
+When more than one criterion is specified, each is evaluated separately - if
+any fail, the group is considered failed.
+
+
+Example Deployment Strategy Document
+'''''''''''''''''''`''''''''''''''''
+This example shows a deployment strategy with 5 groups: control-nodes,
+compute-nodes-1, compute-nodes-2, monitoring-nodes, and ntp-node.
+
+::
+
+  ---
+  schema: shipyard/DeploymentStrategy/v1
+  metadata:
+    schema: metadata/Document/v1
+    name: deployment-strategy
+    layeringDefinition:
+        abstract: false
+        layer: global
+    storagePolicy: cleartext
+  data:
+    groups:
+      - name: control-nodes
+        critical: true
+        depends_on:
+          - ntp-node
+        selctors:
+          - node_names: []
+            node_tags:
+            - control
+            rack_names:
+            - rack03
+        success_criteria:
+          percent_successful_nodes: 90
+          minimum_successful_nodes: 3
+          maximum_failed_nodes: 1
+      - name: compute-nodes-1
+        critical: false
+        depends_on:
+          - control-nodes
+        selctors:
+          - rack_names:
+              - rack01
+            node_tags:
+              - compute
+        success_criteria:
+          percent_successful_nodes: 50
+      - name: compute-nodes-2
+        critical: false
+        depends_on:
+          - control-nodes
+        selectors:
+          - rack_names:
+              - rack02
+            node_tags:
+              - compute
+      - name: monitoring-nodes
+        critical: false
+        depends_on: []
+        selctors:
+          - node_tags:
+              - monitoring
+            rack_names:
+              - rack03
+              - rack02
+              - rack01
+      - name: ntp-node
+        critical: true
+        depends_on: []
+        selctors:
+          node_names:
+            - ntp01
+        success_criteria:
+          minimum_successful_nodes: 1
+
+The ordering of groups, as defined by the dependencies (``depends-on``
+fields)::
+
+   ----------        ------------------
+  | ntp-node |      | monitoring-nodes |
+   ----------        ------------------
+       |
+       V
+   ---------------
+  | control-nodes |
+   ---------------
+       |_________________________
+           |                     |
+           V                     V
+     -----------------     -----------------
+    | compute-nodes-1 |   | compute-nodes-2 |
+     -----------------     -----------------
+
+Given this, the order of execution could be:
+
+- ntp-node > monitoring-nodes > control-nodes > compute-nodes-1 > compute-nodes-2
+- ntp-node > control-nodes > compute-nodes-2 > compute-nodes-1 > monitoring-nodes
+- monitoring-nodes > ntp-node > control-nodes > compute-nodes-1 > compute-nodes-2
+- and many more ... the only guarantee is that ntp-node will run some time
+  beforevcontrol-nodes, which will run sometime before both of the
+  compute-nodes. Monitoring-nodes can run at any time.
+
+Also of note are the various combinations of selectors and the varied use of
+success criteria.
+
+
+Deployment Configuration Document (Shipyard)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The existing deployment-configuration document that is used by the workflows
+will also be modified to use the existing deployment_strategy field to provide
+the name of the deployment-straegy document that will be used.
+
+The default value for the name of the DeploymentStrategy document will be
+``deployment-strategy``.
+
+
+Drydock Changes
+~~~~~~~~~~~~~~~
+
+TODO
+''''
+- does Drydock return a list of nodes that resolve for a given filter?
+- does Drydock return a list of successful and a list of failed nodes following
+  prepare nodes and deploy nodes?
+- is there an api that gives the status of all known nodes and their status in
+  maas? Will we need to pass the design ref each time a call is made?
+
+
+Shipyard Changes
+~~~~~~~~~~~~~~~~
+
+API
+'''
+The commit configdocs api will need to be enhanced to look up the
+DeploymentStrategy by using the DeploymentConfiguration.
+
+The DeploymentStrategy document will need to be validated to ensure there are
+no circular dependencies in the groups' declared dependencies. (perhaps
+NetworkX_)
+
+A new API endpoint (and matching CLI) is desired to retrieve the status of
+nodes as known to Drydock/Maas and their deployment status
+(success/failed/broken?/uninitialized?/?)
+
+TODO: figure out what these values are - can we leverage the exisitng Drydock
+      table response?
+
+Workflow
+''''''''
+The deploy_site and update_site workflows will be modified to utilize the
+DeploymentStrategy.
+
+The deployment configuration step will be enahanced to also read the deployment
+configuraiton and pass the information on a new xcom.
+
+The current workflow invokes the Drydock deploy site subdag, which in turn
+uses the Drydock Operator for the various steps.
+
+The prepare nodes and deploy nodes steps will be modified to include
+functionality that reads in the deployment strategy (from the prior xcom), and
+can orchestrate the calls to Drydock to enact the grouping, ordering and and
+success evaluation.
+
+- function to formulate the ordered groups based on dependencies (perhaps
+  NetworkX_)
+- function to evaluate success/failure against the success criteria for a group
+  based on the result list of succeeded or failed nodes.
+- function to mark groups as success or failure (including failed due to
+  dependency failure), as well as keep track of the (if any) succesful and
+  failed nodes.
+- function to get a group that is ready to execute, or 'Done' when all groups
+  are either complete or failed.
+- function to formulate the node filter for Drydock based on a group's
+  selectors
+- function to orchestrate processing groups, moving to the next group (or being
+  done) when a prior group completes or fails.
+- function to summarize the success/failed nodes for a group, and for
+
+The successful and failed groups will be noted in a new xcom produced by the
+prepare nodes step.
+
+Subsequently the deploy nodes step will read the successes and failures and
+pass them to the functions used to orchestrate the deploy nodes step. Any
+groups that have failed (either due to acutal failure or because of a
+dependency that has failed) will not be attempted by the deploy nodes step.
+
+The timeout values specified for the prepare nodes and deploy nodes steps will
+be used to put bounds on the individual calls to Drydock. A failure based on
+these values will be treated as a failure for the group; need to be vigilant
+on if this will lead to indeterminate states for nodes that mess with further
+processing. (e.g. Timed out, but the requested work still continue to
+completion)
+
+.. _NetworkX: https://networkx.github.io/documentation/networkx-1.9/reference/generated/networkx.algorithms.dag.topological_sort.html
+
+TODO
+''''
+- is there a way to exclude nodes (in case they failed for prepare nodes, but
+  the group was still successful). If a node fails to prepare, but is then
+  asked to deploy, how do we catch this and let the rest of the deployment
+  happen.
+- can a node filter be fed to Deckhand, and a node list returned, such that
+  the workflow could simply replace the declared filter with a simple
+  node list? This would resolve the above, because the exclusion could be done
+  by the workflow instead of needing "not" functionality in the node filter.
+  This would also make is so that if a node failed as part of a group, if the
+  same node appeared in another group
+
+Documentation
+'''''''''''''
+The action documentation will need to include details defining the
+DeploymentStrategy document (mostly as defined here), as well as the update to
+the DeploymentConfiguration document to contain the name of the
+DeploymentStrategy document.
