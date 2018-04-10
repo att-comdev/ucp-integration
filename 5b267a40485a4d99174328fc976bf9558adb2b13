@@ -1,0 +1,257 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "733db89e_2095773a",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-10T20:40:14Z",
+      "side": 1,
+      "message": "Are all groups in here, then, critical? I\u0027m wondering if criticality can be somewhat dynamically determined based off this.",
+      "range": {
+        "startLine": 90,
+        "startChar": 0,
+        "endLine": 90,
+        "endChar": 10
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f095c4e_f759455a",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-10T20:40:14Z",
+      "side": 1,
+      "message": "Execution",
+      "range": {
+        "startLine": 128,
+        "startChar": 16,
+        "endLine": 128,
+        "endChar": 24
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "13138025_6c5ddf50",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-10T20:40:14Z",
+      "side": 1,
+      "message": "selector",
+      "range": {
+        "startLine": 138,
+        "startChar": 34,
+        "endLine": 138,
+        "endChar": 41
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1d168ad7_00b7af19",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-10T20:40:14Z",
+      "side": 1,
+      "message": "is",
+      "range": {
+        "startLine": 139,
+        "startChar": 37,
+        "endLine": 139,
+        "endChar": 40
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cd3da3e7_46c6cf63",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-10T20:40:14Z",
+      "side": 1,
+      "message": "Is there background discussion that is assumed in order to understand this?",
+      "range": {
+        "startLine": 146,
+        "startChar": 54,
+        "endLine": 148,
+        "endChar": 10
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf4b1846_092ff3f8",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-10T20:40:14Z",
+      "side": 1,
+      "message": "Won\u0027t this have performance implications if a failed node is retried over and over again because it\u0027s contained in every group (to provide an extreme example),",
+      "range": {
+        "startLine": 151,
+        "startChar": 27,
+        "endLine": 151,
+        "endChar": 65
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5cda73ff_ceb148cf",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-10T20:40:14Z",
+      "side": 1,
+      "message": "These success criteria can contradict each other. For example, if you have 1 node (for the sake of argument) and specify 100% for percent_successful_nodes but 2 for minimum_successful_nodes, then while the first success criterion is true, the second is false. \n\nThus, maybe percent_successful_nodes should be mutually exclusive with the other two below?",
+      "range": {
+        "startLine": 207,
+        "startChar": 0,
+        "endLine": 208,
+        "endChar": 41
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4da74805_1b01b0ea",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-10T20:40:14Z",
+      "side": 1,
+      "message": "Should remove",
+      "range": {
+        "startLine": 337,
+        "startChar": 8,
+        "endLine": 337,
+        "endChar": 9
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ca6b542_9492b630",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-10T20:40:14Z",
+      "side": 1,
+      "message": "Should remove",
+      "range": {
+        "startLine": 357,
+        "startChar": 63,
+        "endLine": 357,
+        "endChar": 64
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "57e42117_0867e3d8",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-10T20:40:14Z",
+      "side": 1,
+      "message": "It works in DH",
+      "range": {
+        "startLine": 358,
+        "startChar": 2,
+        "endLine": 358,
+        "endChar": 11
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "af117b0e_be757c57",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 539,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-10T20:40:14Z",
+      "side": 1,
+      "message": "Strategy",
+      "range": {
+        "startLine": 539,
+        "startChar": 10,
+        "endLine": 539,
+        "endChar": 17
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
