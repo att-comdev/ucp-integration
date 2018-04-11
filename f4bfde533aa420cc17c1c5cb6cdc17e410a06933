@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "62e4b492_6974447c",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2018-04-11T20:30:59Z",
+      "side": 1,
+      "message": "MAAS",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 4
+      },
+      "revId": "f4bfde533aa420cc17c1c5cb6cdc17e410a06933",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fcc7ba86_ebfb2f5f",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2018-04-11T20:30:59Z",
+      "side": 1,
+      "message": "MAAS",
+      "range": {
+        "startLine": 54,
+        "startChar": 3,
+        "endLine": 54,
+        "endChar": 7
+      },
+      "revId": "f4bfde533aa420cc17c1c5cb6cdc17e410a06933",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f52edc0a_4eac2722",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2018-04-11T20:30:59Z",
+      "side": 1,
+      "message": "This will require significant changes to Drydock. Can be done, but will cause refactoring.",
+      "range": {
+        "startLine": 62,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 18
+      },
+      "revId": "f4bfde533aa420cc17c1c5cb6cdc17e410a06933",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6796944c_2970f59e",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2018-04-11T20:30:59Z",
+      "side": 1,
+      "message": "this should be k:v",
+      "revId": "f4bfde533aa420cc17c1c5cb6cdc17e410a06933",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf105115_edd03e73",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 1011939
+      },
+      "writtenOn": "2018-04-11T20:30:59Z",
+      "side": 1,
+      "message": "There will need to be changes in drydock task orchestration as well to meet some of the \u0027improved parallelization\u0027 goals.",
+      "revId": "f4bfde533aa420cc17c1c5cb6cdc17e410a06933",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
