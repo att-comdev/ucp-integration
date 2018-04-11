@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5e3a6267_076622f4",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-04-11T00:13:23Z",
+      "side": 1,
+      "message": "criticality is a separate concern. If a whole chain of groups fails due to a depends_on, but none of them are critical, the overall deployment continues.  If any of them are critical, then the deployment fails.",
+      "parentUuid": "733db89e_2095773a",
+      "range": {
+        "startLine": 90,
+        "startChar": 0,
+        "endLine": 90,
+        "endChar": 10
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1f095c4e_f759455a",
         "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
         "patchSetId": 11
@@ -117,6 +141,30 @@
     },
     {
       "key": {
+        "uuid": "88a88d72_6021046a",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-04-11T00:13:23Z",
+      "side": 1,
+      "message": "I was trying to avoid an edge case of division by zero when determining success. While this could also be addressed as a validation (somehow) that a group has no possible members based on the design, leaving it in would allow one to define a dummy step that could be used to collect dependencies and then be used as common dependency for other groups. I don\u0027t think this is necessary, but rather a side effect of saying 0/0 deployed servers is considered success.",
+      "parentUuid": "cd3da3e7_46c6cf63",
+      "range": {
+        "startLine": 146,
+        "startChar": 54,
+        "endLine": 148,
+        "endChar": 10
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bf4b1846_092ff3f8",
         "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
         "patchSetId": 11
@@ -140,6 +188,30 @@
     },
     {
       "key": {
+        "uuid": "8b7d24c9_e6b8a905",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-04-11T00:13:23Z",
+      "side": 1,
+      "message": "I need to remove this - it\u0027s old and contradictory of what I say later about not considering nodes twice.",
+      "parentUuid": "bf4b1846_092ff3f8",
+      "range": {
+        "startLine": 151,
+        "startChar": 27,
+        "endLine": 151,
+        "endChar": 65
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5cda73ff_ceb148cf",
         "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
         "patchSetId": 11
@@ -151,6 +223,30 @@
       "writtenOn": "2018-04-10T20:40:14Z",
       "side": 1,
       "message": "These success criteria can contradict each other. For example, if you have 1 node (for the sake of argument) and specify 100% for percent_successful_nodes but 2 for minimum_successful_nodes, then while the first success criterion is true, the second is false. \n\nThus, maybe percent_successful_nodes should be mutually exclusive with the other two below?",
+      "range": {
+        "startLine": 207,
+        "startChar": 0,
+        "endLine": 208,
+        "endChar": 41
+      },
+      "revId": "5b267a40485a4d99174328fc976bf9558adb2b13",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "36d251e7_2a9d72f6",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-04-11T00:13:23Z",
+      "side": 1,
+      "message": "I can imagine a situation where an org sets a goal of say 70%, but in a small site, at least 3 servers of 4 must work due to the software that is going to be deployed there.  In this case, it\u0027s really about \"must pass all criteria\".  The example you provide is a reasonable corner case that would need to be avoided by the designer.\nI see % being more of a general goal, while the # successful is more driven by needs of the software that will run there.",
+      "parentUuid": "5cda73ff_ceb148cf",
       "range": {
         "startLine": 207,
         "startChar": 0,
