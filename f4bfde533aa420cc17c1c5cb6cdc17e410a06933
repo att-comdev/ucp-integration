@@ -71,6 +71,30 @@
     },
     {
       "key": {
+        "uuid": "314e45ca_4f5f99e0",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-04-12T00:34:30Z",
+      "side": 1,
+      "message": "I am adding this as something that advised this design, not necessarily something it achieves. I think because this is a fundamental change to the processing pattern of Drydock, this round of changes will not include it.  I\u0027ll clean up the text a bit to reflect this.",
+      "parentUuid": "f52edc0a_4eac2722",
+      "range": {
+        "startLine": 62,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 18
+      },
+      "revId": "f4bfde533aa420cc17c1c5cb6cdc17e410a06933",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6796944c_2970f59e",
         "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
         "patchSetId": 12
@@ -99,6 +123,24 @@
       "writtenOn": "2018-04-11T20:30:59Z",
       "side": 1,
       "message": "There will need to be changes in drydock task orchestration as well to meet some of the \u0027improved parallelization\u0027 goals.",
+      "revId": "f4bfde533aa420cc17c1c5cb6cdc17e410a06933",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a7a54f22_f08e6411",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-04-12T00:34:30Z",
+      "side": 1,
+      "message": "I think this is a stretch goal, and as the rest of the design doesn\u0027t take advantage of having improved parallelization, I\u0027m not including that here.",
+      "parentUuid": "bf105115_edd03e73",
       "revId": "f4bfde533aa420cc17c1c5cb6cdc17e410a06933",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
