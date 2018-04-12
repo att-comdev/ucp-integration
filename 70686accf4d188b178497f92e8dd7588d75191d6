@@ -114,6 +114,30 @@
       "revId": "70686accf4d188b178497f92e8dd7588d75191d6",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "93e29252_22c989c3",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-04-12T13:20:11Z",
+      "side": 1,
+      "message": "Thanks, I\u0027ve fixed all the typos you\u0027ve noted and about 10 more with the next revision.",
+      "parentUuid": "c7942290_8a637887",
+      "range": {
+        "startLine": 373,
+        "startChar": 13,
+        "endLine": 373,
+        "endChar": 20
+      },
+      "revId": "70686accf4d188b178497f92e8dd7588d75191d6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
