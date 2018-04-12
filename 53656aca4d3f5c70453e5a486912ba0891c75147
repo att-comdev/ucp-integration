@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fe30be60_15728e88",
+        "filename": "deployment_files/global/v1.0u/software/charts/kubernetes/dns/coredns.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-12T21:25:32Z",
+      "side": 1,
+      "message": "Looks like this is no longer true?",
+      "range": {
+        "startLine": 78,
+        "startChar": 8,
+        "endLine": 78,
+        "endChar": 71
+      },
+      "revId": "53656aca4d3f5c70453e5a486912ba0891c75147",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
