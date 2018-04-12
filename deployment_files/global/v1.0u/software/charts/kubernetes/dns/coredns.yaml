@@ -34,6 +34,26 @@ data:
     timeout: 600
   upgrade:
     no_hooks: true
+  values:
+    conf:
+      coredns:
+        # TODO(alanmeadows) this needs to be adjusted to use substition
+        corefile: |
+          .:53 {
+              errors
+              health
+              autopath @kubernetes
+              kubernetes CLUSTER_DOMAIN SERVICE_CIDR POD_CIDR {
+                pods insecure
+                fallthrough in-addr.arpa ip6.arpa
+                upstream UPSTREAM1
+                upstream UPSTREAM2
+              }
+              prometheus :9153
+              proxy . UPSTREAM1
+              proxy . UPSTREAM2
+              cache 30
+          }
   dependencies:
     - coredns-htk
 ---
