@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d9273364_9aa7d202",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 15
+      },
+      "lineNbr": 508,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-13T14:47:41Z",
+      "side": 1,
+      "message": "Looking above looks like ntp-node and control-nodes are both critical, so there\u0027s no point in even trying to deploy these nodes if the entire workflow is already a failure due to the critical groups already having failed?\n\nOr is there a desire to attempt everything for the sake of gathering all data possible?",
+      "range": {
+        "startLine": 507,
+        "startChar": 0,
+        "endLine": 508,
+        "endChar": 40
+      },
+      "revId": "e84bb07d0157ed5e92f5f7618c2c3d23abf57e6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "08f1defc_13c75027",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 15
+      },
+      "lineNbr": 509,
+      "author": {
+        "id": 1011942
+      },
+      "writtenOn": "2018-04-13T14:47:41Z",
+      "side": 1,
+      "message": "Looking above looks like ntp-node and control-nodes are both critical, so there\u0027s no point in even trying to deploy these nodes if the entire workflow is already a failure due to the critical groups already having failed?",
+      "range": {
+        "startLine": 507,
+        "startChar": 0,
+        "endLine": 509,
+        "endChar": 3
+      },
+      "revId": "e84bb07d0157ed5e92f5f7618c2c3d23abf57e6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
