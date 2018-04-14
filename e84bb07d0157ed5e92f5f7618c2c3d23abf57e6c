@@ -45,6 +45,30 @@
       "revId": "e84bb07d0157ed5e92f5f7618c2c3d23abf57e6c",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "679944c1_39741a13",
+        "filename": "docs/source/blueprints/deployment-grouping-baremetal.rst",
+        "patchSetId": 15
+      },
+      "lineNbr": 509,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-04-14T02:44:25Z",
+      "side": 1,
+      "message": "I was intending that the step would go through with all groups that are not in the direct line of failure, and criticality only be a flag to continue with steps AFTER the node deployment (i.e. Armada).\n\nThe reasoning is that if a node is successfully deployed, it will not take more time later (it will not redeploy on a re-run).  If the group were expected to not deploy because another group has failed, it should have been set up as a dependency.",
+      "parentUuid": "08f1defc_13c75027",
+      "range": {
+        "startLine": 507,
+        "startChar": 0,
+        "endLine": 509,
+        "endChar": 3
+      },
+      "revId": "e84bb07d0157ed5e92f5f7618c2c3d23abf57e6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
