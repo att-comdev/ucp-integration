@@ -273,6 +273,6 @@ data:
     type: git
     location: https://github.com/openstack/openstack-helm
     subpath: helm-toolkit
-    reference: d5f880c1ee5111c0e6889323fa4b7138c36f2673
+    reference: f902cd14fac7de4c4c9f7d019191268a6b4e9601
   dependencies: []
 ...
