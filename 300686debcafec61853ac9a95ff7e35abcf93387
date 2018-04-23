@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "828112be_cf1c1431",
+        "filename": "deployment_files/global/v1.0u/software/charts/ucp/ceph/ceph.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 1012483
+      },
+      "writtenOn": "2018-04-23T19:48:02Z",
+      "side": 1,
+      "message": "Can we add this as substitution from pegleg versions\n\nsubstitutions:\n    - src:\n        schema: pegleg/SoftwareVersions/v1\n        name: software-versions\n        path: .charts.ucp.ceph-htk\n      dest:\n        path: .source",
+      "range": {
+        "startLine": 272,
+        "startChar": 2,
+        "endLine": 276,
+        "endChar": 55
+      },
+      "revId": "300686debcafec61853ac9a95ff7e35abcf93387",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
