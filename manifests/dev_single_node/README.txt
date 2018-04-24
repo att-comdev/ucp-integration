@@ -27,30 +27,26 @@ Process
    recommended
 2) become root. All the commands are run as root.
 3) update etc/hosts with IP/Hostname of your VM. e.g. 10.0.0.15 testvm1
-4) go to /root and clone ucp integration. Pull the latest patchset if needed
-   (a) if you instead clone ucp integration into /root/deploy (the workspace
-       used by the deploy script), ucp-integration will not be re-cloned during
-       deployment. This allows you to modify the deployment_files directory
-       contents that will be used by the deployment - which would enable
-       deployment of charts and/or images with versions other than those that
-       are specified by the committed contents. (i.e. you can configure the
-       deployment contents this way)
-5) cd into ucp-integration/manifests/dev_single_node
+4) Make directory /root/deploy and go to /root/deploy and clone ucp integration
+  4a) If testing from a inflight patchset to ucp-integration, apply the patchset
+      to /root/deploy/ucp-integration
+5) cd into /root/deploy/ucp-integration/manifests/dev_single_node
 6) Update the set-env.sh with the hostname and ip on the appropriate lines.
-7) set the UCP integration repo and refspec to the gerrithub & patchset of the
-   deployment you want to use. (if you used 4.a, this is not necessary)
-
-E.g.:
-
-export UCP_INTEGRATION_REPO="https://review.gerrithub.io/att-comdev/ucp-integration"
-export UCP_INTEGRATION_REFSPEC="refs/changes/03/404203/32"
-
-8) set the pegleg image, since :latest is not right as of 3/21/2018
-
-export PEGLEG_IMAGE="artifacts-aic.atlantafoundry.com/att-comdev/pegleg:f019b4ff594db7d13a2ac444c001f867b3a67c50"
-
-9) source set-env.sh
-10) ./deploy-ucp.sh
+7) If deploying UCP behind a proxy and without direct internet access...
+  7a) Update /root/deploy/ucp-integration/deployment_files/site/dev-proxy/networks/common-addresses.yaml
+      with your available DNS servers on lines 61-63 (both 'upstream_servers' and
+      'upstream_servers_joined' needs to be updated). A minimum of 2 servers
+      is required.
+  7b) Update the above file with the proxy configuration on lines 84-87 taking care
+      to update no_proxy for any access needed inside your proxy. (e.g. if you
+      can access all *.acme.com URLs without using your proxy, update '.foo.com' to
+      '.acme.com'
+  7c) Update /root/deploy/ucp-integration/manifests/dev_single_node/set-env.sh
+      to set TARGET_SITE="dev-proxy" and to export 'PROXY' with your proxy
+      server URL. If you have different URLs for HTTP vs HTTPS proxy, use the
+      HTTPS URL.
+8) cd /root/deploy/ucp-integration/manifests/dev_single_node and source set-env.sh
+9) ./deploy-ucp.sh
 
 If you want to stop the deployment before it starts running genesis and inspect
 the produced files, comment the last few lines of the deploy-ucp.sh to not
@@ -59,7 +55,7 @@ trigger the genesis steps.
 Next Steps
 ----------
 All of the documents used for a subsequent deploy_site action are now placed
-into the /root/deploy/site direectory for ease of use - instructions are
+into the /root/deploy/site directory for ease of use - instructions are
 provided by the script at the end of a successful genesis process.
 
 In the same directory as the deploy-ucp.sh script, there is a file creds.sh
@@ -82,9 +78,3 @@ cp /root/deploy/genesis/*.yaml /root/deploy/shipyard/tools
 # Note that /home/shipyard/host is where the host's pwd is mounted in the shipyard container.
 ./run_shipyard.sh create configdocs design --filename=/home/shipyard/host/deployment_files.yaml
 ./run_shipyard.sh create configdocs secrets --filename=/home/shipyard/host/certificates.yaml --append
-
-Please note: The deployment_files.yaml document may have the SiteDefinition
-document defined twice in it due to a bug in how the documents are gathered by
-Pegleg. Simply deleting the second copy of the SiteDefinition (at the very end
-of the deployment_files.yaml) will allow the documents to be loaded without a
-"conflict" response.
