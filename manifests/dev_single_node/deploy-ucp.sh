@@ -55,7 +55,7 @@ SHIPYARD_REPO=${SHIPYARD_REPO:-"https://github.com/att-comdev/shipyard.git"}
 SHIPYARD_REFSPEC=${SHIPYARD_REFSPEC:-""}
 
 # Images
-PEGLEG_IMAGE=${PEGLEG_IMAGE:-"artifacts-aic.atlantafoundry.com/att-comdev/pegleg:latest"}
+PEGLEG_IMAGE=${PEGLEG_IMAGE:-"artifacts-aic.atlantafoundry.com/att-comdev/pegleg:eced6aa0711b39c75d1bfc53d740dc2db4cbcab2"}
 PROMENADE_IMAGE=${PROMENADE_IMAGE:-"quay.io/attcomdev/promenade:latest"}
 
 # Command shortcuts
@@ -102,6 +102,19 @@ function setup_workspace() {
   mkdir -p ${WORKSPACE}/genesis
   # Open permissions for output from promenade
   chmod -R 777 ${WORKSPACE}/genesis
+  if [[ ! -z "${https_proxy}" ]]
+  then
+    echo "Configuring Docker to use a proxy..."
+    mkdir -p /etc/systemd/system/docker.service.d/
+    cat << EOF > /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service]
+Environment="HTTP_PROXY=${http_proxy}"
+Environment="HTTPS_PROXY=${https_proxy}"
+Environment="NO_PROXY=${no_proxy}"
+EOF
+    systemctl daemon-reload
+    systemctl restart docker
+  fi
 }
 
 function get_repo() {
@@ -132,12 +145,22 @@ function setup_repos() {
 }
 
 function configure_dev_configurables() {
-  cat << EOF >> ${WORKSPACE}/ucp-integration/deployment_files/site/${TARGET_SITE}/deployment/dev-configurables.yaml
+  cat << EOF > ${WORKSPACE}/ucp-integration/deployment_files/site/${TARGET_SITE}/deployment/dev-configurables.yaml
+---
+schema: dev/Configurables/v1
+metadata:
+  schema: metadata/Document/v1
+  name: dev-configurables
+  layeringDefinition:
+    abstract: false
+    layer: site
+  storagePolicy: cleartext
 data:
   hostname: ${HOSTNAME}
   hostip: ${HOSTIP}
   hostcidr: ${HOSTCIDR}
   interface: ${NODE_NET_IFACE}
+...
 EOF
 }
 
@@ -165,6 +188,7 @@ function generate_certs() {
   cp "${WORKSPACE}/collected"/*.yaml ${WORKSPACE}/genesis
 
   docker run --rm -t \
+      --network host \
       -e http_proxy=$PROXY \
       -e https_proxy=$PROXY \
       -w /target \
@@ -182,12 +206,13 @@ function generate_certs() {
 
 function lint_design() {
   # After the certificates are in the deployment files run a pegleg lint
-  IMAGE=${PEGLEG_IMAGE} ${PEGLEG} lint -p /workspace/ucp-integration/deployment_files
+  IMAGE=${PEGLEG_IMAGE} ${PEGLEG} lint -p /workspace/ucp-integration/deployment_files -x P001
 }
 
 function generate_genesis() {
   # Generate the genesis scripts
   docker run --rm -t \
+      --network host \
       -e http_proxy=$PROXY \
       -e https_proxy=$PROXY \
       -w /target \
@@ -290,7 +315,8 @@ configure_dev_configurables || error "adding dev-configurables values"
 install_dependencies || error "installing dependencies"
 run_pegleg_collect || error "running pegleg collect"
 generate_certs || error "setting up certs with Promenade"
-lint_design || error "linting the design"
+# TODO Uncomment this when pegleg can lint a single site
+# lint_design || error "linting the design"
 generate_genesis || error "generating genesis"
 run_genesis || error "running genesis"
 validate_genesis || error "validating genesis"
