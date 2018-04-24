@@ -147,7 +147,7 @@ data:
         type: git
         location: https://github.com/att-comdev/deckhand
         subpath: charts/deckhand
-        reference: 99e3064eda9da0227780b57ee30baeb264b3040d
+        reference: 35f15ee601ebf89b93d657a1b78fedb3a8ebbe38
       deckhand-htk:
         type: git
         location: https://github.com/openstack/openstack-helm
@@ -197,7 +197,7 @@ data:
         type: git
         location: https://github.com/att-comdev/promenade
         subpath: charts/promenade
-        reference: ccd372a97490971d4a5b2281424be7595c55c1b0
+        reference: c1e7a74c1ef5862e485d3a3a241edee0b18de969
       promenade-htk:
         type: git
         location: https://github.com/openstack/openstack-helm
@@ -287,15 +287,15 @@ data:
         tiller: gcr.io/kubernetes-helm/tiller:v2.7.2
       promenade:
         dep_check: quay.io/stackanetes/kubernetes-entrypoint:v0.3.0
-        promenade: artifacts-aic.atlantafoundry.com/att-comdev/promenade:ccd372a97490971d4a5b2281424be7595c55c1b0
+        promenade: artifacts-aic.atlantafoundry.com/att-comdev/promenade:c1e7a74c1ef5862e485d3a3a241edee0b18de969
         ks_user: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
         ks_service: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
         ks_endpoints: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
       deckhand:
-        deckhand: artifacts-aic.atlantafoundry.com/att-comdev/deckhand:99e3064eda9da0227780b57ee30baeb264b3040d
+        deckhand: artifacts-aic.atlantafoundry.com/att-comdev/deckhand:35f15ee601ebf89b93d657a1b78fedb3a8ebbe38
         dep_check: quay.io/stackanetes/kubernetes-entrypoint:v0.3.0
         db_init: docker.io/postgres:9.5
-        db_sync: docker.io/postgres:9.5
+        db_sync: artifacts-aic.atlantafoundry.com/att-comdev/deckhand:35f15ee601ebf89b93d657a1b78fedb3a8ebbe38
         ks_endpoints: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
         ks_service: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
         ks_user: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
