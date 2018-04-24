@@ -22,6 +22,30 @@
       "revId": "300686debcafec61853ac9a95ff7e35abcf93387",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b041f8cc_4b30262e",
+        "filename": "deployment_files/global/v1.0u/software/charts/ucp/ceph/ceph.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-04-24T02:29:43Z",
+      "side": 1,
+      "message": "Ok, will update it to align with Treasuremap layout as well. It seems to work fine in my test environment as well.",
+      "parentUuid": "828112be_cf1c1431",
+      "range": {
+        "startLine": 272,
+        "startChar": 2,
+        "endLine": 276,
+        "endChar": 55
+      },
+      "revId": "300686debcafec61853ac9a95ff7e35abcf93387",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
