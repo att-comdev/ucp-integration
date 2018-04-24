@@ -32,6 +32,9 @@ export HOSTCIDR=10.0.0.0/24
 # The network interface on the genesis node
 export NODE_NET_IFACE=ens3
 
+# Export proxy configuration
+# export PROXY="http://proxy.foo.com:8080"
+
 # Repositories
 # export UCP_INTEGRATION_REPO="https://github.com/att-comdev/ucp-integration"
 # export UCP_INTEGRATION_REFSPEC=""
@@ -48,4 +51,6 @@ export NODE_NET_IFACE=ens3
 # export WORKSPACE="/root/deploy"
 
 # The site to deploy
-#export TARGET_SITE="dev"
+export TARGET_SITE="dev"
+# If running behind a proxy
+# export TARGET_SITE="dev-proxy"
