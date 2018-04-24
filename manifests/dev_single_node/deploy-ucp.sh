@@ -55,8 +55,8 @@ SHIPYARD_REPO=${SHIPYARD_REPO:-"https://github.com/att-comdev/shipyard.git"}
 SHIPYARD_REFSPEC=${SHIPYARD_REFSPEC:-""}
 
 # Images
-PEGLEG_IMAGE=${PEGLEG_IMAGE:-"artifacts-aic.atlantafoundry.com/att-comdev/pegleg:latest"}
-PROMENADE_IMAGE=${PROMENADE_IMAGE:-"quay.io/attcomdev/promenade:latest"}
+PEGLEG_IMAGE=${PEGLEG_IMAGE:-"artifacts-aic.atlantafoundry.com/att-comdev/pegleg:eced6aa0711b39c75d1bfc53d740dc2db4cbcab2"}
+PROMENADE_IMAGE=${PROMENADE_IMAGE:-"artifacts-aic.atlantafoundry.com/att-comdev/promenade:c1e7a74c1ef5862e485d3a3a241edee0b18de969"}
 
 # Command shortcuts
 PEGLEG=${WORKSPACE}/pegleg/tools/pegleg.sh
