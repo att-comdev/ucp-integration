@@ -182,7 +182,7 @@ function generate_certs() {
 
 function lint_design() {
   # After the certificates are in the deployment files run a pegleg lint
-  IMAGE=${PEGLEG_IMAGE} ${PEGLEG} lint -p /workspace/ucp-integration/deployment_files
+  IMAGE=${PEGLEG_IMAGE} ${PEGLEG} lint -p /workspace/ucp-integration/deployment_files -x P001
 }
 
 function generate_genesis() {
