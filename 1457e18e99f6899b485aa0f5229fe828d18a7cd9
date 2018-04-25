@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aee8b8ab_7e7bab6d",
+        "filename": "manifests/dev_single_node/set-env.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1014191
+      },
+      "writtenOn": "2018-04-25T13:28:19Z",
+      "side": 1,
+      "message": "Cap check\n\nTARGET",
+      "range": {
+        "startLine": 53,
+        "startChar": 9,
+        "endLine": 53,
+        "endChar": 16
+      },
+      "revId": "1457e18e99f6899b485aa0f5229fe828d18a7cd9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
