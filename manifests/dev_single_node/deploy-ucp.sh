@@ -55,8 +55,8 @@ SHIPYARD_REPO=${SHIPYARD_REPO:-"https://github.com/att-comdev/shipyard.git"}
 SHIPYARD_REFSPEC=${SHIPYARD_REFSPEC:-""}
 
 # Images
-PEGLEG_IMAGE=${PEGLEG_IMAGE:-"artifacts-aic.atlantafoundry.com/att-comdev/pegleg:latest"}
-PROMENADE_IMAGE=${PROMENADE_IMAGE:-"quay.io/attcomdev/promenade:latest"}
+PEGLEG_IMAGE=${PEGLEG_IMAGE:-"artifacts-aic.atlantafoundry.com/att-comdev/pegleg:15c1481b1d96cdea71c53a779b8812ce1f18199b"}
+PROMENADE_IMAGE=${PROMENADE_IMAGE:-"artifacts-aic.atlantafoundry.com/att-comdev/promenade:2885218d35f3bc73722638f14a500b69b7197e1c"}
 
 # Command shortcuts
 PEGLEG=${WORKSPACE}/pegleg/tools/pegleg.sh
@@ -182,7 +182,7 @@ function generate_certs() {
 
 function lint_design() {
   # After the certificates are in the deployment files run a pegleg lint
-  IMAGE=${PEGLEG_IMAGE} ${PEGLEG} lint -p /workspace/ucp-integration/deployment_files
+  IMAGE=${PEGLEG_IMAGE} ${PEGLEG} lint -p /workspace/ucp-integration/deployment_files -x P001
 }
 
 function generate_genesis() {
