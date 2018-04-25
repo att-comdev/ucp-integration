@@ -24,11 +24,11 @@
 # frequently changed
 
 # The hostname for the genesis node
-export HOSTNAME=testvm1
+export HOSTNAME=n0
 # The IP address of the genesis node
-export HOSTIP=10.0.0.9
+export HOSTIP=172.24.1.10
 # The CIDR of the network for the genesis node
-export HOSTCIDR=10.0.0.0/24
+export HOSTCIDR=172.24.1.0/24
 # The network interface on the genesis node
 export NODE_NET_IFACE=ens3
 
@@ -48,6 +48,6 @@ export NODE_NET_IFACE=ens3
 # export WORKSPACE="/root/deploy"
 
 # The site to deploy
-export TARGET_SITE="dev"
+export TARGET_SITE="gate-multinode"
 # If running behind a proxy
 # export TARGET_SITE="dev-proxy"
