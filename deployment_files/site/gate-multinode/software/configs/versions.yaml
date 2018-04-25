@@ -1,0 +1,37 @@
+---
+schema: pegleg/SoftwareVersions/v1
+metadata:
+  schema: metadata/Document/v1
+  name: software-versions
+  replacement: true
+  layeringDefinition:
+    abstract: false
+    layer: site
+    parentSelector:
+      name: software-versions
+    actions:
+      - method: merge
+        path: .
+  storagePolicy: cleartext
+data:
+  charts:
+    ucp:
+      drydock:
+        location: https://review.gerrithub.io/att-comdev/drydock
+        reference: refs/changes/86/405186/8
+      maas:
+        location: https://review.gerrithub.io/att-comdev/maas
+        reference: refs/changes/92/405192/13
+      deckhand:
+        reference: 35f15ee601ebf89b93d657a1b78fedb3a8ebbe38
+  images:
+    ucp:
+      drydock:
+        drydock: docker.io/sthussey/drydock:libvirtv16
+        drydock_db_sync: docker.io/sthussey/drydock:libvirtv16
+      maas:
+        maas_rack: artifacts-aic.atlantafoundry.com/att-comdev/maas-rack-controller:ff2e2ae151e98b08d57b01408475143016d4ed7c
+      deckhand:
+        deckhand: artifacts-aic.atlantafoundry.com/att-comdev/deckhand@sha256:de3600481a9921c4943ae73eb0e0e9e771ec4333f1628926b6e014badb0131ea
+        db_sync: artifacts-aic.atlantafoundry.com/att-comdev/deckhand@sha256:de3600481a9921c4943ae73eb0e0e9e771ec4333f1628926b6e014badb0131ea
+...
