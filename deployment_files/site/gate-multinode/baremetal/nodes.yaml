@@ -1,0 +1,73 @@
+---
+schema: 'drydock/BaremetalNode/v1'
+metadata:
+  schema: 'metadata/Document/v1'
+  name: n0
+  layeringDefinition:
+    abstract: false
+    layer: site
+  storagePolicy: cleartext
+data:
+  host_profile: defaults
+  addressing:
+    - network: gp
+      address: 172.24.1.10
+  metadata:
+    rack: rack1
+    tags:
+      - 'masters'
+---
+schema: 'drydock/BaremetalNode/v1'
+metadata:
+  schema: 'metadata/Document/v1'
+  name: n1
+  layeringDefinition:
+    abstract: false
+    layer: site
+  storagePolicy: cleartext
+data:
+  host_profile: defaults
+  addressing:
+    - network: gp
+      address: 172.24.1.11
+  metadata:
+    rack: rack1
+    tags:
+      - 'masters'
+---
+schema: 'drydock/BaremetalNode/v1'
+metadata:
+  schema: 'metadata/Document/v1'
+  name: n2
+  layeringDefinition:
+    abstract: false
+    layer: site
+  storagePolicy: cleartext
+data:
+  host_profile: defaults
+  addressing:
+    - network: gp
+      address: 172.24.1.12
+  metadata:
+    rack: rack1
+    tags:
+      - 'masters'
+---
+schema: 'drydock/BaremetalNode/v1'
+metadata:
+  schema: 'metadata/Document/v1'
+  name: n3
+  layeringDefinition:
+    abstract: false
+    layer: site
+  storagePolicy: cleartext
+data:
+  host_profile: defaults
+  addressing:
+    - network: gp
+      address: 172.24.1.13
+  metadata:
+    rack: rack1
+    tags:
+      - 'masters'
+...
