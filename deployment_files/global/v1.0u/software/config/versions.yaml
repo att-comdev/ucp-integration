@@ -3,6 +3,8 @@ schema: pegleg/SoftwareVersions/v1
 metadata:
   schema: metadata/Document/v1
   name: software-versions
+  labels:
+    name: software-versions
   layeringDefinition:
     abstract: false
     layer: global
@@ -287,7 +289,7 @@ data:
         tiller: gcr.io/kubernetes-helm/tiller:v2.7.2
       promenade:
         dep_check: quay.io/stackanetes/kubernetes-entrypoint:v0.3.0
-        promenade: artifacts-aic.atlantafoundry.com/att-comdev/promenade:ccd372a97490971d4a5b2281424be7595c55c1b0
+        promenade: artifacts-aic.atlantafoundry.com/att-comdev/promenade:37906384fdf88568789b4c42776b815a9537c942
         ks_user: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
         ks_service: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
         ks_endpoints: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
