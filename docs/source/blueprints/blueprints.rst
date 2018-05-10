@@ -26,3 +26,4 @@ Designs for features of the UCP.
 
    deployment-grouping-baremetal
    node-teardown
+   monorepo
