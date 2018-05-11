@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "804632b7_a0553011",
+        "filename": "docs/source/blueprints/monorepo.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-05-11T16:42:06Z",
+      "side": 1,
+      "message": "are",
+      "range": {
+        "startLine": 49,
+        "startChar": 45,
+        "endLine": 49,
+        "endChar": 48
+      },
+      "revId": "af9aa5abe872ac37ccc898f5188238d959adedae",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
