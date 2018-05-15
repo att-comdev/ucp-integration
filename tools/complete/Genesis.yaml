@@ -1,0 +1,43 @@
+---
+schema: promenade/Genesis/v1
+metadata:
+  schema: metadata/Document/v1
+  name: genesis
+  layeringDefinition:
+    abstract: false
+    layer: site
+  storagePolicy: cleartext
+data:
+  hostname: n0
+  ip: 172.24.1.10
+  armada:
+    target_manifest: cluster-bootstrap
+  labels:
+    dynamic:
+      - calico-etcd=enabled
+      - ceph-mds=enabled
+      - ceph-mon=enabled
+      - ceph-osd=enabled
+      - ceph-rgw=enabled
+      - ceph-mgr=enabled
+      - coredns=enabled
+      - kubernetes-apiserver=enabled
+      - kubernetes-controller-manager=enabled
+      - kubernetes-etcd=enabled
+      - kubernetes-scheduler=enabled
+      - promenade-genesis=enabled
+      - ucp-control-plane=enabled
+  images:
+    armada: quay.io/attcomdev/armada:latest
+    helm:
+      tiller: gcr.io/kubernetes-helm/tiller:v2.7.2
+    kubernetes:
+      apiserver: gcr.io/google_containers/hyperkube-amd64:v1.10.2
+      controller-manager: gcr.io/google_containers/hyperkube-amd64:v1.10.2
+      etcd: quay.io/coreos/etcd:v3.2.14
+      scheduler: gcr.io/google_containers/hyperkube-amd64:v1.10.2
+  files:
+    - path: /var/lib/anchor/calico-etcd-bootstrap
+      content: "# placeholder for triggering calico etcd bootstrapping"
+      mode: 0644
+...
