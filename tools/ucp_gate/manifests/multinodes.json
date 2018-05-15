@@ -1,0 +1,27 @@
+{
+  "configuration": [],
+  "stages": [
+    {
+      "name": "Report Disk IO",
+      "script": "report-disk-io.sh"
+    },
+    {
+      "name": "Gate Setup",
+      "script": "gate-setup.sh"
+    },
+    {
+      "name": "Create VMs",
+      "script": "create-vms.sh"
+    }
+  ],
+  "vm": {
+    "memory": 3072,
+    "names": [
+      "n0",
+      "n1",
+      "n2",
+      "n3"
+    ],
+    "vcpus": 2
+  }
+}
