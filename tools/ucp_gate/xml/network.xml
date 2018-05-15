@@ -1,0 +1,11 @@
+<network>
+  <name>ucp_gate</name>
+  <forward mode='nat'/>
+  <bridge name='ucp-gate-br' stp='on' delay='0'/>
+  <mac address='52:54:00:e7:94:3f'/>
+  <ip address='172.24.1.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='172.24.1.10' end='172.24.1.254'/>
+    </dhcp>
+  </ip>
+</network>
