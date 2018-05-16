@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ced9bafb_e619372b",
+        "filename": "manifests/dev_single_node/README.txt",
+        "patchSetId": 21
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-05-16T20:57:19Z",
+      "side": 1,
+      "message": "I think we can get rid of this, if the instruction is to put the ucp-integration into /root/deploy.  (unless you changed the logic...)  if the ucp-integration directory is present, it won\u0027t bother getting it again.",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 58
+      },
+      "revId": "0489a9d2edb1e0a79ff54693da75bce697e6ee76",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e2cdb5dd_c1d54d63",
+        "filename": "manifests/dev_single_node/README.txt",
+        "patchSetId": 21
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1011940
+      },
+      "writtenOn": "2018-05-16T20:57:19Z",
+      "side": 1,
+      "message": "Is this true with latest Pegleg?",
+      "range": {
+        "startLine": 90,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 20
+      },
+      "revId": "0489a9d2edb1e0a79ff54693da75bce697e6ee76",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
