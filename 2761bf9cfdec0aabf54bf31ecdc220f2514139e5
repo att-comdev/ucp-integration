@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87ec6c88_b8378e15",
+        "filename": "manifests/gate_multinode/README.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1011947
+      },
+      "writtenOn": "2018-05-16T08:26:15Z",
+      "side": 1,
+      "message": "Seems like this is the same MAC address as n1. Probably need another unique value to differentiate between n0 and n1 VM.",
+      "range": {
+        "startLine": 40,
+        "startChar": 35,
+        "endLine": 40,
+        "endChar": 52
+      },
+      "revId": "2761bf9cfdec0aabf54bf31ecdc220f2514139e5",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
