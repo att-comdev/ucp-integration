@@ -113,6 +113,16 @@ data:
         subpath: helm-toolkit
         reference: f902cd14fac7de4c4c9f7d019191268a6b4e9601
     ucp:
+      nfs_provisioner:
+        type: git
+        location: https://github.com/openstack/openstack-helm-infra
+        subpath: nfs-provisioner
+        reference: f402171e42356bc1e805782f1d7f090ce1f6ab17
+      nfs_htk:
+        type: git
+        location: https://github.com/openstack/openstack-helm-infra
+        subpath: helm-toolkit
+        reference: 9e0a4fab18fab60bed7a62f734303378c9db751e
       armada:
         type: git
         location: https://github.com/att-comdev/armada
@@ -375,6 +385,11 @@ data:
         ceph_config_helper: docker.io/port/ceph-config-helper:v1.7.5
         ceph_rbd_provisioner: quay.io/external_storage/rbd-provisioner:v0.1.1
         ceph_cephfs_provisioner: quay.io/external_storage/cephfs-provisioner:v0.1.1
+    storage:
+      nfs_provisioner:
+        nfs_provisioner: quay.io/kubernetes_incubator/nfs-provisioner:v1.0.8
+        dep_check: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
+        image_repo_sync: docker.io/docker:17.07.0
     kubernetes:
       apiserver:
         anchor: gcr.io/google_containers/hyperkube-amd64:v1.8.6
