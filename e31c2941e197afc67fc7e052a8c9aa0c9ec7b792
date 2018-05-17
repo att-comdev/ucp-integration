@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c6acf5fe_1d188e04",
+        "filename": "manifests/dev_single_node/airship-in-a-bottle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1008770
+      },
+      "writtenOn": "2018-05-17T16:27:14Z",
+      "side": 1,
+      "message": "collect?",
+      "range": {
+        "startLine": 39,
+        "startChar": 12,
+        "endLine": 39,
+        "endChar": 22
+      },
+      "revId": "e31c2941e197afc67fc7e052a8c9aa0c9ec7b792",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
